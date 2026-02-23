@@ -1,0 +1,9 @@
+@use "./variables";
+
+@mixin gradient($direction) {
+    @if $direction == up {
+        background-color: linear-gradient(variables.$pink, variables.$purple);
+    } @else if $direction == down {
+        background-color: linear-gradient(variables.$purple, variables.$pink);
+    }
+}
