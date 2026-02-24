@@ -1,0 +1,52 @@
+@use "../utils/variables";
+@use "../base//typography";
+@use "../utils/mixins";
+
+.explanation-item {
+    @include typography.roboto;
+    display: flex;
+    align-items: center;
+
+    &:nth-child(3) i {
+        color: variables.$purple !important;
+    }
+
+    &::before {
+        @include mixins.flex-centered;
+        width: 24px;
+        height: 24px;
+        position: absolute;
+        border-radius: 100%;
+        background-color: variables.$purple;
+        color: #fff;
+    }
+
+    @for $index from 1 to 4 {
+        &:nth-child(#{$index})::before {
+            content: "#{$index}";
+        }
+    }
+
+    i {
+        font-size: 20px;
+        color: variables.$grey-four;
+    }
+
+    div {
+        background-color: variables.$background;
+        margin-left: calc(24px / 2);
+        box-shadow: 0px 4px 15px 0px #00000026;
+        border-radius: 20px;
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        padding: 20px 30px;
+        height: 72px;
+        width: 100%;
+
+        p {
+            @include typography.roboto;
+            font-weight: 500;
+        }
+    }
+}

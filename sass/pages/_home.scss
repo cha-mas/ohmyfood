@@ -3,12 +3,17 @@
 @use "../utils/variables";
 @use "../base/typography";
 
+@use "../components/explanation-item";
+
 .location {
     @include mixins.flex-centered;
     @include typography.roboto;
 
     background-color: variables.$grey-two;
     color: variables.$grey;
+
+    font-size: 16px;
+    font-weight: 500;
 
     height: 50px;
     gap: 17px;
@@ -20,7 +25,7 @@
 .hero {
     @include mixins.flex-centered;
     flex-direction: column;
-        text-align: center;
+    text-align: center;
     padding: 50px;
 
     h1 {
@@ -36,5 +41,22 @@
         font-size: 18px;
         margin-top: 20px;
         margin-bottom: 30px;
+    }
+}
+
+.explanations {
+    padding: 50px 20px;
+
+    h2 {
+        @include typography.roboto;
+        font-weight: 700;
+        font-size: 24px;
+        margin-bottom: 30px;
+    }
+
+    .explanations-list {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
     }
 }
