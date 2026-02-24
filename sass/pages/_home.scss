@@ -1,1 +1,18 @@
 @use "../layout/header";
+@use "../utils/mixins";
+@use "../utils/variables";
+@use '../base/typography';
+
+.location {
+    @include mixins.flex-centered;
+    @include typography.roboto;
+    
+    background-color: variables.$grey-two;
+    color: variables.$grey;
+
+    height: 50px;
+    gap: 17px;
+    box-shadow:
+        0px 4px 4px 0px #00000040,
+        0px 2px 4px 0px #00000026 inset;
+}

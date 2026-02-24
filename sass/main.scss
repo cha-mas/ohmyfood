@@ -4,3 +4,7 @@
 @use "./utils/mixins";
 
 @use "./pages/home";
+
+:root {
+    color-scheme: light;
+}

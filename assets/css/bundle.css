@@ -18,4 +18,22 @@ header img {
   width: 197px;
 }
 
+.location {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Roboto", sans-serif;
+  font-optical-sizing: auto;
+  font-variation-settings: "wdth" 100;
+  background-color: #EAEAEA;
+  color: #353535;
+  height: 50px;
+  gap: 17px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.2509803922), 0px 2px 4px 0px rgba(0, 0, 0, 0.1490196078) inset;
+}
+
+:root {
+  color-scheme: light;
+}
+
 /*# sourceMappingURL=bundle.css.map */
