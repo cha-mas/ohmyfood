@@ -5,6 +5,8 @@
 
 @use "./pages/home";
 
+@use './components/button';
+
 :root {
     color-scheme: light;
 }

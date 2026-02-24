@@ -16,3 +16,25 @@
         0px 4px 4px 0px #00000040,
         0px 2px 4px 0px #00000026 inset;
 }
+
+.hero {
+    @include mixins.flex-centered;
+    flex-direction: column;
+        text-align: center;
+    padding: 50px;
+
+    h1 {
+        @include typography.roboto;
+        font-weight: 700;
+        font-size: 24px;
+    }
+
+    > p {
+        @include typography.roboto;
+        color: variables.$grey;
+        font-weight: 300;
+        font-size: 18px;
+        margin-top: 20px;
+        margin-bottom: 30px;
+    }
+}
