@@ -1,12 +1,12 @@
 @use "../layout/header";
 @use "../utils/mixins";
 @use "../utils/variables";
-@use '../base/typography';
+@use "../base/typography";
 
 .location {
     @include mixins.flex-centered;
     @include typography.roboto;
-    
+
     background-color: variables.$grey-two;
     color: variables.$grey;
 
