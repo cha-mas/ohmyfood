@@ -7,4 +7,15 @@
   padding: 0;
 }
 
+header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 63px;
+}
+header img {
+  height: 36px;
+  width: 197px;
+}
+
 /*# sourceMappingURL=bundle.css.map */

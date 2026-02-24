@@ -1,0 +1,11 @@
+@use "../utils/mixins";
+
+header {
+    @include mixins.flex-centered;
+    height: 63px;
+
+    img {
+        height: 36px;
+        width: 197px;
+    }
+}

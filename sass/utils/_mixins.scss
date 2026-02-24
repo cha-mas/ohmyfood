@@ -7,3 +7,9 @@
         background-color: linear-gradient(variables.$purple, variables.$pink);
     }
 }
+
+@mixin flex-centered {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
