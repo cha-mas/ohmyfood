@@ -1,5 +1,5 @@
-@use '../utils/mixins';
-@use '../base/typography';
+@use "../utils/mixins";
+@use "../base/typography";
 
 .button {
     @include mixins.flex-centered;

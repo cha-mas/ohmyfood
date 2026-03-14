@@ -1,141 +1,144 @@
 <!doctype html>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>OhMyFood</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" />
+        <link rel="stylesheet" href="./assets/css/bundle.css" />
+    </head>
 
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>OhMyFood</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" />
-    <link rel="stylesheet" href="./assets/css/bundle.css" />
-</head>
-
-<body>
-    <header>
-        <img srcset="./assets/images/logo/ohmyfood.png, ./assets/images/logo/ohmyfood@2x.svg 2x"
-            src="./assets/images/logo/ohmyfood.png" alt="Logo du site OhMyFood" />
-    </header>
-    <div class="location">
-        <i class="fa-solid fa-location-dot"></i>
-        <p>Paris, Belleville</p>
-    </div>
-    <section class="hero">
-        <h1>Réservez le menu qui vous convient</h1>
-        <p>Découvrez des restaurants d'exception, sélectionnés par nos soins.</p>
-        <a href="#restaurants" class="button button-up">
-            Explorer nos restaurants
-        </a>
-    </section>
-    <section class="explanations">
-        <h2>Fonctionnement</h2>
-        <div class="explanations-list">
-            <article class="explanation-item">
-                <div>
-                    <i class="fa-solid fa-mobile-screen"></i>
-                    <p>Choisissez un restaurant</p>
-                </div>
-            </article>
-            <article class="explanation-item">
-                <div>
-                    <i class="fa-solid fa-list"></i>
-                    <p>Composez votre menu</p>
-                </div>
-            </article>
-            <article class="explanation-item">
-                <div>
-                    <i class="fa-solid fa-store"></i>
-                    <p>Dégustez au restaurant</p>
-                </div>
-            </article>
+    <body>
+        <header>
+            <img
+                srcset="./assets/images/logo/ohmyfood.png, ./assets/images/logo/ohmyfood@2x.svg 2x"
+                src="./assets/images/logo/ohmyfood.png"
+                alt="Logo du site OhMyFood"
+            />
+        </header>
+        <div class="location">
+            <i class="fa-solid fa-location-dot"></i>
+            <p>Paris, Belleville</p>
         </div>
-    </section>
-    <section class="restaurants">
-        <h2>Restaurants</h2>
-        <div class="restaurants-list">
-            <article class="restaurant-item">
-                <div class="card-media">
-                    <img src="./assets/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg"
-                        alt="Une table typique du restaurant" />
-                </div>
-                <div class="card-footer">
+        <section class="hero">
+            <h1>Réservez le menu qui vous convient</h1>
+            <p>Découvrez des restaurants d'exception, sélectionnés par nos soins.</p>
+            <a href="#restaurants" class="button button-up"> Explorer nos restaurants </a>
+        </section>
+        <section class="explanations">
+            <h2>Fonctionnement</h2>
+            <div class="explanations-list">
+                <article class="explanation-item">
                     <div>
-                        <h3>La palette du goût</h3>
-                        <p>Ménilmontant</p>
+                        <i class="fa-solid fa-mobile-screen"></i>
+                        <p>Choisissez un restaurant</p>
                     </div>
-                    <button>
-                        <i class="fa-regular fa-heart"></i>
-                        <span class="sr-only">Ajouter ou supprimer de vos favoris</span>
-                    </button>
-                </div>
-            </article>
-            <article class="restaurant-item">
-                <div class="card-media">
-                    <img src="./assets/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg"
-                        alt="Une table typique du restaurant" />
-                </div>
-                <div class="card-footer">
+                </article>
+                <article class="explanation-item">
                     <div>
-                        <h3>La note enchantée</h3>
-                        <p>Charonne</p>
+                        <i class="fa-solid fa-list"></i>
+                        <p>Composez votre menu</p>
                     </div>
-                    <button class="liked">
-                        <i class="fa-solid fa-heart"></i>
-                        <span class="sr-only">Ajouter ou supprimer de vos favoris</span>
-                    </button>
-                </div>
-            </article>
-            <article class="restaurant-item">
-                <div class="card-media">
-                    <img src="./assets/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg"
-                        alt="Une table typique du restaurant" />
-                </div>
-                <div class="card-footer">
+                </article>
+                <article class="explanation-item">
                     <div>
-                        <h3>À la française</h3>
-                        <p>Cité Rouge</p>
+                        <i class="fa-solid fa-store"></i>
+                        <p>Dégustez au restaurant</p>
                     </div>
-                    <button>
-                        <i class="fa-regular fa-heart"></i>
-                        <span class="sr-only">Ajouter ou supprimer de vos favoris</span>
-                    </button>
-                </div>
-            </article>
-            <article class="restaurant-item">
-                <div class="card-media">
-                    <img src="./assets/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg"
-                        alt="Une table typique du restaurant" />
-                </div>
-                <div class="card-footer">
-                    <div>
-                        <h3>Le délice des sens</h3>
-                        <p>Folie-Méricourt</p>
+                </article>
+            </div>
+        </section>
+        <section class="restaurants">
+            <h2>Restaurants</h2>
+            <div class="restaurants-list">
+                <article class="restaurant-item">
+                    <div class="card-media">
+                        <img
+                            src="./assets/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg"
+                            alt="Une table typique du restaurant"
+                        />
                     </div>
-                    <button>
-                        <i class="fa-regular fa-heart"></i>
-                        <span class="sr-only">Ajouter ou supprimer de vos favoris</span>
-                    </button>
-                </div>
-            </article>
-        </div>
-    </section>
-    <footer>
-        <img src="./assets/images/logo/ohmyfood.png" alt="Logo de OhMyFood" />
-        <nav>
-            <a href="#">
-                <i class="fa-solid fa-utensils"></i>
-                Proposer un restaurant
-            </a>
-            <a href="#">
-                <i class="fa-solid fa-handshake-angle"></i>
-                Devenir partenaire
-            </a>
-            <a href="#">
-                Mentions légales
-            </a>
-            <a href="#">
-                Contact
-            </a>
-        </nav>
-    </footer>
-</body>
-
+                    <div class="card-footer">
+                        <div>
+                            <h3>La palette du goût</h3>
+                            <p>Ménilmontant</p>
+                        </div>
+                        <button>
+                            <i class="fa-regular fa-heart"></i>
+                            <span class="sr-only">Ajouter ou supprimer de vos favoris</span>
+                        </button>
+                    </div>
+                </article>
+                <article class="restaurant-item">
+                    <div class="card-media">
+                        <img
+                            src="./assets/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg"
+                            alt="Une table typique du restaurant"
+                        />
+                    </div>
+                    <div class="card-footer">
+                        <div>
+                            <h3>La note enchantée</h3>
+                            <p>Charonne</p>
+                        </div>
+                        <button class="liked">
+                            <i class="fa-solid fa-heart"></i>
+                            <span class="sr-only">Ajouter ou supprimer de vos favoris</span>
+                        </button>
+                    </div>
+                </article>
+                <article class="restaurant-item">
+                    <div class="card-media">
+                        <img
+                            src="./assets/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg"
+                            alt="Une table typique du restaurant"
+                        />
+                    </div>
+                    <div class="card-footer">
+                        <div>
+                            <h3>À la française</h3>
+                            <p>Cité Rouge</p>
+                        </div>
+                        <button>
+                            <i class="fa-regular fa-heart"></i>
+                            <span class="sr-only">Ajouter ou supprimer de vos favoris</span>
+                        </button>
+                    </div>
+                </article>
+                <article class="restaurant-item">
+                    <div class="card-media">
+                        <img
+                            src="./assets/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg"
+                            alt="Une table typique du restaurant"
+                        />
+                    </div>
+                    <div class="card-footer">
+                        <div>
+                            <h3>Le délice des sens</h3>
+                            <p>Folie-Méricourt</p>
+                        </div>
+                        <button>
+                            <i class="fa-regular fa-heart"></i>
+                            <span class="sr-only">Ajouter ou supprimer de vos favoris</span>
+                        </button>
+                    </div>
+                </article>
+            </div>
+        </section>
+        <footer>
+            <img src="./assets/images/logo/ohmyfood.png" alt="Logo de OhMyFood" />
+            <nav>
+                <a href="#">
+                    <i class="fa-solid fa-utensils"></i>
+                    Proposer un restaurant
+                </a>
+                <a href="#">
+                    <i class="fa-solid fa-handshake-angle"></i>
+                    Devenir partenaire
+                </a>
+                <a href="#"> Mentions légales </a>
+                <a href="#"> Contact </a>
+            </nav>
+        </footer>
+    </body>
 </html>

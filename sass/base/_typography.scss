@@ -24,7 +24,7 @@
 }
 
 @mixin light-text {
-    @include  roboto;
+    @include roboto;
     font-size: 17px;
     font-weight: 300;
 }

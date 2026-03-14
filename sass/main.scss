@@ -3,13 +3,11 @@
 
 @use "./utils/variables";
 @use "./utils/mixins";
-@use './utils/sr-only.scss';
+@use "./utils/sr-only.scss";
 
-@use './components/button';
-
+@use "./components/button";
 
 @use "./pages/home";
-
 
 :root {
     color-scheme: light;
