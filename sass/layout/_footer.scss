@@ -1,0 +1,34 @@
+@use "../utils/variables";
+@use "../base/typography";
+
+footer {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background: variables.$grey;
+    color: #fff;
+
+    img {
+        filter: invert(100%) sepia(100%) hue-rotate(180deg); // turns it white
+        height: 27px;
+        width: 139px;
+    }
+
+    nav {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+
+        a {
+            @include typography.roboto;
+            color: #fff;
+            text-decoration: none;
+
+            i {
+                font-size: 12px;
+                margin-right: 4px;
+            }
+        }
+    }
+}

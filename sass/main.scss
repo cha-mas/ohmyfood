@@ -1,12 +1,15 @@
 @use "./base/reset";
 @use "./base/typography";
+
 @use "./utils/variables";
 @use "./utils/mixins";
+@use './utils/sr-only.scss';
+
+@use './components/button';
+
 
 @use "./pages/home";
 
-@use './components/button';
-@use './utils/sr-only.scss';
 
 :root {
     color-scheme: light;

@@ -1,7 +1,9 @@
-@use "../layout/header";
 @use "../utils/mixins";
 @use "../utils/variables";
 @use "../base/typography";
+
+@use "../layout/header";
+@use "../layout/footer";
 
 @use "../components/explanation-item";
 @use "../components/restaurant-item";
