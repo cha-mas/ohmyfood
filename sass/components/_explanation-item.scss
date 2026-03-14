@@ -1,9 +1,9 @@
 @use "../utils/variables";
-@use "../base//typography";
+@use "../base/typography";
 @use "../utils/mixins";
 
 .explanation-item {
-    @include typography.roboto;
+    @include typography.bold-h3;
     display: flex;
     align-items: center;
 

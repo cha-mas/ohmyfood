@@ -6,6 +6,7 @@
 @use "./pages/home";
 
 @use './components/button';
+@use './utils/sr-only.scss';
 
 :root {
     color-scheme: light;

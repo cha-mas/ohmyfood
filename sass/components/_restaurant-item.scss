@@ -1,0 +1,50 @@
+@use "../base/typography";
+@use "../utils/variables";
+@use '../utils/mixins';
+
+.restaurant-item {
+    border-radius: 15px;
+    box-shadow: 0px 4px 15px 0px #0000001A;
+    background-color: #fff;
+
+    .card-media {
+        position: relative;
+
+        img {
+            width: 100%;
+            height: auto;
+            aspect-ratio: 16/9;
+            border-top-left-radius: 15px;
+            border-top-right-radius: 15px;
+        }
+    }
+
+    .card-footer {
+        padding: 10px;
+        display: flex;
+        justify-content: space-between;
+
+        h3 {
+            @include typography.bold-h3;
+        }
+
+        p {
+            @include typography.light-text;
+        }
+
+        button {
+            background: transparent;
+            color: variables.$black;
+            border: none;
+            font-size: 21px;
+
+            &.liked {
+                color: transparent;
+                i {
+                  @include mixins.gradient("down");
+                  background-clip: text;
+                }
+            }
+        }
+    }
+}
