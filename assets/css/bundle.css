@@ -195,9 +195,6 @@ footer nav a i {
   cursor: pointer;
   transition: all 0.3s ease;
 }
-.restaurant-item .card-footer .fav-label i {
-  transition: all 0.3s ease;
-}
 .restaurant-item .card-footer .fav-label .regular-icon {
   display: inline;
 }

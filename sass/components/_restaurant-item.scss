@@ -61,9 +61,6 @@
             color: $black;
             border: none;
             @include button-icon;
-            i {
-                transition: all 0.3s ease;
-            }
             .regular-icon {
                 display: inline;
             }
