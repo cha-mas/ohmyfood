@@ -28,3 +28,12 @@
     font-size: 17px;
     font-weight: 300;
 }
+
+@mixin badge-text {
+    @include roboto;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-align: center;
+}

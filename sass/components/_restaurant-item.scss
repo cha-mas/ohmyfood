@@ -17,6 +17,18 @@
             border-top-left-radius: 15px;
             border-top-right-radius: 15px;
         }
+
+        .badge-new {
+            @include typography.badge-text;
+            padding: 10px 15px;
+            position: absolute;
+            top: 16px;
+            right: 16px;
+            border-radius: 2px;
+            background: variables.$green;
+            color: variables.$green-font;
+            box-shadow: 0px 2px 4px 0px #00000026;
+        }
     }
 
     .card-footer {
