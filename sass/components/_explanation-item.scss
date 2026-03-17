@@ -3,6 +3,7 @@
 @use "../utils/mixins" as *;
 @use "../utils/spacing" as *;
 @use "../utils/shadows" as *;
+@use "../utils/breakpoints" as *;
 
 .explanation-item {
     @include h3;
@@ -49,4 +50,10 @@
             font-weight: 500;
         }
     }
+}
+
+@include respond-to(lg) {
+.explanation-item {
+    flex: 1;
+}
 }

@@ -132,6 +132,11 @@ footer nav a i {
   font-weight: 500;
 }
 
+@media (min-width: 1024px) {
+  .explanation-item {
+    flex: 1;
+  }
+}
 .restaurant-item {
   border-radius: 15px;
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1019607843);
@@ -292,6 +297,14 @@ section h2 {
   background-color: #f6f6f6;
 }
 
+@media (min-width: 1024px) {
+  section {
+    padding: 50px max(10%, 300px);
+  }
+  .explanations-list {
+    flex-direction: row;
+  }
+}
 :root {
   color-scheme: light;
 }
