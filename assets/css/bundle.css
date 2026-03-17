@@ -179,16 +179,33 @@ footer nav a i {
   font-size: 17px;
   font-weight: 300;
 }
-.restaurant-item .card-footer button {
+.restaurant-item .card-footer .fav-checkbox {
+  display: none;
+}
+.restaurant-item .card-footer .fav-label {
   background: transparent;
   color: #101010;
   border: none;
   font-size: 21px;
+  cursor: pointer;
 }
-.restaurant-item .card-footer button.liked {
+.restaurant-item .card-footer .fav-label i {
+  transition: all 0.3s ease;
+}
+.restaurant-item .card-footer .fav-label .regular-icon {
+  display: inline;
+}
+.restaurant-item .card-footer .fav-label .solid-icon {
+  display: none;
+}
+.restaurant-item .card-footer .fav-checkbox:checked + .fav-label {
   color: transparent;
 }
-.restaurant-item .card-footer button.liked i {
+.restaurant-item .card-footer .fav-checkbox:checked + .fav-label .regular-icon {
+  display: none;
+}
+.restaurant-item .card-footer .fav-checkbox:checked + .fav-label .solid-icon {
+  display: inline;
   background: linear-gradient(#9356dc, #ff79da 95%);
   background-clip: text;
 }

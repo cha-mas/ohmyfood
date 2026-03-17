@@ -32,18 +32,36 @@
             @include typography.light-text;
         }
 
-        button {
+        .fav-checkbox {
+            display: none;
+        }
+
+        .fav-label {
             background: transparent;
             color: variables.$black;
             border: none;
             font-size: 21px;
+            cursor: pointer;
+            i {
+                transition: all 0.3s ease;
+            }
+            .regular-icon {
+                display: inline;
+            }
+            .solid-icon {
+                display: none;
+            }
+        }
 
-            &.liked {
-                color: transparent;
-                i {
-                    @include mixins.gradient("down");
-                    background-clip: text;
-                }
+        .fav-checkbox:checked + .fav-label {
+            color: transparent;
+            .regular-icon {
+                display: none;
+            }
+            .solid-icon {
+                display: inline;
+                @include mixins.gradient("down");
+                background-clip: text;
             }
         }
     }
