@@ -1,5 +1,7 @@
 @use "../utils/mixins";
 @use "../base/typography";
+@use '../utils/variables';
+@use 'sass:color';
 
 .button {
     @include mixins.flex-centered;
@@ -15,9 +17,21 @@
 
     &.button-up {
         @include mixins.gradient("up");
+        &:hover {
+        background: linear-gradient(color.adjust(variables.$pink-gradient, $lightness: 5%), color.adjust(variables.$purple, $lightness: 5%) 95%);
+        }
     }
 
     &.button-down {
         @include mixins.gradient("down");
+
+        &:hover {
+        background: linear-gradient(color.adjust(variables.$purple, $lightness: 5%), color.adjust(variables.$pink-gradient, $lightness: 5%) 95%);
+        }
+    }
+
+    &:hover {
+        box-shadow: 0px 4px 15px 0px #00000059;
+        transition: all ease-in-out 200ms;
     }
 }
