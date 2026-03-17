@@ -61,9 +61,17 @@ footer nav a i {
 }
 .button.button-up {
   background: linear-gradient(#ff79da, #9356dc 95%);
+  transition: all ease-in-out 200ms;
+}
+.button.button-up:hover {
+  background: linear-gradient(rgb(255, 146.5, 225.0410447761), rgb(160.5, 107.125, 224.375) 95%);
 }
 .button.button-down {
   background: linear-gradient(#9356dc, #ff79da 95%);
+  transition: all ease-in-out 200ms;
+}
+.button.button-down:hover {
+  background: linear-gradient(rgb(160.5, 107.125, 224.375), rgb(255, 146.5, 225.0410447761) 95%);
 }
 .button:hover {
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.3490196078);
@@ -210,6 +218,12 @@ footer nav a i {
 .restaurant-item .card-footer .fav-checkbox:checked + .fav-label .solid-icon {
   display: inline;
   background: linear-gradient(#9356dc, #ff79da 95%);
+  transition: all ease-in-out 200ms;
+}
+.restaurant-item .card-footer .fav-checkbox:checked + .fav-label .solid-icon:hover {
+  background: linear-gradient(rgb(160.5, 107.125, 224.375), rgb(255, 146.5, 225.0410447761) 95%);
+}
+.restaurant-item .card-footer .fav-checkbox:checked + .fav-label .solid-icon {
   background-clip: text;
 }
 
