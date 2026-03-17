@@ -76,7 +76,7 @@
             }
             .solid-icon {
                 display: inline;
-                @include gradient-down;
+                background: $gradient-up;
                 background-clip: text;
             }
         }

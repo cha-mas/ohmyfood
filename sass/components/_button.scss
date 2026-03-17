@@ -26,6 +26,5 @@
 
     &:hover {
         @include shadow-hover-sm;
-        transition: all ease-in-out 200ms;
     }
 }

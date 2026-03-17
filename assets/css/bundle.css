@@ -75,7 +75,6 @@ footer nav a i {
 }
 .button:hover {
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.3490196078);
-  transition: all ease-in-out 200ms;
 }
 
 .explanation-item {
@@ -201,7 +200,6 @@ footer nav a i {
   border: none;
   font-size: 24px;
   cursor: pointer;
-  transition: all 0.3s ease;
 }
 .restaurant-item .card-footer .fav-label .regular-icon {
   display: inline;
@@ -217,13 +215,7 @@ footer nav a i {
 }
 .restaurant-item .card-footer .fav-checkbox:checked + .fav-label .solid-icon {
   display: inline;
-  background: linear-gradient(#9356dc, #ff79da 95%);
-  transition: all ease-in-out 200ms;
-}
-.restaurant-item .card-footer .fav-checkbox:checked + .fav-label .solid-icon:hover {
-  background: linear-gradient(rgb(160.5, 107.125, 224.375), rgb(255, 146.5, 225.0410447761) 95%);
-}
-.restaurant-item .card-footer .fav-checkbox:checked + .fav-label .solid-icon {
+  background: linear-gradient(#ff79da, #9356dc 95%);
   background-clip: text;
 }
 
