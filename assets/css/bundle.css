@@ -4,6 +4,7 @@ header {
   align-items: center;
   justify-content: center;
   height: 63px;
+  background: #fff;
 }
 header img {
   height: 36px;
@@ -40,6 +41,20 @@ footer nav a i {
   margin-right: 4px;
 }
 
+@media (min-width: 1024px) {
+  footer {
+    padding: 50px max(10%, 300px);
+    flex-direction: row-reverse;
+    gap: 50px;
+  }
+  footer nav {
+    flex-direction: row;
+    align-items: flex-end;
+  }
+  footer nav > :nth-child(2) {
+    margin-right: 50px;
+  }
+}
 .button {
   display: flex;
   align-items: center;
@@ -298,6 +313,10 @@ section h2 {
   gap: 20px;
 }
 
+.explanations {
+  background-color: #fff;
+}
+
 .restaurants {
   background-color: #f6f6f6;
 }
@@ -333,6 +352,12 @@ section h2 {
   width: 1px;
   height: 1px;
   overflow: hidden;
+}
+
+html {
+  max-width: 1440px;
+  background-color: #7e7e7e;
+  margin: auto;
 }
 
 /*# sourceMappingURL=bundle.css.map */

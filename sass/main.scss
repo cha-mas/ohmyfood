@@ -1,3 +1,4 @@
+@use "./utils/variables" as *;
 @use "./layout/header";
 @use "./layout/footer";
 
@@ -5,6 +6,7 @@
 
 :root {
     color-scheme: light;
+    
 }
 
 *,
@@ -22,4 +24,10 @@
     width: 1px;
     height: 1px;
     overflow: hidden;
+}
+
+html {
+    max-width: 1440px;
+    background-color: $grey-four;
+    margin: auto;
 }

@@ -1,6 +1,8 @@
 @use "../utils/variables" as *;
 @use "../base/typography" as *;
 @use "../utils/mixins" as *;
+@use "../utils/breakpoints" as *;
+@use "../utils/spacing" as *;
 
 footer {
     padding: 20px;
@@ -27,6 +29,24 @@ footer {
             i {
                 @include icon-sm;
                 margin-right: 4px;
+            }
+        }
+    }
+}
+
+@include respond-to(lg) {
+    footer {
+        padding: $spacing-xl max(10%, 300px);
+
+        flex-direction: row-reverse;
+        gap: $spacing-xl;
+
+        nav {
+            flex-direction: row;
+            align-items: flex-end;
+
+            > :nth-child(2) {
+                margin-right: $spacing-xl;
             }
         }
     }
