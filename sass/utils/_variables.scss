@@ -17,3 +17,8 @@ $gradient-up: linear-gradient($pink-gradient, $purple 95%);
 $gradient-down: linear-gradient($purple, $pink-gradient 95%);
 $gradient-light-up: linear-gradient(color.adjust($pink-gradient, $lightness: 5%), color.adjust($purple, $lightness: 5%) 95%);
 $gradient-light-down: linear-gradient(color.adjust($purple, $lightness: 5%), color.adjust($pink-gradient, $lightness: 5%) 95%);
+
+// Loading overlay
+$loading-black: #101010;
+$loading-white: #ffffff;
+$loading-pink: #ff79da;
