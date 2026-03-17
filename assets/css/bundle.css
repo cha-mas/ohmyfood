@@ -224,6 +224,11 @@ footer nav a i {
   background-clip: text;
 }
 
+@media (min-width: 1024px) {
+  .restaurant-item {
+    width: calc(50% - 10px);
+  }
+}
 .location {
   display: flex;
   align-items: center;
@@ -303,6 +308,10 @@ section h2 {
   }
   .explanations-list {
     flex-direction: row;
+  }
+  .restaurants-list {
+    flex-direction: row;
+    flex-wrap: wrap;
   }
 }
 :root {
