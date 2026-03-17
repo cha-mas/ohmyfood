@@ -147,6 +147,7 @@ footer nav a i {
   }
   100% {
     opacity: 0;
+    z-index: -9999;
   }
 }
 .button {
