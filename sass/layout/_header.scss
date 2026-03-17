@@ -1,7 +1,7 @@
-@use "../utils/mixins";
+@use "../utils/mixins" as *;
 
 header {
-    @include mixins.flex-centered;
+    @include flex-centered;
     height: 63px;
 
     img {

@@ -1,5 +1,3 @@
-// ===== COLORS =====
-
 $pink: #fcc0ce;
 $pink-gradient: #ff79da;
 $green: #99e2d0;
@@ -12,3 +10,6 @@ $grey-two: #eaeaea;
 $grey-four: #7e7e7e;
 $background: #f6f6f6;
 $black: #101010;
+
+$gradient-up: linear-gradient($pink-gradient, $purple 95%);
+$gradient-down: linear-gradient($purple, $pink-gradient 95%);

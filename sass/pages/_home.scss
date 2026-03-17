@@ -1,23 +1,20 @@
-@use "../utils/mixins";
-@use "../utils/variables";
-@use "../base/typography";
-
-@use "../layout/header";
-@use "../layout/footer";
-
+@use "../components/button";
 @use "../components/explanation-item";
 @use "../components/restaurant-item";
 
+@use "../utils/mixins" as *;
+@use "../utils/spacing" as *;
+@use "../base/typography" as *;
+@use "../utils/variables" as *;
+
 .location {
-    @include mixins.flex-centered;
-    @include typography.roboto;
+    @include flex-centered;
+    @include font-roboto;
 
-    background-color: variables.$grey-two;
-    color: variables.$grey;
+    background-color: $grey-two;
+    color: $grey;
 
-    font-size: 16px;
-    font-weight: 500;
-
+    @include body-text-sm;
     height: 50px;
     gap: 17px;
     box-shadow:
@@ -26,20 +23,20 @@
 }
 
 .hero {
-    @include mixins.flex-centered;
-    background-color: variables.$background;
-    flex-direction: column;
+    @include flex-centered;
+    background-color: $background;
+    @include flex-column;
     text-align: center;
-    padding: 50px;
+    padding: $spacing-xl;
     z-index: -1;
 
     h1 {
-        @include typography.section-title;
+        @include h1;
     }
 
     > p {
-        @include typography.roboto;
-        color: variables.$grey;
+        @include body-text;
+        color: $grey;
         font-weight: 300;
         font-size: 18px;
         margin-top: 20px;
@@ -48,21 +45,20 @@
 }
 
 section {
-    padding: 50px 20px;
+    padding: $spacing-xl 20px;
 
     h2 {
-        @include typography.section-title;
+        @include h2;
         margin-bottom: 30px;
     }
 }
 
 .explanations-list,
 .restaurants-list {
-    display: flex;
-    flex-direction: column;
+    @include flex-column;
     gap: 20px;
 }
 
 .restaurants {
-    background-color: variables.$background;
+    background-color: $background;
 }

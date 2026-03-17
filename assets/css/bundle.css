@@ -1,54 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-.sr-only {
-  position: absolute;
-  left: -10000px;
-  top: auto;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
-}
-
-.button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: "Roboto", sans-serif;
-  font-optical-sizing: auto;
-  font-variation-settings: "wdth" 100;
-  font-weight: 500;
-  font-size: 16px;
-  height: 50px;
-  padding: 0 25px;
-  border-radius: 25px;
-  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.2509803922);
-  color: #fff;
-  text-decoration: none;
-}
-.button.button-up {
-  background: linear-gradient(#ff79da, #9356dc 95%);
-}
-.button.button-up:hover {
-  background: linear-gradient(rgb(255, 146.5, 225.0410447761), rgb(160.5, 107.125, 224.375) 95%);
-}
-.button.button-down {
-  background: linear-gradient(#9356dc, #ff79da 95%);
-}
-.button.button-down:hover {
-  background: linear-gradient(rgb(160.5, 107.125, 224.375), rgb(255, 146.5, 225.0410447761) 95%);
-}
-.button:hover {
-  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.3490196078);
-  transition: all ease-in-out 200ms;
-}
-
 header {
   display: flex;
   align-items: center;
@@ -90,6 +40,36 @@ footer nav a i {
   margin-right: 4px;
 }
 
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Roboto", sans-serif;
+  font-optical-sizing: auto;
+  font-variation-settings: "wdth" 100;
+  font-family: "Roboto", sans-serif;
+  font-optical-sizing: auto;
+  font-variation-settings: "wdth" 100;
+  font-weight: 500;
+  font-size: 16px;
+  height: 50px;
+  padding: 0 25px;
+  border-radius: 25px;
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.2509803922);
+  color: #fff;
+  text-decoration: none;
+}
+.button.button-up {
+  background: linear-gradient(#ff79da, #9356dc 95%);
+}
+.button.button-down {
+  background: linear-gradient(#9356dc, #ff79da 95%);
+}
+.button:hover {
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.3490196078);
+  transition: all ease-in-out 200ms;
+}
+
 .explanation-item {
   font-family: "Roboto", sans-serif;
   font-optical-sizing: auto;
@@ -129,12 +109,12 @@ footer nav a i {
 .explanation-item div {
   background-color: #f6f6f6;
   margin-left: 12px;
-  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1490196078);
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1490196078);
   border-radius: 20px;
   display: flex;
   align-items: center;
   gap: 20px;
-  padding: 20px 30px;
+  padding: 24px;
   height: 72px;
   width: 100%;
 }
@@ -175,7 +155,7 @@ footer nav a i {
   line-height: 100%;
   letter-spacing: 0%;
   text-align: center;
-  padding: 10px 15px;
+  padding: 16px;
   position: absolute;
   top: 16px;
   right: 16px;
@@ -185,9 +165,10 @@ footer nav a i {
   box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1490196078);
 }
 .restaurant-item .card-footer {
-  padding: 10px;
   display: flex;
+  align-items: center;
   justify-content: space-between;
+  padding: 16px;
 }
 .restaurant-item .card-footer h3 {
   font-family: "Roboto", sans-serif;
@@ -200,8 +181,8 @@ footer nav a i {
   font-family: "Roboto", sans-serif;
   font-optical-sizing: auto;
   font-variation-settings: "wdth" 100;
-  font-size: 17px;
   font-weight: 300;
+  font-size: 17px;
 }
 .restaurant-item .card-footer .fav-checkbox {
   display: none;
@@ -212,6 +193,7 @@ footer nav a i {
   border: none;
   font-size: 24px;
   cursor: pointer;
+  transition: all 0.3s ease;
 }
 .restaurant-item .card-footer .fav-label i {
   transition: all 0.3s ease;
@@ -243,8 +225,11 @@ footer nav a i {
   font-variation-settings: "wdth" 100;
   background-color: #eaeaea;
   color: #353535;
-  font-size: 16px;
+  font-family: "Roboto", sans-serif;
+  font-optical-sizing: auto;
+  font-variation-settings: "wdth" 100;
   font-weight: 500;
+  font-size: 16px;
   height: 50px;
   gap: 17px;
   box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1490196078) inset, 0px 4px 4px 0px rgba(0, 0, 0, 0.2509803922);
@@ -255,6 +240,7 @@ footer nav a i {
   align-items: center;
   justify-content: center;
   background-color: #f6f6f6;
+  display: flex;
   flex-direction: column;
   text-align: center;
   padding: 50px;
@@ -271,6 +257,8 @@ footer nav a i {
   font-family: "Roboto", sans-serif;
   font-optical-sizing: auto;
   font-variation-settings: "wdth" 100;
+  font-weight: 300;
+  font-size: 17px;
   color: #353535;
   font-weight: 300;
   font-size: 18px;
@@ -303,6 +291,23 @@ section h2 {
 
 :root {
   color-scheme: light;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.sr-only {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
 }
 
 /*# sourceMappingURL=bundle.css.map */

@@ -1,37 +1,31 @@
-@use "../utils/mixins";
-@use "../base/typography";
-@use '../utils/variables';
+@use "../utils/mixins" as *;
+@use "../base/typography" as *;
+@use "../utils/spacing" as *;
+@use "../utils/shadows" as *;
+@use "../utils/variables" as *;
 @use 'sass:color';
 
 .button {
-    @include mixins.flex-centered;
-    @include typography.roboto;
-    font-weight: 500;
-    font-size: 16px;
+    @include flex-centered;
+    @include font-roboto;
+    @include body-text-sm;
     height: 50px;
     padding: 0 25px;
     border-radius: 25px;
-    box-shadow: 0px 4px 10px 0px #00000040;
+    @include shadow-md;
     color: #fff;
     text-decoration: none;
 
     &.button-up {
-        @include mixins.gradient("up");
-        &:hover {
-        background: linear-gradient(color.adjust(variables.$pink-gradient, $lightness: 5%), color.adjust(variables.$purple, $lightness: 5%) 95%);
-        }
+        @include gradient-up;
     }
 
     &.button-down {
-        @include mixins.gradient("down");
-
-        &:hover {
-        background: linear-gradient(color.adjust(variables.$purple, $lightness: 5%), color.adjust(variables.$pink-gradient, $lightness: 5%) 95%);
-        }
+        @include gradient-down;
     }
 
     &:hover {
-        box-shadow: 0px 4px 15px 0px #00000059;
+        @include shadow-hover-sm;
         transition: all ease-in-out 200ms;
     }
 }

@@ -1,23 +1,24 @@
-@use "../utils/variables";
-@use "../base/typography";
-@use "../utils/mixins";
+@use "../utils/variables" as *;
+@use "../base/typography" as *;
+@use "../utils/mixins" as *;
+@use "../utils/spacing" as *;
+@use "../utils/shadows" as *;
 
 .explanation-item {
-    @include typography.bold-h3;
-    display: flex;
-    align-items: center;
+    @include h3;
+    @include flex-row;
 
     &:nth-child(3) i {
-        color: variables.$purple !important;
+        color: $purple !important;
     }
 
     &::before {
-        @include mixins.flex-centered;
+        @include flex-centered;
         width: 24px;
         height: 24px;
         position: absolute;
         border-radius: 100%;
-        background-color: variables.$purple;
+        background-color: $purple;
         color: #fff;
     }
 
@@ -28,24 +29,23 @@
     }
 
     i {
-        font-size: 20px;
-        color: variables.$grey-four;
+        @include icon;
+        color: $grey-four;
     }
 
     div {
-        background-color: variables.$background;
+        background-color: $background;
         margin-left: calc(24px / 2);
-        box-shadow: 0px 4px 15px 0px #00000026;
+        @include shadow-sm;
         border-radius: 20px;
-        display: flex;
-        align-items: center;
+        @include flex-row;
         gap: 20px;
-        padding: 20px 30px;
+        @include spacing-md;
         height: 72px;
         width: 100%;
 
         p {
-            @include typography.roboto;
+            @include font-roboto;
             font-weight: 500;
         }
     }

@@ -1,15 +1,15 @@
-@use "./variables";
+@use "../utils/variables" as *;
 
-@mixin gradient($direction) {
-    @if $direction == "up" {
-        background: linear-gradient(variables.$pink-gradient, variables.$purple 95%);
-    } @else if $direction == "down" {
-        background: linear-gradient(variables.$purple, variables.$pink-gradient 95%);
-    }
-}
+@mixin flex-centered { display: flex; align-items: center; justify-content: center; }
+@mixin flex-row { display: flex; align-items: center; }
+@mixin flex-column { display: flex; flex-direction: column; }
+@mixin flex-between { display: flex; align-items: center; justify-content: space-between; }
 
-@mixin flex-centered {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
+@mixin gradient-up { background: $gradient-up; }
+@mixin gradient-down { background: $gradient-down; }
+
+@mixin icon { font-size: 20px; }
+@mixin icon-sm { font-size: 12px; }
+@mixin icon-lg { font-size: 24px; }
+
+@mixin button-icon { font-size: 24px; cursor: pointer; transition: all 0.3s ease; }
