@@ -6,22 +6,22 @@
 @use "../utils/mixins" as *;
 @use "../base/typography" as *;
 
-body {
-    position: relative;
-}
-
 .hero-media {
-    top: 63px;
+    position: relative;
+    z-index: 0; 
     height: 275px;
     width: 100%;
     object-fit: cover;
 }
 
 .menu-container {
-    position: absolute;
-    top: 63px + 275px + (-$spacing-lg);
+    position: relative;
+    z-index: 1;
+    margin-top: (-$spacing-lg);
     width: 100%;
     max-width: $breakpoint-lg;
+    margin-left: auto;
+    margin-right: auto;
     @include flex-column;
     gap: $spacing-xl;
     background-color: $grey-two;
