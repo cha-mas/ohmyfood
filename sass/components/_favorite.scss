@@ -1,0 +1,34 @@
+@use "../utils/variables" as *;
+@use "../utils/mixins" as *;
+
+.fav-checkbox {
+    display: none;
+}
+
+.fav-label {
+    background: transparent;
+    color: $black;
+    border: none;
+    @include button-icon;
+    .regular-icon {
+        display: inline;
+    }
+    .solid-icon {
+        display: none;
+    }
+}
+
+.fav-checkbox:checked + .fav-label {
+    color: transparent;
+    .regular-icon {
+        display: none;
+    }
+    .solid-icon {
+        display: inline;
+        background: $gradient-up;
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        color: transparent;
+    }
+}

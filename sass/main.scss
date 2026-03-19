@@ -1,7 +1,10 @@
 @use "./utils/variables" as *;
+
 @use "./layout/header";
 @use "./layout/footer";
+
 @use "./components/loading-overlay";
+@use "./components/favorite";
 
 @use "./pages/home";
 @use "./pages/restaurant";

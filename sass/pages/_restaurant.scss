@@ -1,0 +1,49 @@
+@use "../utils/spacing" as *;
+@use "../utils/variables" as *;
+@use "../utils/breakpoints" as *;
+@use "../utils/mixins" as *;
+@use "../base/typography" as *;
+
+body {
+    position: relative;
+}
+
+.hero-media {
+    top: 63px;
+    height: 275px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.menu-container {
+    position: absolute;
+    top: 63px + 275px + (-$spacing-lg);
+    width: 100%;
+    max-width: $breakpoint-lg;
+    @include flex-column;
+    gap: $spacing-lg;
+    background-color: $grey-two;
+    padding: $spacing-xl $spacing-md;
+    border-top-left-radius: $spacing-lg;
+    border-top-right-radius: $spacing-lg;
+
+    .restaurant-info {
+        @include flex-between;
+
+        h1 {
+            @include menu-title;
+        }
+    }
+
+    h2 {
+        @include menu-category;
+
+        &:after {
+            content: "";
+            display: block;
+            width: 40px;
+            margin: $spacing-xs 0;
+            border-bottom: 2px solid $green;
+        }
+    }
+}
