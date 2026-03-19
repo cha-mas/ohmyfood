@@ -23,7 +23,7 @@ body {
     width: 100%;
     max-width: $breakpoint-lg;
     @include flex-column;
-    gap: $spacing-lg;
+    gap: $spacing-xl;
     background-color: $grey-two;
     padding: $spacing-xl $spacing-md;
     border-top-left-radius: $spacing-lg;
@@ -55,5 +55,10 @@ body {
         gap: $spacing-sm;
         margin-top: $spacing-sm;
         li { padding: 0; margin: 0;}
+    }
+
+    button.button.button-up {
+        max-width: 180px;
+        margin: 0 auto;
     }
 }

@@ -555,7 +555,7 @@ body {
   max-width: 1024px;
   display: flex;
   flex-direction: column;
-  gap: 32px;
+  gap: 50px;
   background-color: #eaeaea;
   padding: 50px 24px;
   border-top-left-radius: 32px;
@@ -598,6 +598,10 @@ body {
 .menu-container ul li {
   padding: 0;
   margin: 0;
+}
+.menu-container button.button.button-up {
+  max-width: 180px;
+  margin: 0 auto;
 }
 
 :root {
