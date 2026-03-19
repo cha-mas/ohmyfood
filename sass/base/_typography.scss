@@ -60,3 +60,10 @@
     letter-spacing: 0%;
     text-transform: uppercase;
 }
+@mixin menu-item-description {
+    font-family: Roboto;
+    font-weight: 300;
+    font-size: 15.04px;
+    line-height: 100%;
+    letter-spacing: 0%;
+}

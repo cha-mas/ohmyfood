@@ -1,0 +1,94 @@
+@use "../base/typography" as *;
+@use "../utils/mixins" as *;
+@use "../utils/variables" as *;
+@use "../utils/shadows" as *;
+@use "../utils/spacing" as *;
+
+.menu-card {
+    position: relative;
+    display: block;
+    cursor: pointer;
+
+    &-checkbox {
+        position: absolute;
+        opacity: 0;
+        width: 0;
+        height: 0;
+    }
+
+    &-content {
+        @include flex-between;
+        background: #fff;
+        border-radius: 1rem;
+        padding: $spacing-sm;
+        @include shadow-sm;
+        overflow: hidden;
+        transition:
+            transform 0.3s ease,
+            padding 0.3s ease,
+            box-shadow 0.3s ease;
+        position: relative;
+    }
+
+    &:hover &-content {
+        @include shadow-hover-sm;
+    }
+
+    &-info {
+        flex: 1;
+        min-width: 0;
+    }
+
+    &-title {
+        @include h3;
+        margin-bottom: 4px;
+        font-weight: 500;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    &-description {
+        @include menu-item-description;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    &-price {
+        @include h3;
+        color: $grey;
+        align-self: flex-end;
+    }
+
+    &-checkmark {
+        position: absolute;
+        right: -4rem;
+        top: 0;
+        bottom: 0;
+        width: 4rem;
+        background: $green;
+       @include flex-centered;
+
+        transition: right 0.4s ease;
+
+        &-icon {
+            @include icon-sm;
+            color: $green;
+            background: #fff;
+            border-radius: 100%;
+            @include flex-centered;
+            width: 26px;
+            height: 26px;
+
+        }
+    }
+
+    &-checkbox:checked ~ &-content {
+        padding-right: calc(4rem + $spacing-sm);
+    }
+
+    &-checkbox:checked ~ &-content &-checkmark {
+        right: 0;
+    }
+}
