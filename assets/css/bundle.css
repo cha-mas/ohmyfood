@@ -587,6 +587,17 @@ body {
   margin: 8px 0;
   border-bottom: 2px solid #99e2d0;
 }
+.menu-container ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 16px;
+}
+.menu-container ul li {
+  padding: 0;
+  margin: 0;
+}
 
 :root {
   color-scheme: light;
