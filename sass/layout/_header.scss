@@ -1,4 +1,5 @@
 @use "../utils/mixins" as *;
+@use '../utils/spacing'  as *;
 
 header {
     @include flex-centered;
@@ -8,5 +9,17 @@ header {
     img {
         height: 36px;
         width: 197px;
+    }
+
+    &.header-with-arrow {
+            position: relative;
+
+            a {
+                color: inherit;
+                @include button-icon;
+                position: absolute;
+                left: $spacing-md;
+            }
+
     }
 }

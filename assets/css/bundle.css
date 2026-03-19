@@ -10,6 +10,16 @@ header img {
   height: 36px;
   width: 197px;
 }
+header.header-with-arrow {
+  position: relative;
+}
+header.header-with-arrow a {
+  color: inherit;
+  font-size: 24px;
+  cursor: pointer;
+  position: absolute;
+  left: 24px;
+}
 
 footer {
   padding: 20px;
