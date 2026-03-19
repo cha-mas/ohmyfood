@@ -1,12 +1,46 @@
 @import url("https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
 
-@mixin font-arimo { font-family: "Arimo", sans-serif; font-optical-sizing: auto; }
-@mixin font-roboto { font-family: "Roboto", sans-serif; font-optical-sizing: auto; font-variation-settings: "wdth" 100; }
+@mixin font-arimo {
+    font-family: "Arimo", sans-serif;
+    font-optical-sizing: auto;
+}
+@mixin font-roboto {
+    font-family: "Roboto", sans-serif;
+    font-optical-sizing: auto;
+    font-variation-settings: "wdth" 100;
+}
 
-@mixin h1 { @include font-roboto; font-size: 24px; font-weight: 700; }
-@mixin h2 { @include font-roboto; font-size: 24px; font-weight: 700; }
-@mixin h3 { @include font-roboto; font-size: 18px; font-weight: 700; }
+@mixin h1 {
+    @include font-roboto;
+    font-size: 24px;
+    font-weight: 700;
+}
+@mixin h2 {
+    @include font-roboto;
+    font-size: 24px;
+    font-weight: 700;
+}
+@mixin h3 {
+    @include font-roboto;
+    font-size: 18px;
+    font-weight: 700;
+}
 
-@mixin body-text { @include font-roboto; font-weight: 300; font-size: 17px; }
-@mixin body-text-sm { @include font-roboto; font-weight: 500; font-size: 16px; }
-@mixin badge-text { @include font-roboto; font-weight: 500; font-size: 14px; line-height: 100%; letter-spacing: 0%; text-align: center; }
+@mixin body-text {
+    @include font-roboto;
+    font-weight: 300;
+    font-size: 17px;
+}
+@mixin body-text-sm {
+    @include font-roboto;
+    font-weight: 500;
+    font-size: 16px;
+}
+@mixin badge-text {
+    @include font-roboto;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-align: center;
+}

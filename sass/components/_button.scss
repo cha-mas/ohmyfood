@@ -3,7 +3,7 @@
 @use "../utils/spacing" as *;
 @use "../utils/shadows" as *;
 @use "../utils/variables" as *;
-@use 'sass:color';
+@use "sass:color";
 
 .button {
     @include flex-centered;

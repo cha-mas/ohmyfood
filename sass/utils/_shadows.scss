@@ -4,8 +4,18 @@ $shadow-lg: 0px 4px 15px 0px #0000001a;
 $shadow-hover-sm: 0px 4px 15px 0px #00000059;
 $shadow-hover-md: 0px 4px 15px 0px #00000059;
 
-@mixin shadow-sm { box-shadow: $shadow-sm; }
-@mixin shadow-md { box-shadow: $shadow-md; }
-@mixin shadow-lg { box-shadow: $shadow-lg; }
-@mixin shadow-hover-sm { box-shadow: $shadow-hover-sm; }
-@mixin shadow-hover-md { box-shadow: $shadow-hover-md; }
+@mixin shadow-sm {
+    box-shadow: $shadow-sm;
+}
+@mixin shadow-md {
+    box-shadow: $shadow-md;
+}
+@mixin shadow-lg {
+    box-shadow: $shadow-lg;
+}
+@mixin shadow-hover-sm {
+    box-shadow: $shadow-hover-sm;
+}
+@mixin shadow-hover-md {
+    box-shadow: $shadow-hover-md;
+}

@@ -1,28 +1,51 @@
 @use "../utils/variables" as *;
 @use "sass:color";
 
-@mixin flex-centered { display: flex; align-items: center; justify-content: center; }
-@mixin flex-row { display: flex; align-items: center; }
-@mixin flex-column { display: flex; flex-direction: column; }
-@mixin flex-between { display: flex; align-items: center; justify-content: space-between; }
+@mixin flex-centered {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+@mixin flex-row {
+    display: flex;
+    align-items: center;
+}
+@mixin flex-column {
+    display: flex;
+    flex-direction: column;
+}
+@mixin flex-between {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
 
 @mixin gradient-up {
-  background: $gradient-up;
-  transition: all ease-in-out 200ms;
-  &:hover {
-    background: $gradient-light-up;
-  }
+    background: $gradient-up;
+    transition: all ease-in-out 200ms;
+    &:hover {
+        background: $gradient-light-up;
+    }
 }
 @mixin gradient-down {
-  background: $gradient-down;
-  transition: all ease-in-out 200ms;
-  &:hover {
-    background: $gradient-light-down;
-  }
+    background: $gradient-down;
+    transition: all ease-in-out 200ms;
+    &:hover {
+        background: $gradient-light-down;
+    }
 }
 
-@mixin icon { font-size: 20px; }
-@mixin icon-sm { font-size: 12px; }
-@mixin icon-lg { font-size: 24px; }
+@mixin icon {
+    font-size: 20px;
+}
+@mixin icon-sm {
+    font-size: 12px;
+}
+@mixin icon-lg {
+    font-size: 24px;
+}
 
-@mixin button-icon { font-size: 24px; cursor: pointer; }
+@mixin button-icon {
+    font-size: 24px;
+    cursor: pointer;
+}

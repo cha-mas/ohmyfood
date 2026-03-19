@@ -53,7 +53,7 @@
 }
 
 @include respond-to(lg) {
-.explanation-item {
-    flex: 1;
-}
+    .explanation-item {
+        flex: 1;
+    }
 }

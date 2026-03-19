@@ -2,13 +2,15 @@ $breakpoint-xs: 576px;
 $breakpoint-lg: 1024px;
 
 @mixin respond-to($breakpoint) {
-  @if $breakpoint == xs {
-    @media (min-width: $breakpoint-xs) { @content; }
-  }
-  @else if $breakpoint == lg {
-    @media (min-width: $breakpoint-lg) { @content; }
-  }
-  @else {
-    @warn "Unknown breakpoint: #{$breakpoint}";
-  }
+    @if $breakpoint == xs {
+        @media (min-width: $breakpoint-xs) {
+            @content;
+        }
+    } @else if $breakpoint == lg {
+        @media (min-width: $breakpoint-lg) {
+            @content;
+        }
+    } @else {
+        @warn "Unknown breakpoint: #{$breakpoint}";
+    }
 }

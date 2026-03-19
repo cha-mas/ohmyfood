@@ -4,8 +4,18 @@ $spacing-md: 24px;
 $spacing-lg: 32px;
 $spacing-xl: 50px;
 
-@mixin spacing-xs { padding: $spacing-xs; }
-@mixin spacing-sm { padding: $spacing-sm; }
-@mixin spacing-md { padding: $spacing-md; }
-@mixin spacing-lg { padding: $spacing-lg; }
-@mixin spacing-xl { padding: $spacing-xl; }
+@mixin spacing-xs {
+    padding: $spacing-xs;
+}
+@mixin spacing-sm {
+    padding: $spacing-sm;
+}
+@mixin spacing-md {
+    padding: $spacing-md;
+}
+@mixin spacing-lg {
+    padding: $spacing-lg;
+}
+@mixin spacing-xl {
+    padding: $spacing-xl;
+}

@@ -6,7 +6,7 @@
 @use "../utils/spacing" as *;
 @use "../base/typography" as *;
 @use "../utils/variables" as *;
-@use '../utils/breakpoints' as *;
+@use "../utils/breakpoints" as *;
 
 .location {
     @include flex-centered;
