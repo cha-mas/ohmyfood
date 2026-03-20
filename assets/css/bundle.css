@@ -168,31 +168,32 @@ footer nav a i {
 
 .fav-label {
   background: transparent;
-  color: #101010;
   border: none;
   font-size: 24px;
   cursor: pointer;
+  position: relative;
 }
-.fav-label .regular-icon {
-  display: inline;
+.fav-label svg {
+  width: 24px;
+  height: 24px;
+  display: block;
+  overflow: visible;
 }
-.fav-label .solid-icon {
-  display: none;
+.fav-label .heart-outline {
+  fill: none;
+  stroke: #101010;
+  stroke-width: 2;
+  transition: stroke 300ms ease-in-out;
+}
+.fav-label .heart-fill {
+  fill: url(#heart-gradient);
+  stroke: none;
+  clip-path: inset(100% 0 0 0);
+  transition: clip-path 400ms ease-in-out;
 }
 
-.fav-checkbox:checked + .fav-label {
-  color: transparent;
-}
-.fav-checkbox:checked + .fav-label .regular-icon {
-  display: none;
-}
-.fav-checkbox:checked + .fav-label .solid-icon {
-  display: inline;
-  background: linear-gradient(#ff79da, #9356dc 95%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  color: transparent;
+.fav-checkbox:checked + .fav-label .heart-fill {
+  clip-path: inset(0 0 0 0);
 }
 
 .button {

@@ -7,28 +7,34 @@
 
 .fav-label {
     background: transparent;
-    color: $black;
     border: none;
     @include button-icon;
-    .regular-icon {
-        display: inline;
+    position: relative;
+    
+    svg {
+        width: 24px;
+        height: 24px;
+        display: block;
+        overflow: visible;
     }
-    .solid-icon {
-        display: none;
+    
+    .heart-outline {
+        fill: none;
+        stroke: $black;
+        stroke-width: 2;
+        transition: stroke 300ms ease-in-out;
+    }
+    
+    .heart-fill {
+        fill: url(#heart-gradient);
+        stroke: none;
+        clip-path: inset(100% 0 0 0);
+        transition: clip-path 400ms ease-in-out;
     }
 }
 
 .fav-checkbox:checked + .fav-label {
-    color: transparent;
-    .regular-icon {
-        display: none;
-    }
-    .solid-icon {
-        display: inline;
-        background: $gradient-up;
-        -webkit-background-clip: text;
-        background-clip: text;
-        -webkit-text-fill-color: transparent;
-        color: transparent;
+    .heart-fill {
+        clip-path: inset(0 0 0 0);
     }
 }
