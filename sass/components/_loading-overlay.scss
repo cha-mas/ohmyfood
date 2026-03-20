@@ -1,9 +1,11 @@
 // ========================================
 // Loading Overlay Component Styles
 // ========================================
-// This file contains styles for the full-screen loading animation
-// displayed when the page first loads. Features a rotating icon
-// and animated text with dots.
+// Simplified Loading Animation
+// Culinary utensils icon with spring bounce animation
+// Linear progress bar beneath
+// White backdrop with blur filter
+// Two-phase exit animation
 // ========================================
 
 // ========================================
@@ -14,8 +16,6 @@
 // ========================================
 // Loading Overlay Container
 // ========================================
-// Full-screen overlay that covers all content during loading
-// Fades out after 3 seconds
 .loading-overlay {
     position: fixed;
     inset: 0;
@@ -23,25 +23,22 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: $loading-black;
-    animation: fade-out 0.5s ease-out 3s forwards;
+    animation: overlay-fade-out 0.5s ease-out 3.5s forwards;
 }
 
 // ========================================
 // Loading Backdrop
 // ========================================
-// Semi-transparent background layer
 .loading-backdrop {
     position: absolute;
     inset: 0;
-    background-color: $loading-black;
-    animation: fade-out 0.5s ease-out 3s forwards;
+    background-color: #fff;
+    animation: overlay-fade-out 0.5s ease-out 3.5s forwards;
 }
 
 // ========================================
 // Loading Content Container
 // ========================================
-// Centers the loading icon and text vertically
 .loading-content {
     position: relative;
     z-index: 1;
@@ -49,87 +46,130 @@
     flex-direction: column;
     align-items: center;
     gap: 1.5rem;
+    animation: content-fade-out 0.5s ease-out 3.5s forwards;
 }
 
 // ========================================
-// Loading Icon
+// Utensils Container
+// Main container for culinary icon and progress bar
 // ========================================
-// Large animated icon that rotates and bounces
-.loading-icon {
-    font-size: 120px;
-    color: $loading-white;
-    animation: rotate-bounce 3s ease-in-out forwards;
-}
-
-// ========================================
-// Loading Text
-// ========================================
-// Container for the loading text with animated dots
-.loading-text {
+.utensils-container {
+    position: relative;
+    width: 200px;
+    height: 220px;
     display: flex;
-    gap: 0.5rem;
-    color: $loading-white;
-    font-size: 1.5rem;
-    font-weight: 500;
-    font-family: "Roboto", sans-serif;
-    animation: fade-out 0.3s ease-out 3s forwards;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
 }
 
-// Text element
-.text {
-    animation: fade-out 0.3s ease-out 3s forwards;
+// ========================================
+// Culinary Icon
+// Utensils icon with spring bounce animation
+// ========================================
+.utensils-body {
+    position: relative;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
 }
 
-// Animated dots
-.dot {
-    font-size: 1.5rem;
-    animation: dots 3s ease-in-out forwards;
+.utensils-icon {
+    font-size: 80px;
+    color: $grey;
+    animation:
+        utensils-bounce 3s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0s infinite,
+        icon-scale-down 0.5s ease-out 3.5s forwards;
+}
+
+// ========================================
+// Linear Progress Bar
+// Progress bar beneath the utensils
+// ========================================
+.progress-bar-container {
+    width: 180px;
+    height: 6px;
+    background-color: $background;
+    border-radius: 3px;
+    overflow: hidden;
+    margin-top: 10px;
+    animation: progress-fade-out 0.5s ease-out 3s forwards;
+}
+
+.progress-bar {
+    height: 100%;
+    width: 0;
+    background-color: $grey;
+    border-radius: 3px;
+    animation: progress-fill 3s ease-in-out forwards;
 }
 
 // ========================================
 // Keyframe Animations
 // ========================================
-// Rotate and bounce animation for the loading icon
-// Creates a spinning effect with scale variations
-@keyframes rotate-bounce {
-    0% {
-        transform: rotate(0deg) scale(1);
+
+// Utensils bounce - smooth spring-like bouncing animation
+@keyframes utensils-bounce {
+    0%, 100% {
+        transform: translateY(0);
     }
     25% {
-        transform: rotate(90deg) scale(0.75);
+        transform: translateY(-10px);
     }
     50% {
-        transform: rotate(180deg) scale(1.25);
+        transform: translateY(0);
     }
     75% {
-        transform: rotate(270deg) scale(0.75);
-    }
-    100% {
-        transform: rotate(360deg) scale(1);
+        transform: translateY(-10px);
     }
 }
 
-// Dots animation - pulsing opacity effect
-@keyframes dots {
+// Progress fill - progress bar fills from 0 to 100%
+@keyframes progress-fill {
     0% {
-        opacity: 0.1;
+        width: 0;
     }
-    25% {
-        opacity: 1;
-    }
-    50% {
-        opacity: 1;
-    }
-    75% {
-        opacity: 1;
-    }
+    50% { width: 90%; }
+    90% {width: 95%; }
     100% {
-        opacity: 0.1;
+        width: 100%;
     }
 }
 
-// Fade out animation - hides elements after loading
-@keyframes fade-out {
+// Progress fade out - progress bar fades away after 3s
+@keyframes progress-fade-out {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+// Icon scale down - icon scales to 0 during phase 2
+@keyframes icon-scale-down {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(0);
+    }
+}
+
+// Content fade out - content fades away during phase 2
+@keyframes content-fade-out {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+// Overlay fade out - overlay fades away during phase 2
+@keyframes overlay-fade-out {
     0% {
         opacity: 1;
     }

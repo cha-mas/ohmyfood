@@ -250,18 +250,23 @@
 
     <!-- ========================================
          LOADING OVERLAY
-         Initial page load animation
+         Simplified Loading Animation
          Displays for 3 seconds then fades out
     ======================================== -->
     <div class="loading-overlay" role="status" aria-live="polite" aria-label="Chargement de la page">
         <div class="loading-backdrop"></div>
         <div class="loading-content">
-            <i class="fa-solid fa-utensils loading-icon" aria-hidden="true"></i>
-            <div class="loading-text">
-                <span class="text">Chargement</span>
-                <span class="dot" aria-hidden="true">.</span>
-                <span class="dot" aria-hidden="true">.</span>
-                <span class="dot" aria-hidden="true">.</span>
+            <!-- Utensils with spring bounce animation and progress bar -->
+            <div class="utensils-container">
+                <!-- Culinary utensils icon -->
+                <div class="utensils-body">
+                    <i class="fa-solid fa-utensils utensils-icon" aria-hidden="true"></i>
+                </div>
+                
+                <!-- Linear progress bar beneath the utensils -->
+                <div class="progress-bar-container">
+                    <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
             </div>
         </div>
     </div>
