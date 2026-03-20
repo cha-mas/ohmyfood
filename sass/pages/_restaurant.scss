@@ -73,6 +73,11 @@ main {
 }
 
 @include respond-to(lg) {
+
+    .hero-media {
+        height: 375px;
+    }
+
     .menu-container {
         padding-left: min(150px, 10%);
         padding-right: min(150px, 10%);
