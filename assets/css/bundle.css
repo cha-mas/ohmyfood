@@ -247,9 +247,6 @@ footer nav a i {
   display: flex;
   align-items: center;
 }
-.explanation-item:nth-child(3) i {
-  color: #9356dc !important;
-}
 .explanation-item::before {
   display: flex;
   align-items: center;
@@ -260,15 +257,6 @@ footer nav a i {
   border-radius: 100%;
   background-color: #9356dc;
   color: #fff;
-}
-.explanation-item:nth-child(1)::before {
-  content: "1";
-}
-.explanation-item:nth-child(2)::before {
-  content: "2";
-}
-.explanation-item:nth-child(3)::before {
-  content: "3";
 }
 .explanation-item i {
   font-size: 20px;
@@ -290,6 +278,20 @@ footer nav a i {
   font-family: "Roboto", sans-serif;
   font-variation-settings: "wdth" 100;
   font-weight: 500;
+}
+
+.explanations-list li:last-child .explanation-item i {
+  color: #9356dc !important;
+}
+
+.explanations-list li:nth-child(1) .explanation-item::before {
+  content: "1";
+}
+.explanations-list li:nth-child(2) .explanation-item::before {
+  content: "2";
+}
+.explanations-list li:nth-child(3) .explanation-item::before {
+  content: "3";
 }
 
 @media (min-width: 1024px) {
