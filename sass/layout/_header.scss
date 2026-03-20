@@ -1,19 +1,42 @@
+// ========================================
+// Header Layout Styles
+// ========================================
+// This file contains styles for the site header displayed on
+// all pages. Includes logo and optional back navigation arrow
+// for restaurant detail pages.
+// ========================================
+
+// ========================================
+// Dependencies
+// ========================================
 @use "../utils/mixins" as *;
 @use "../utils/spacing" as *;
 
+// ========================================
+// Header Base Styles
+// ========================================
+// Centered header with white background
+// Contains the OhMyFood logo
 header {
     @include flex-centered;
     height: 63px;
     background: #fff;
 
+    // Logo image dimensions
     img {
         height: 36px;
         width: 197px;
     }
 
+    // ========================================
+    // Header with Back Arrow
+    // ========================================
+    // Variant used on restaurant detail pages
+    // Includes a back arrow link to homepage
     &.header-with-arrow {
         position: relative;
 
+        // Back arrow link positioned on the left
         a {
             color: inherit;
             @include button-icon;

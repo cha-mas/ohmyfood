@@ -1,175 +1,234 @@
+// ============================================
+// Restaurant Page Styles
+// ============================================
+// This stylesheet contains styles specific to restaurant menu pages,
+// including the hero image, menu container, restaurant info section,
+// and menu categories with animated entrance effects.
+// ============================================
+
+// --------------------------------------------
+// Module Imports
+// --------------------------------------------
+// Import menu card component styles
 @use "../components/menu-card";
 
+// Import utility modules
 @use "../utils/spacing" as *;
 @use "../utils/variables" as *;
 @use "../utils/breakpoints" as *;
 @use "../utils/mixins" as *;
 @use "../base/typography" as *;
 
-// Keyframe animations for menu entrance
+// --------------------------------------------
+// Keyframe Animations
+// --------------------------------------------
+// Custom animations for menu item entrance effects.
+// These create a polished reveal animation when the page loads.
+
+/// Menu Slide-Up Animation
+/// Animates menu items sliding up from below with a subtle bounce effect.
+/// The animation includes:
+/// - Initial state: invisible and positioned below final position
+/// - Mid-point: slight overshoot for bounce effect
+/// - Final state: visible at correct position
 @keyframes menu-slide-up {
     0% {
         opacity: 0;
-        transform: translateY(60px) scale(0.95);
+        transform: translateY(60px) scale(0.95);  // Start below, slightly smaller
     }
     60% {
-        transform: translateY(-5px) scale(1.02);
+        transform: translateY(-5px) scale(1.02);   // Overshoot for bounce
     }
     100% {
         opacity: 1;
-        transform: translateY(0) scale(1);
+        transform: translateY(0) scale(1);        // Final position
     }
 }
 
+/// Category Title Entrance Animation
+/// Animates the category titles (Entrées, Plats, Desserts) sliding in from the left.
+/// Creates a subtle reveal effect for section headings.
 @keyframes category-title-entrance {
     0% {
         opacity: 0;
-        transform: translateX(-20px);
+        transform: translateX(-20px);  // Start off-screen to the left
     }
     100% {
         opacity: 1;
-        transform: translateX(0);
+        transform: translateX(0);      // Final position
     }
 }
 
+// --------------------------------------------
+// Hero Media Section
+// --------------------------------------------
+// Full-width hero image at the top of restaurant pages.
+// Displays a photograph of the restaurant or signature dish.
 .hero-media {
     position: relative;
-    z-index: 0;
-    height: 275px;
+    z-index: 0;              // Behind the menu container
+    height: 275px;           // Fixed height on mobile
     width: 100%;
-    object-fit: cover;
+    object-fit: cover;       // Maintain aspect ratio, crop if needed
 }
 
+// --------------------------------------------
+// Main Content Container
+// --------------------------------------------
+// Contains the entire menu content below the hero image.
+// Uses negative margin to overlap the hero image slightly.
 main {
-    margin-top: -10px;
+    margin-top: -10px;       // Slight overlap with hero
     position: relative;
     width: 100%;
     height: 100%;
-    background: #fff;
-    @include flex-column;
+    background: #fff;        // White background for content
+    @include flex-column;    // Stack children vertically
 }
 
+// --------------------------------------------
+// Menu Container
+// --------------------------------------------
+// Main container for restaurant menu content.
+// Features rounded top corners that overlap the hero image.
+// Contains restaurant info and menu categories.
 .menu-container {
     position: relative;
-    z-index: 1;
-    margin-top: (-$spacing-lg);
+    z-index: 1;              // Above hero image
+    margin-top: (-$spacing-lg);  // Pull up to overlap hero
     width: 100%;
-    max-width: $breakpoint-lg;
+    max-width: $breakpoint-lg;  // Limit width on large screens
     margin-left: auto;
     margin-right: auto;
     @include flex-column;
     gap: $spacing-xl;
-    background-color: $grey-two;
+    background-color: $grey-two;  // Light grey background
     padding: $spacing-xl $spacing-md;
-    border-top-left-radius: $spacing-lg;
+    border-top-left-radius: $spacing-lg;   // Rounded corners at top
     border-top-right-radius: $spacing-lg;
 
+    // --------------------------------------------
+    // Restaurant Info Section
+    // --------------------------------------------
+    // Contains the restaurant name and favorite button.
+    // Uses space-between layout to push favorite to the right.
     .restaurant-info {
         @include flex-between;
 
         h1 {
-            @include menu-title;
+            @include menu-title;  // Special typography for menu title
         }
     }
 
-    // Staggered animation for menu categories
+    // --------------------------------------------
+    // Menu Category Styles
+    // --------------------------------------------
+    // Each category (Entrées, Plats, Desserts) has its own section
+    // with animated entrance effects.
     .menu-category {
         h2 {
             @include menu-category;
-            opacity: 0;
+            opacity: 0;      // Start invisible for animation
             animation: category-title-entrance 0.4s ease-out forwards;
 
+            // Green underline accent for category titles
             &:after {
                 content: "";
                 display: block;
                 width: 40px;
                 margin: $spacing-xs 0;
-                border-bottom: 2px solid $green;
+                border-bottom: 2px solid $green;  // Brand green color
             }
         }
 
+        // --------------------------------------------
+        // Staggered Animation Delays
+        // --------------------------------------------
+        // Each category and its items animate in sequence.
+        // Delays are calculated to create a cascading reveal effect.
+        // Category 1 (Entrées): earliest timing
         &:nth-child(1) {
             h2 {
                 animation-delay: 0.1s;
             }
-            li:nth-child(1) {
-                animation-delay: 0.15s;
-            }
-            li:nth-child(2) {
-                animation-delay: 0.25s;
-            }
-            li:nth-child(3) {
-                animation-delay: 0.35s;
-            }
-            li:nth-child(4) {
-                animation-delay: 0.45s;
-            }
+            li:nth-child(1) { animation-delay: 0.15s; }
+            li:nth-child(2) { animation-delay: 0.25s; }
+            li:nth-child(3) { animation-delay: 0.35s; }
+            li:nth-child(4) { animation-delay: 0.45s; }
         }
+
+        // Category 2 (Plats): middle timing
         &:nth-child(2) {
             h2 {
                 animation-delay: 0.55s;
             }
-            li:nth-child(1) {
-                animation-delay: 0.6s;
-            }
-            li:nth-child(2) {
-                animation-delay: 0.7s;
-            }
-            li:nth-child(3) {
-                animation-delay: 0.8s;
-            }
-            li:nth-child(4) {
-                animation-delay: 0.9s;
-            }
+            li:nth-child(1) { animation-delay: 0.6s; }
+            li:nth-child(2) { animation-delay: 0.7s; }
+            li:nth-child(3) { animation-delay: 0.8s; }
+            li:nth-child(4) { animation-delay: 0.9s; }
         }
+
+        // Category 3 (Desserts): latest timing
         &:nth-child(3) {
             h2 {
                 animation-delay: 1s;
             }
-            li:nth-child(1) {
-                animation-delay: 1.05s;
-            }
-            li:nth-child(2) {
-                animation-delay: 1.15s;
-            }
-            li:nth-child(3) {
-                animation-delay: 1.25s;
-            }
-            li:nth-child(4) {
-                animation-delay: 1.35s;
-            }
+            li:nth-child(1) { animation-delay: 1.05s; }
+            li:nth-child(2) { animation-delay: 1.15s; }
+            li:nth-child(3) { animation-delay: 1.25s; }
+            li:nth-child(4) { animation-delay: 1.35s; }
         }
     }
 
+    // --------------------------------------------
+    // Menu Items List
+    // --------------------------------------------
+    // Contains the individual menu item cards.
+    // Hidden overflow ensures animations don't show outside container.
     ul {
         list-style: none;
         @include flex-column;
         margin-top: $spacing-sm;
-        overflow: hidden;
+        overflow: hidden;     // Clip animated items during entrance
 
+        // Each menu item animates in from below
         li {
             padding: 0;
             margin: 0;
-            opacity: 0;
+            opacity: 0;       // Start invisible for animation
             animation: menu-slide-up 0.5s ease-out forwards;
         }
     }
 
+    // --------------------------------------------
+    // Order Button
+    // --------------------------------------------
+    // Centered CTA button at the bottom of the menu.
     button.button.button-up {
         max-width: 180px;
-        margin: 0 auto;
+        margin: 0 auto;       // Center horizontally
     }
 }
 
+// --------------------------------------------
+// Responsive Breakpoint: Large Screens (≥1024px)
+// --------------------------------------------
+// Adjusts layout for tablet and desktop viewing.
+// - Taller hero image for more visual impact
+// - Wider menu container with side padding
+// - Centered restaurant info with gap
 @include respond-to(lg) {
+    // Taller hero image on larger screens
     .hero-media {
         height: 375px;
     }
 
+    // Wider menu container with proportional padding
     .menu-container {
         padding-left: min(150px, 10%);
         padding-right: min(150px, 10%);
 
+        // Center restaurant name and favorite button
         .restaurant-info {
             justify-content: center;
             gap: $spacing-md;

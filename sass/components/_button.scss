@@ -1,3 +1,13 @@
+// ========================================
+// Button Component Styles
+// ========================================
+// This file contains styles for gradient buttons used throughout
+// the OhMyFood website, including primary and secondary variants.
+// ========================================
+
+// ========================================
+// Dependencies
+// ========================================
 @use "../utils/mixins" as *;
 @use "../base/typography" as *;
 @use "../utils/spacing" as *;
@@ -5,6 +15,11 @@
 @use "../utils/variables" as *;
 @use "sass:color";
 
+// ========================================
+// Button Base Styles
+// ========================================
+// Primary button class with gradient background
+// Used for call-to-action buttons throughout the site
 .button {
     @include flex-centered;
     @include font-roboto;
@@ -17,14 +32,23 @@
     text-decoration: none;
     border: none;
 
+    // ========================================
+    // Button Variants
+    // ========================================
+    // Gradient up - Primary gradient (purple to pink, bottom to top)
     &.button-up {
         @include gradient-up;
     }
 
+    // Gradient down - Secondary gradient (pink to purple, top to bottom)
     &.button-down {
         @include gradient-down;
     }
 
+    // ========================================
+    // Hover State
+    // ========================================
+    // Enhanced shadow on hover for depth effect
     &:hover {
         @include shadow-hover-sm;
     }

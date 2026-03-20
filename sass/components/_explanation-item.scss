@@ -1,3 +1,14 @@
+// ========================================
+// Explanation Item Component Styles
+// ========================================
+// This file contains styles for the how-it-works explanation items
+// displayed on the homepage. Each item shows a numbered step with
+// an icon and description.
+// ========================================
+
+// ========================================
+// Dependencies
+// ========================================
 @use "../utils/variables" as *;
 @use "../base/typography" as *;
 @use "../utils/mixins" as *;
@@ -5,14 +16,24 @@
 @use "../utils/shadows" as *;
 @use "../utils/breakpoints" as *;
 
+// ========================================
+// Explanation Item Styles
+// ========================================
+// Each item displays a numbered badge, icon, and text
+// Items are displayed in a row on desktop, stacked on mobile
 .explanation-item {
     @include h3;
     @include flex-row;
 
+    // ========================================
+    // Step Number Badge
+    // ========================================
+    // Purple circle with white number positioned on the left
     &:nth-child(3) i {
         color: $purple !important;
     }
 
+    // Numbered badge using CSS counter
     &::before {
         @include flex-centered;
         width: 24px;
@@ -23,17 +44,26 @@
         color: #fff;
     }
 
+    // Generate content for steps 1-3
     @for $index from 1 to 4 {
         &:nth-child(#{$index})::before {
             content: "#{$index}";
         }
     }
 
+    // ========================================
+    // Icon Styles
+    // ========================================
+    // Icon displayed inside the explanation card
     i {
         @include icon;
         color: $grey-four;
     }
 
+    // ========================================
+    // Content Container
+    // ========================================
+    // White card containing icon and text
     div {
         background-color: $background;
         margin-left: calc(24px / 2);
@@ -45,6 +75,7 @@
         height: 72px;
         width: 100%;
 
+        // Text inside the card
         p {
             @include font-roboto;
             font-weight: 500;
@@ -52,6 +83,10 @@
     }
 }
 
+// ========================================
+// Responsive Styles
+// ========================================
+// On large screens, items expand to fill available space
 @include respond-to(lg) {
     .explanation-item {
         flex: 1;

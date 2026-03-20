@@ -1,735 +1,730 @@
 @import url("https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 header {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 63px;
-    background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 63px;
+  background: #fff;
 }
 header img {
-    height: 36px;
-    width: 197px;
+  height: 36px;
+  width: 197px;
 }
 header.header-with-arrow {
-    position: relative;
+  position: relative;
 }
 header.header-with-arrow a {
-    color: inherit;
-    font-size: 24px;
-    cursor: pointer;
-    position: absolute;
-    left: 24px;
+  color: inherit;
+  font-size: 24px;
+  cursor: pointer;
+  position: absolute;
+  left: 24px;
 }
 
 footer {
-    padding: 24px;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    background: #353535;
-    color: #fff;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background: #353535;
+  color: #fff;
 }
 footer img {
-    filter: invert(100%) sepia(100%) hue-rotate(180deg);
-    height: 18px;
-    width: 130px;
+  filter: invert(100%) sepia(100%) hue-rotate(180deg);
+  height: 18px;
+  width: 130px;
 }
 footer nav {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 }
 footer nav a {
-    font-family: "Roboto", sans-serif;
-    font-optical-sizing: auto;
-    font-variation-settings: "wdth" 100;
-    color: #fff;
-    text-decoration: none;
+  font-family: "Roboto", sans-serif;
+  font-optical-sizing: auto;
+  font-variation-settings: "wdth" 100;
+  color: #fff;
+  text-decoration: none;
 }
 footer nav a i {
-    font-size: 12px;
-    margin-right: 4px;
+  font-size: 12px;
+  margin-right: 4px;
 }
 
 @media (min-width: 1024px) {
-    footer {
-        padding: 24px;
-        height: 114px;
-        flex-direction: row-reverse;
-        gap: 50px;
-        align-items: flex-end;
-    }
-    footer nav {
-        flex-direction: row;
-        align-items: flex-end;
-    }
-    footer nav > :nth-child(2) {
-        margin-right: 50px;
-    }
+  footer {
+    padding: 24px;
+    height: 114px;
+    flex-direction: row-reverse;
+    gap: 50px;
+    align-items: flex-end;
+  }
+  footer nav {
+    flex-direction: row;
+    align-items: flex-end;
+  }
+  footer nav > :nth-child(2) {
+    margin-right: 50px;
+  }
 }
 .loading-overlay {
-    position: fixed;
-    inset: 0;
-    z-index: 9999;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #101010;
-    animation: fade-out 0.5s ease-out 3s forwards;
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #101010;
+  animation: fade-out 0.5s ease-out 3s forwards;
 }
 
 .loading-backdrop {
-    position: absolute;
-    inset: 0;
-    background-color: #101010;
-    animation: fade-out 0.5s ease-out 3s forwards;
+  position: absolute;
+  inset: 0;
+  background-color: #101010;
+  animation: fade-out 0.5s ease-out 3s forwards;
 }
 
 .loading-content {
-    position: relative;
-    z-index: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1.5rem;
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
 }
 
 .loading-icon {
-    font-size: 120px;
-    color: #ffffff;
-    animation: rotate-bounce 3s ease-in-out forwards;
+  font-size: 120px;
+  color: #ffffff;
+  animation: rotate-bounce 3s ease-in-out forwards;
 }
 
 .loading-text {
-    display: flex;
-    gap: 0.5rem;
-    color: #ffffff;
-    font-size: 1.5rem;
-    font-weight: 500;
-    font-family: "Roboto", sans-serif;
-    animation: fade-out 0.3s ease-out 3s forwards;
+  display: flex;
+  gap: 0.5rem;
+  color: #ffffff;
+  font-size: 1.5rem;
+  font-weight: 500;
+  font-family: "Roboto", sans-serif;
+  animation: fade-out 0.3s ease-out 3s forwards;
 }
 
 .text {
-    animation: fade-out 0.3s ease-out 3s forwards;
+  animation: fade-out 0.3s ease-out 3s forwards;
 }
 
 .dot {
-    font-size: 1.5rem;
-    animation: dots 3s ease-in-out forwards;
+  font-size: 1.5rem;
+  animation: dots 3s ease-in-out forwards;
 }
 
 @keyframes rotate-bounce {
-    0% {
-        transform: rotate(0deg) scale(1);
-    }
-    25% {
-        transform: rotate(90deg) scale(0.75);
-    }
-    50% {
-        transform: rotate(180deg) scale(1.25);
-    }
-    75% {
-        transform: rotate(270deg) scale(0.75);
-    }
-    100% {
-        transform: rotate(360deg) scale(1);
-    }
+  0% {
+    transform: rotate(0deg) scale(1);
+  }
+  25% {
+    transform: rotate(90deg) scale(0.75);
+  }
+  50% {
+    transform: rotate(180deg) scale(1.25);
+  }
+  75% {
+    transform: rotate(270deg) scale(0.75);
+  }
+  100% {
+    transform: rotate(360deg) scale(1);
+  }
 }
 @keyframes dots {
-    0% {
-        opacity: 0.1;
-    }
-    25% {
-        opacity: 1;
-    }
-    50% {
-        opacity: 1;
-    }
-    75% {
-        opacity: 1;
-    }
-    100% {
-        opacity: 0.1;
-    }
+  0% {
+    opacity: 0.1;
+  }
+  25% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.1;
+  }
 }
 @keyframes fade-out {
-    0% {
-        opacity: 1;
-    }
-    100% {
-        opacity: 0;
-        z-index: -9999;
-    }
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    z-index: -9999;
+  }
 }
 .fav-checkbox {
-    display: none;
+  display: none;
 }
 
 .fav-label {
-    background: transparent;
-    border: none;
-    font-size: 24px;
-    cursor: pointer;
-    position: relative;
+  background: transparent;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  position: relative;
 }
 .fav-label svg {
-    width: 24px;
-    height: 24px;
-    display: block;
-    overflow: visible;
+  width: 24px;
+  height: 24px;
+  display: block;
+  overflow: visible;
 }
 .fav-label .heart-outline {
-    fill: none;
-    stroke: #101010;
-    stroke-width: 2;
-    transition: stroke 300ms ease-in-out;
+  fill: none;
+  stroke: #101010;
+  stroke-width: 2;
+  transition: stroke 300ms ease-in-out;
 }
 .fav-label .heart-fill {
-    fill: url(#heart-gradient);
-    stroke: none;
-    clip-path: inset(100% 0 0 0);
-    transition: clip-path 400ms ease-in-out;
+  fill: url(#heart-gradient);
+  stroke: none;
+  clip-path: inset(100% 0 0 0);
+  transition: clip-path 400ms ease-in-out;
 }
 
 .fav-checkbox:checked + .fav-label .heart-fill {
-    clip-path: inset(0 0 0 0);
+  clip-path: inset(0 0 0 0);
 }
 
 .button {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: "Roboto", sans-serif;
-    font-optical-sizing: auto;
-    font-variation-settings: "wdth" 100;
-    font-family: "Roboto", sans-serif;
-    font-optical-sizing: auto;
-    font-variation-settings: "wdth" 100;
-    font-weight: 500;
-    font-size: 16px;
-    height: 50px;
-    padding: 0 25px;
-    border-radius: 25px;
-    box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.2509803922);
-    color: #fff;
-    text-decoration: none;
-    border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Roboto", sans-serif;
+  font-optical-sizing: auto;
+  font-variation-settings: "wdth" 100;
+  font-family: "Roboto", sans-serif;
+  font-optical-sizing: auto;
+  font-variation-settings: "wdth" 100;
+  font-weight: 500;
+  font-size: 16px;
+  height: 50px;
+  padding: 0 25px;
+  border-radius: 25px;
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.2509803922);
+  color: #fff;
+  text-decoration: none;
+  border: none;
 }
 .button.button-up {
-    background: linear-gradient(#ff79da, #9356dc 95%);
-    transition: all ease-in-out 200ms;
+  background: linear-gradient(#ff79da, #9356dc 95%);
+  transition: all ease-in-out 200ms;
 }
 .button.button-up:hover {
-    background: linear-gradient(rgb(255, 146.5, 225.0410447761), rgb(160.5, 107.125, 224.375) 95%);
+  background: linear-gradient(rgb(255, 146.5, 225.0410447761), rgb(160.5, 107.125, 224.375) 95%);
 }
 .button.button-down {
-    background: linear-gradient(#9356dc, #ff79da 95%);
-    transition: all ease-in-out 200ms;
+  background: linear-gradient(#9356dc, #ff79da 95%);
+  transition: all ease-in-out 200ms;
 }
 .button.button-down:hover {
-    background: linear-gradient(rgb(160.5, 107.125, 224.375), rgb(255, 146.5, 225.0410447761) 95%);
+  background: linear-gradient(rgb(160.5, 107.125, 224.375), rgb(255, 146.5, 225.0410447761) 95%);
 }
 .button:hover {
-    box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.3490196078);
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.3490196078);
 }
 
 .explanation-item {
-    font-family: "Roboto", sans-serif;
-    font-optical-sizing: auto;
-    font-variation-settings: "wdth" 100;
-    font-size: 18px;
-    font-weight: 700;
-    display: flex;
-    align-items: center;
+  font-family: "Roboto", sans-serif;
+  font-optical-sizing: auto;
+  font-variation-settings: "wdth" 100;
+  font-size: 18px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
 }
 .explanation-item:nth-child(3) i {
-    color: #9356dc !important;
+  color: #9356dc !important;
 }
 .explanation-item::before {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 24px;
-    height: 24px;
-    position: absolute;
-    border-radius: 100%;
-    background-color: #9356dc;
-    color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  border-radius: 100%;
+  background-color: #9356dc;
+  color: #fff;
 }
 .explanation-item:nth-child(1)::before {
-    content: "1";
+  content: "1";
 }
 .explanation-item:nth-child(2)::before {
-    content: "2";
+  content: "2";
 }
 .explanation-item:nth-child(3)::before {
-    content: "3";
+  content: "3";
 }
 .explanation-item i {
-    font-size: 20px;
-    color: #7e7e7e;
+  font-size: 20px;
+  color: #7e7e7e;
 }
 .explanation-item div {
-    background-color: #f6f6f6;
-    margin-left: 12px;
-    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1490196078);
-    border-radius: 20px;
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    padding: 24px;
-    height: 72px;
-    width: 100%;
+  background-color: #f6f6f6;
+  margin-left: 12px;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1490196078);
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 24px;
+  height: 72px;
+  width: 100%;
 }
 .explanation-item div p {
-    font-family: "Roboto", sans-serif;
-    font-optical-sizing: auto;
-    font-variation-settings: "wdth" 100;
-    font-weight: 500;
+  font-family: "Roboto", sans-serif;
+  font-optical-sizing: auto;
+  font-variation-settings: "wdth" 100;
+  font-weight: 500;
 }
 
 @media (min-width: 1024px) {
-    .explanation-item {
-        flex: 1;
-    }
+  .explanation-item {
+    flex: 1;
+  }
 }
 .restaurant-item {
-    border-radius: 15px;
-    box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1019607843);
-    background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1019607843);
+  background-color: #fff;
 }
 .restaurant-item a {
-    display: block;
-    text-decoration: none;
-    color: inherit;
+  display: block;
+  text-decoration: none;
+  color: inherit;
 }
 .restaurant-item .card-media {
-    position: relative;
+  position: relative;
 }
 .restaurant-item .card-media img {
-    display: block;
-    width: 100%;
-    height: auto;
-    aspect-ratio: 16/9;
-    border-top-left-radius: 15px;
-    border-top-right-radius: 15px;
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16/9;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
 }
 .restaurant-item .card-media .badge-new {
-    font-family: "Roboto", sans-serif;
-    font-optical-sizing: auto;
-    font-variation-settings: "wdth" 100;
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 100%;
-    letter-spacing: 0%;
-    text-align: center;
-    padding: 16px;
-    position: absolute;
-    top: 16px;
-    right: 16px;
-    border-radius: 2px;
-    background: #99e2d0;
-    color: #008766;
-    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1490196078);
+  font-family: "Roboto", sans-serif;
+  font-optical-sizing: auto;
+  font-variation-settings: "wdth" 100;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-align: center;
+  padding: 16px;
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  border-radius: 2px;
+  background: #99e2d0;
+  color: #008766;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1490196078);
 }
 .restaurant-item .card-footer {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px;
 }
 .restaurant-item .card-footer h3 {
-    font-family: "Roboto", sans-serif;
-    font-optical-sizing: auto;
-    font-variation-settings: "wdth" 100;
-    font-size: 18px;
-    font-weight: 700;
+  font-family: "Roboto", sans-serif;
+  font-optical-sizing: auto;
+  font-variation-settings: "wdth" 100;
+  font-size: 18px;
+  font-weight: 700;
 }
 .restaurant-item .card-footer p {
-    font-family: "Roboto", sans-serif;
-    font-optical-sizing: auto;
-    font-variation-settings: "wdth" 100;
-    font-weight: 300;
-    font-size: 17px;
+  font-family: "Roboto", sans-serif;
+  font-optical-sizing: auto;
+  font-variation-settings: "wdth" 100;
+  font-weight: 300;
+  font-size: 17px;
 }
 
 @media (min-width: 1024px) {
-    .restaurant-item {
-        width: calc(50% - 10px);
-    }
+  .restaurant-item {
+    width: calc(50% - 10px);
+  }
 }
 .location {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: "Roboto", sans-serif;
-    font-optical-sizing: auto;
-    font-variation-settings: "wdth" 100;
-    background-color: #eaeaea;
-    color: #353535;
-    font-family: "Roboto", sans-serif;
-    font-optical-sizing: auto;
-    font-variation-settings: "wdth" 100;
-    font-weight: 500;
-    font-size: 16px;
-    height: 50px;
-    gap: 17px;
-    box-shadow:
-        0px 2px 4px 0px rgba(0, 0, 0, 0.1490196078) inset,
-        0px 4px 4px 0px rgba(0, 0, 0, 0.2509803922);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Roboto", sans-serif;
+  font-optical-sizing: auto;
+  font-variation-settings: "wdth" 100;
+  background-color: #eaeaea;
+  color: #353535;
+  font-family: "Roboto", sans-serif;
+  font-optical-sizing: auto;
+  font-variation-settings: "wdth" 100;
+  font-weight: 500;
+  font-size: 16px;
+  height: 50px;
+  gap: 17px;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1490196078) inset, 0px 4px 4px 0px rgba(0, 0, 0, 0.2509803922);
 }
 
 .hero {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #f6f6f6;
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    padding: 50px;
-    z-index: -1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f6f6f6;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 50px;
+  z-index: -1;
 }
 .hero h1 {
-    font-family: "Roboto", sans-serif;
-    font-optical-sizing: auto;
-    font-variation-settings: "wdth" 100;
-    font-size: 24px;
-    font-weight: 700;
+  font-family: "Roboto", sans-serif;
+  font-optical-sizing: auto;
+  font-variation-settings: "wdth" 100;
+  font-size: 24px;
+  font-weight: 700;
 }
 .hero > p {
-    font-family: "Roboto", sans-serif;
-    font-optical-sizing: auto;
-    font-variation-settings: "wdth" 100;
-    font-weight: 300;
-    font-size: 17px;
-    color: #353535;
-    font-weight: 300;
-    font-size: 18px;
-    margin-top: 20px;
-    margin-bottom: 30px;
+  font-family: "Roboto", sans-serif;
+  font-optical-sizing: auto;
+  font-variation-settings: "wdth" 100;
+  font-weight: 300;
+  font-size: 17px;
+  color: #353535;
+  font-weight: 300;
+  font-size: 18px;
+  margin-top: 20px;
+  margin-bottom: 30px;
 }
 
 section {
-    padding: 50px 20px;
+  padding: 50px 20px;
 }
 section h2 {
-    font-family: "Roboto", sans-serif;
-    font-optical-sizing: auto;
-    font-variation-settings: "wdth" 100;
-    font-size: 24px;
-    font-weight: 700;
-    margin-bottom: 30px;
+  font-family: "Roboto", sans-serif;
+  font-optical-sizing: auto;
+  font-variation-settings: "wdth" 100;
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 30px;
 }
 
 .explanations-list,
 .restaurants-list {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
 .explanations {
-    background-color: #fff;
+  background-color: #fff;
 }
 
 .restaurants {
-    background-color: #f6f6f6;
+  background-color: #f6f6f6;
 }
 
 @media (min-width: 1024px) {
-    section {
-        padding: 50px max(10%, 300px);
-    }
-    .explanations-list {
-        flex-direction: row;
-    }
-    .restaurants-list {
-        flex-direction: row;
-        flex-wrap: wrap;
-    }
+  section {
+    padding: 50px max(10%, 300px);
+  }
+  .explanations-list {
+    flex-direction: row;
+  }
+  .restaurants-list {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
 }
 .menu-card {
-    position: relative;
-    display: block;
-    cursor: pointer;
-    margin: 8px;
+  position: relative;
+  display: block;
+  cursor: pointer;
+  margin: 8px;
 }
 .menu-card-checkbox {
-    position: absolute;
-    opacity: 0;
-    width: 0;
-    height: 0;
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
 }
 .menu-card-content {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background: #fff;
-    border-radius: 1rem;
-    padding: 16px;
-    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1490196078);
-    overflow: hidden;
-    transition:
-        transform 0.3s ease,
-        padding 0.3s ease,
-        box-shadow 0.3s ease;
-    position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #fff;
+  border-radius: 1rem;
+  padding: 16px;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1490196078);
+  overflow: hidden;
+  transition: transform 0.3s ease, padding 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
 }
 .menu-card-info {
-    flex: 1;
-    min-width: 0;
+  flex: 1;
+  min-width: 0;
 }
 .menu-card-title {
-    font-family: "Roboto", sans-serif;
-    font-optical-sizing: auto;
-    font-variation-settings: "wdth" 100;
-    font-size: 18px;
-    font-weight: 700;
-    margin-bottom: 4px;
-    font-weight: 500;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+  font-family: "Roboto", sans-serif;
+  font-optical-sizing: auto;
+  font-variation-settings: "wdth" 100;
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 4px;
+  font-weight: 500;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .menu-card-description {
-    font-family: Roboto;
-    font-weight: 300;
-    font-size: 15.04px;
-    line-height: 100%;
-    letter-spacing: 0%;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+  font-family: Roboto;
+  font-weight: 300;
+  font-size: 15.04px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .menu-card-price {
-    font-family: "Roboto", sans-serif;
-    font-optical-sizing: auto;
-    font-variation-settings: "wdth" 100;
-    font-size: 18px;
-    font-weight: 700;
-    color: #353535;
-    align-self: flex-end;
+  font-family: "Roboto", sans-serif;
+  font-optical-sizing: auto;
+  font-variation-settings: "wdth" 100;
+  font-size: 18px;
+  font-weight: 700;
+  color: #353535;
+  align-self: flex-end;
 }
 .menu-card-checkmark {
-    position: absolute;
-    right: -4rem;
-    top: 0;
-    bottom: 0;
-    width: 4rem;
-    background: #99e2d0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: right 0.4s ease;
+  position: absolute;
+  right: -4rem;
+  top: 0;
+  bottom: 0;
+  width: 4rem;
+  background: #99e2d0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: right 0.4s ease;
 }
 .menu-card-checkmark-icon {
-    font-size: 12px;
-    color: #99e2d0;
-    background: #fff;
-    border-radius: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 26px;
-    height: 26px;
+  font-size: 12px;
+  color: #99e2d0;
+  background: #fff;
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 26px;
+  height: 26px;
 }
 .menu-card-checkbox:checked ~ .menu-card-content {
-    padding-right: calc(4rem + 16px);
+  padding-right: calc(4rem + 16px);
 }
 .menu-card-checkbox:checked ~ .menu-card-content .menu-card-checkmark {
-    right: 0;
+  right: 0;
 }
 
 @keyframes menu-slide-up {
-    0% {
-        opacity: 0;
-        transform: translateY(60px) scale(0.95);
-    }
-    60% {
-        transform: translateY(-5px) scale(1.02);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0) scale(1);
-    }
+  0% {
+    opacity: 0;
+    transform: translateY(60px) scale(0.95);
+  }
+  60% {
+    transform: translateY(-5px) scale(1.02);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
 }
 @keyframes category-title-entrance {
-    0% {
-        opacity: 0;
-        transform: translateX(-20px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateX(0);
-    }
+  0% {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 .hero-media {
-    position: relative;
-    z-index: 0;
-    height: 275px;
-    width: 100%;
-    object-fit: cover;
+  position: relative;
+  z-index: 0;
+  height: 275px;
+  width: 100%;
+  object-fit: cover;
 }
 
 main {
-    margin-top: -10px;
-    position: relative;
-    width: 100%;
-    height: 100%;
-    background: #fff;
-    display: flex;
-    flex-direction: column;
+  margin-top: -10px;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
 }
 
 .menu-container {
-    position: relative;
-    z-index: 1;
-    margin-top: -32px;
-    width: 100%;
-    max-width: 1024px;
-    margin-left: auto;
-    margin-right: auto;
-    display: flex;
-    flex-direction: column;
-    gap: 50px;
-    background-color: #eaeaea;
-    padding: 50px 24px;
-    border-top-left-radius: 32px;
-    border-top-right-radius: 32px;
+  position: relative;
+  z-index: 1;
+  margin-top: -32px;
+  width: 100%;
+  max-width: 1024px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  background-color: #eaeaea;
+  padding: 50px 24px;
+  border-top-left-radius: 32px;
+  border-top-right-radius: 32px;
 }
 .menu-container .restaurant-info {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 .menu-container .restaurant-info h1 {
-    font-family: Shrikhand;
-    font-weight: 400;
-    font-size: 28px;
-    line-height: 100%;
-    letter-spacing: 0%;
+  font-family: Shrikhand;
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 100%;
+  letter-spacing: 0%;
 }
 .menu-container .menu-category h2 {
-    font-family: Roboto;
-    font-weight: 300;
-    font-size: 16px;
-    line-height: 100%;
-    letter-spacing: 0%;
-    text-transform: uppercase;
-    opacity: 0;
-    animation: category-title-entrance 0.4s ease-out forwards;
+  font-family: Roboto;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-transform: uppercase;
+  opacity: 0;
+  animation: category-title-entrance 0.4s ease-out forwards;
 }
 .menu-container .menu-category h2:after {
-    content: "";
-    display: block;
-    width: 40px;
-    margin: 8px 0;
-    border-bottom: 2px solid #99e2d0;
+  content: "";
+  display: block;
+  width: 40px;
+  margin: 8px 0;
+  border-bottom: 2px solid #99e2d0;
 }
 .menu-container .menu-category:nth-child(1) h2 {
-    animation-delay: 0.1s;
+  animation-delay: 0.1s;
 }
 .menu-container .menu-category:nth-child(1) li:nth-child(1) {
-    animation-delay: 0.15s;
+  animation-delay: 0.15s;
 }
 .menu-container .menu-category:nth-child(1) li:nth-child(2) {
-    animation-delay: 0.25s;
+  animation-delay: 0.25s;
 }
 .menu-container .menu-category:nth-child(1) li:nth-child(3) {
-    animation-delay: 0.35s;
+  animation-delay: 0.35s;
 }
 .menu-container .menu-category:nth-child(1) li:nth-child(4) {
-    animation-delay: 0.45s;
+  animation-delay: 0.45s;
 }
 .menu-container .menu-category:nth-child(2) h2 {
-    animation-delay: 0.55s;
+  animation-delay: 0.55s;
 }
 .menu-container .menu-category:nth-child(2) li:nth-child(1) {
-    animation-delay: 0.6s;
+  animation-delay: 0.6s;
 }
 .menu-container .menu-category:nth-child(2) li:nth-child(2) {
-    animation-delay: 0.7s;
+  animation-delay: 0.7s;
 }
 .menu-container .menu-category:nth-child(2) li:nth-child(3) {
-    animation-delay: 0.8s;
+  animation-delay: 0.8s;
 }
 .menu-container .menu-category:nth-child(2) li:nth-child(4) {
-    animation-delay: 0.9s;
+  animation-delay: 0.9s;
 }
 .menu-container .menu-category:nth-child(3) h2 {
-    animation-delay: 1s;
+  animation-delay: 1s;
 }
 .menu-container .menu-category:nth-child(3) li:nth-child(1) {
-    animation-delay: 1.05s;
+  animation-delay: 1.05s;
 }
 .menu-container .menu-category:nth-child(3) li:nth-child(2) {
-    animation-delay: 1.15s;
+  animation-delay: 1.15s;
 }
 .menu-container .menu-category:nth-child(3) li:nth-child(3) {
-    animation-delay: 1.25s;
+  animation-delay: 1.25s;
 }
 .menu-container .menu-category:nth-child(3) li:nth-child(4) {
-    animation-delay: 1.35s;
+  animation-delay: 1.35s;
 }
 .menu-container ul {
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    margin-top: 16px;
-    overflow: hidden;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  margin-top: 16px;
+  overflow: hidden;
 }
 .menu-container ul li {
-    padding: 0;
-    margin: 0;
-    opacity: 0;
-    animation: menu-slide-up 0.5s ease-out forwards;
+  padding: 0;
+  margin: 0;
+  opacity: 0;
+  animation: menu-slide-up 0.5s ease-out forwards;
 }
 .menu-container button.button.button-up {
-    max-width: 180px;
-    margin: 0 auto;
+  max-width: 180px;
+  margin: 0 auto;
 }
 
 @media (min-width: 1024px) {
-    .hero-media {
-        height: 375px;
-    }
-    .menu-container {
-        padding-left: min(150px, 10%);
-        padding-right: min(150px, 10%);
-    }
-    .menu-container .restaurant-info {
-        justify-content: center;
-        gap: 24px;
-    }
+  .hero-media {
+    height: 375px;
+  }
+  .menu-container {
+    padding-left: min(150px, 10%);
+    padding-right: min(150px, 10%);
+  }
+  .menu-container .restaurant-info {
+    justify-content: center;
+    gap: 24px;
+  }
 }
 :root {
-    color-scheme: light;
+  color-scheme: light;
 }
 
 *,
 *::before,
 *::after {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 .sr-only {
-    position: absolute;
-    left: -10000px;
-    top: auto;
-    width: 1px;
-    height: 1px;
-    overflow: hidden;
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
 }
 
 html {
-    max-width: 1440px;
-    background-color: #7e7e7e;
-    margin: auto;
+  max-width: 1440px;
+  background-color: #7e7e7e;
+  margin: auto;
 }
 
 /*# sourceMappingURL=bundle.css.map */

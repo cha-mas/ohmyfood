@@ -1,16 +1,41 @@
+// ========================================
+// Favorite Button Component Styles
+// ========================================
+// This file contains styles for the heart-shaped favorite button
+// used on restaurant cards and restaurant detail pages.
+// The button uses a single SVG with animated fill effect.
+// ========================================
+
+// ========================================
+// Dependencies
+// ========================================
 @use "../utils/variables" as *;
 @use "../utils/mixins" as *;
 
+// ========================================
+// Hidden Checkbox
+// ========================================
+// The checkbox is visually hidden but controls the toggle state
+// This allows for pure CSS interactivity without JavaScript
 .fav-checkbox {
     display: none;
 }
 
+// ========================================
+// Favorite Label (Heart Button)
+// ========================================
+// The label acts as the clickable heart button
+// Contains an SVG with two paths: outline and fill
 .fav-label {
     background: transparent;
     border: none;
     @include button-icon;
     position: relative;
 
+    // ========================================
+    // SVG Container
+    // ========================================
+    // Sets dimensions and ensures overflow is visible for effects
     svg {
         width: 24px;
         height: 24px;
@@ -18,6 +43,11 @@
         overflow: visible;
     }
 
+    // ========================================
+    // Heart Outline Path
+    // ========================================
+    // The visible outline of the heart
+    // Stroke-only with no fill, creating an empty heart
     .heart-outline {
         fill: none;
         stroke: $black;
@@ -25,16 +55,27 @@
         transition: stroke 300ms ease-in-out;
     }
 
+    // ========================================
+    // Heart Fill Path
+    // ========================================
+    // The filled heart that animates in from the bottom
+    // Uses clip-path to create the fill animation effect
+    // References the SVG gradient defined in the HTML
     .heart-fill {
         fill: url(#heart-gradient);
         stroke: none;
-        clip-path: inset(100% 0 0 0);
+        clip-path: inset(100% 0 0 0); // Hidden by default (clipped from top)
         transition: clip-path 400ms ease-in-out;
     }
 }
 
+// ========================================
+// Checked State - Filled Heart
+// ========================================
+// When checkbox is checked, animate the fill from bottom to top
+// The clip-path changes to show the full heart
 .fav-checkbox:checked + .fav-label {
     .heart-fill {
-        clip-path: inset(0 0 0 0);
+        clip-path: inset(0 0 0 0); // Fully visible
     }
 }

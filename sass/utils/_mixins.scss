@@ -1,25 +1,50 @@
+// ========================================
+// Mixins - Reusable Style Patterns
+// ========================================
+// This file contains reusable SCSS mixins for common layout patterns,
+// gradients, and icon sizing throughout the application.
+// ========================================
+
+// ========================================
+// Dependencies
+// ========================================
 @use "../utils/variables" as *;
 @use "sass:color";
 
+// ========================================
+// Flexbox Layout Mixins
+// ========================================
+// Flex centered - Perfect centering (both axes)
 @mixin flex-centered {
     display: flex;
     align-items: center;
     justify-content: center;
 }
+
+// Flex row - Horizontal layout with vertical centering
 @mixin flex-row {
     display: flex;
     align-items: center;
 }
+
+// Flex column - Vertical layout
 @mixin flex-column {
     display: flex;
     flex-direction: column;
 }
+
+// Flex between - Space between items with vertical centering
 @mixin flex-between {
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
+// ========================================
+// Gradient Mixins
+// ========================================
+// Gradient up - Primary gradient button (bottom to top)
+// Includes hover state with lighter gradient
 @mixin gradient-up {
     background: $gradient-up;
     transition: all ease-in-out 200ms;
@@ -27,6 +52,9 @@
         background: $gradient-light-up;
     }
 }
+
+// Gradient down - Secondary gradient button (top to bottom)
+// Includes hover state with lighter gradient
 @mixin gradient-down {
     background: $gradient-down;
     transition: all ease-in-out 200ms;
@@ -35,16 +63,28 @@
     }
 }
 
+// ========================================
+// Icon Sizing Mixins
+// ========================================
+// Default icon size (20px)
 @mixin icon {
     font-size: 20px;
 }
+
+// Small icon size (12px)
 @mixin icon-sm {
     font-size: 12px;
 }
+
+// Large icon size (24px)
 @mixin icon-lg {
     font-size: 24px;
 }
 
+// ========================================
+// Button Icon Mixin
+// ========================================
+// Button icon - Interactive icon with pointer cursor
 @mixin button-icon {
     font-size: 24px;
     cursor: pointer;

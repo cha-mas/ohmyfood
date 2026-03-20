@@ -1,3 +1,14 @@
+// ========================================
+// Restaurant Item Component Styles
+// ========================================
+// This file contains styles for restaurant cards displayed on
+// the homepage. Each card shows a restaurant image, name,
+// location, and a favorite button.
+// ========================================
+
+// ========================================
+// Dependencies
+// ========================================
 @use "../base/typography" as *;
 @use "../utils/variables" as *;
 @use "../utils/mixins" as *;
@@ -5,20 +16,34 @@
 @use "../utils/shadows" as *;
 @use "../utils/breakpoints" as *;
 
+// ========================================
+// Restaurant Card Styles
+// ========================================
+// Card component displaying restaurant preview
+// Includes image, badge (if new), name, location, and favorite button
 .restaurant-item {
     border-radius: 15px;
     @include shadow-lg;
     background-color: #fff;
 
+    // ========================================
+    // Card Link
+    // ========================================
+    // Entire card is clickable and links to restaurant page
     a {
         display: block;
         text-decoration: none;
         color: inherit;
     }
 
+    // ========================================
+    // Card Media Section
+    // ========================================
+    // Contains restaurant image and optional "New" badge
     .card-media {
         position: relative;
 
+        // Restaurant image with 16:9 aspect ratio
         img {
             display: block;
             width: 100%;
@@ -28,6 +53,11 @@
             border-top-right-radius: 15px;
         }
 
+        // ========================================
+        // "New" Badge
+        // ========================================
+        // Green badge indicating new restaurants
+        // Positioned in top-right corner of image
         .badge-new {
             @include badge-text;
             @include spacing-sm;
@@ -41,20 +71,30 @@
         }
     }
 
+    // ========================================
+    // Card Footer Section
+    // ========================================
+    // Contains restaurant name, location, and favorite button
     .card-footer {
         @include flex-between;
         @include spacing-sm;
 
+        // Restaurant name
         h3 {
             @include h3;
         }
 
+        // Restaurant location
         p {
             @include body-text;
         }
     }
 }
 
+// ========================================
+// Responsive Styles
+// ========================================
+// On large screens, cards display in a 2-column grid
 @include respond-to(lg) {
     .restaurant-item {
         width: calc(50% - 10px);

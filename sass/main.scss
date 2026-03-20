@@ -1,18 +1,43 @@
+// ========================================
+// Main SCSS Entry Point
+// ========================================
+// This file imports all partials and defines global styles.
+// It serves as the main stylesheet for the OhMyFood website.
+// ========================================
+
+// ========================================
+// Utils - Variables and Mixins
+// ========================================
 @use "./utils/variables" as *;
 
+// ========================================
+// Layout - Header and Footer
+// ========================================
 @use "./layout/header";
 @use "./layout/footer";
 
+// ========================================
+// Components - Reusable UI elements
+// ========================================
 @use "./components/loading-overlay";
 @use "./components/favorite";
 
+// ========================================
+// Pages - Page-specific styles
+// ========================================
 @use "./pages/home";
 @use "./pages/restaurant";
 
+// ========================================
+// CSS Custom Properties - Color scheme
+// ========================================
 :root {
     color-scheme: light;
 }
 
+// ========================================
+// Global Reset - Box model and spacing
+// ========================================
 *,
 *::before,
 *::after {
@@ -21,6 +46,11 @@
     padding: 0;
 }
 
+// ========================================
+// Screen Reader Only - Accessibility
+// ========================================
+// Visually hides content but keeps it accessible to screen readers
+// Used for skip links and hidden labels
 .sr-only {
     position: absolute;
     left: -10000px;
@@ -30,6 +60,9 @@
     overflow: hidden;
 }
 
+// ========================================
+// Root Container - Max width and centering
+// ========================================
 html {
     max-width: 1440px;
     background-color: $grey-four;

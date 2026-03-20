@@ -1,9 +1,25 @@
+// ========================================
+// Footer Layout Styles
+// ========================================
+// This file contains styles for the site footer displayed on
+// all pages. Includes logo and navigation links for
+// restaurant proposals, partnerships, legal notices, and contact.
+// ========================================
+
+// ========================================
+// Dependencies
+// ========================================
 @use "../utils/variables" as *;
 @use "../base/typography" as *;
 @use "../utils/mixins" as *;
 @use "../utils/breakpoints" as *;
 @use "../utils/spacing" as *;
 
+// ========================================
+// Footer Base Styles
+// ========================================
+// Dark footer with white text
+// Stacked layout on mobile, horizontal on desktop
 footer {
     padding: $spacing-md;
     @include flex-column;
@@ -11,21 +27,31 @@ footer {
     background: $grey;
     color: #fff;
 
+    // ========================================
+    // Logo
+    // ========================================
+    // Inverted logo for dark background
     img {
         filter: invert(100%) sepia(100%) hue-rotate(180deg);
         height: 18px;
         width: 130px;
     }
 
+    // ========================================
+    // Navigation Links
+    // ========================================
+    // Vertical stack of links on mobile
     nav {
         @include flex-column;
         gap: 8px;
 
+        // Individual navigation links
         a {
             @include font-roboto;
             color: #fff;
             text-decoration: none;
 
+            // Icon styling
             i {
                 @include icon-sm;
                 margin-right: 4px;
@@ -34,19 +60,27 @@ footer {
     }
 }
 
+// ========================================
+// Responsive Styles
+// ========================================
+// On large screens, footer displays horizontally
+// with logo on the right and links on the left
 @include respond-to(lg) {
     footer {
         padding: $spacing-md;
         height: 114px;
 
+        // Reverse direction for desktop layout
         flex-direction: row-reverse;
         gap: $spacing-xl;
         align-items: flex-end;
 
+        // Horizontal navigation layout
         nav {
             flex-direction: row;
             align-items: flex-end;
 
+            // Add spacing after second link
             > :nth-child(2) {
                 margin-right: $spacing-xl;
             }

@@ -1,6 +1,25 @@
+// ========================================
+// Breakpoints - Responsive Design
+// ========================================
+// This file defines breakpoint variables and a responsive mixin
+// for mobile-first responsive design approach.
+// ========================================
+
+// ========================================
+// Breakpoint Variables
+// ========================================
+// Extra small breakpoint - Small tablets and large phones (576px)
 $breakpoint-xs: 576px;
+
+// Large breakpoint - Desktop screens (1024px)
 $breakpoint-lg: 1024px;
 
+// ========================================
+// Responsive Mixin
+// ========================================
+// respond-to - Applies styles at specified breakpoint
+// Usage: @include respond-to(xs) { ... }
+// Available breakpoints: xs (576px), lg (1024px)
 @mixin respond-to($breakpoint) {
     @if $breakpoint == xs {
         @media (min-width: $breakpoint-xs) {

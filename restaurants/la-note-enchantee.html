@@ -1,39 +1,75 @@
 <!doctype html>
-<html lang="en">
+<html lang="fr">
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="description" content="Commandez vos repas en ligne au restaurant La Note Enchantée. Découvrez notre menu raffiné et réservez vos plats préférés sur OhMyFood." />
         <title>Commander à La Note Enchantée - OhMyFood</title>
         <link rel="stylesheet" href="../assets/css/bundle.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" />
     </head>
 
     <body>
+        <!-- ========================================
+             Skip Link - Accessibilité
+             ======================================== -->
+        <a href="#main-content" class="skip-link sr-only">Aller au contenu principal</a>
+
+        <!-- ========================================
+             SVG Definitions - Shared gradient for heart icons
+             Hidden from view but kept in render tree for url(#id) references
+             ======================================== -->
+        <svg style="position: absolute; width: 0; height: 0; overflow: hidden;" aria-hidden="true">
+            <defs>
+                <linearGradient id="heart-gradient" x1="0%" y1="100%" x2="0%" y2="0%">
+                    <stop offset="0%" stop-color="#ff79da" />
+                    <stop offset="95%" stop-color="#9356dc" />
+                </linearGradient>
+            </defs>
+        </svg>
+
+        <!-- ========================================
+             Header - Logo and back navigation
+             ======================================== -->
         <header class="header-with-arrow">
-            <a href="../index.html">
-                <i class="fa-solid fa-arrow-left"></i>
+            <a href="../index.html" aria-label="Retour à la page d'accueil">
+                <i class="fa-solid fa-arrow-left" aria-hidden="true"></i>
                 <span class="sr-only">Retour à la page d'accueil</span>
             </a>
             <img
                 srcset="../assets/images/logo/ohmyfood.png, ../assets/images/logo/ohmyfood@2x.svg 2x"
                 src="../assets/images/logo/ohmyfood.png"
                 alt="Logo du site OhMyFood"
+                width="200"
+                height="40"
             />
         </header>
-        <img src="../assets/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" class="hero-media" />
-        <main>
-            <form class="menu-container">
+
+        <!-- ========================================
+             Hero Image - Restaurant banner
+             ======================================== -->
+        <img
+            src="../assets/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg"
+            class="hero-media"
+            alt="Photo du restaurant La Note Enchantée"
+            loading="lazy"
+            width="800"
+            height="450"
+        />
+
+        <!-- ========================================
+             Main Content - Restaurant menu
+             ======================================== -->
+        <main id="main-content">
+            <form class="menu-container" aria-label="Menu du restaurant La Note Enchantée">
+                <!-- ========================================
+                     Restaurant Info - Name and favorite button
+                     ======================================== -->
                 <div class="restaurant-info">
                     <h1>La Note Enchantée</h1>
-                    <input type="checkbox" id="fav-1" class="fav-checkbox" checked />
-                    <label for="fav-1" class="fav-label">
+                    <input type="checkbox" id="fav-1" class="fav-checkbox" aria-label="Ajouter aux favoris" />
+                    <label for="fav-1" class="fav-label" role="button" tabindex="0">
                         <svg viewBox="0 0 24 24" aria-hidden="true">
-                            <defs>
-                                <linearGradient id="heart-gradient" x1="0%" y1="100%" x2="0%" y2="0%">
-                                    <stop offset="0%" stop-color="#ff79da" />
-                                    <stop offset="95%" stop-color="#9356dc" />
-                                </linearGradient>
-                            </defs>
                             <path
                                 class="heart-outline"
                                 d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"
@@ -46,12 +82,16 @@
                         <span class="sr-only">Ajouter ou supprimer de vos favoris</span>
                     </label>
                 </div>
+
+                <!-- ========================================
+                     Menu Category - Entrées (Starters)
+                     ======================================== -->
                 <div class="menu-category">
                     <h2>Entrées</h2>
-                    <ul>
-                        <li>
+                    <ul role="list">
+                        <li role="listitem">
                             <label class="menu-card">
-                                <input type="checkbox" class="menu-card-checkbox" />
+                                <input type="checkbox" class="menu-card-checkbox" aria-label="Sélectionner Ravioles de foie gras" />
                                 <div class="menu-card-content">
                                     <div class="menu-card-info">
                                         <h3 class="menu-card-title">Ravioles de foie gras</h3>
@@ -62,15 +102,15 @@
                                     </div>
                                     <div class="menu-card-checkmark">
                                         <span class="menu-card-checkmark-icon">
-                                            <i class="fa-solid fa-check"></i>
+                                            <i class="fa-solid fa-check" aria-hidden="true"></i>
                                         </span>
                                     </div>
                                 </div>
                             </label>
                         </li>
-                        <li>
+                        <li role="listitem">
                             <label class="menu-card">
-                                <input type="checkbox" class="menu-card-checkbox" />
+                                <input type="checkbox" class="menu-card-checkbox" aria-label="Sélectionner Caviar osciètre" />
                                 <div class="menu-card-content">
                                     <div class="menu-card-info">
                                         <h3 class="menu-card-title">Caviar osciètre</h3>
@@ -81,15 +121,15 @@
                                     </div>
                                     <div class="menu-card-checkmark">
                                         <span class="menu-card-checkmark-icon">
-                                            <i class="fa-solid fa-check"></i>
+                                            <i class="fa-solid fa-check" aria-hidden="true"></i>
                                         </span>
                                     </div>
                                 </div>
                             </label>
                         </li>
-                        <li>
+                        <li role="listitem">
                             <label class="menu-card">
-                                <input type="checkbox" class="menu-card-checkbox" />
+                                <input type="checkbox" class="menu-card-checkbox" aria-label="Sélectionner Homard et espuma de potiron" />
                                 <div class="menu-card-content">
                                     <div class="menu-card-info">
                                         <h3 class="menu-card-title">Homard et espuma de potiron</h3>
@@ -100,15 +140,15 @@
                                     </div>
                                     <div class="menu-card-checkmark">
                                         <span class="menu-card-checkmark-icon">
-                                            <i class="fa-solid fa-check"></i>
+                                            <i class="fa-solid fa-check" aria-hidden="true"></i>
                                         </span>
                                     </div>
                                 </div>
                             </label>
                         </li>
-                        <li>
+                        <li role="listitem">
                             <label class="menu-card">
-                                <input type="checkbox" class="menu-card-checkbox" />
+                                <input type="checkbox" class="menu-card-checkbox" aria-label="Sélectionner Foie gras de canard cuit entier" />
                                 <div class="menu-card-content">
                                     <div class="menu-card-info">
                                         <h3 class="menu-card-title">Foie gras de canard cuit entier</h3>
@@ -119,7 +159,7 @@
                                     </div>
                                     <div class="menu-card-checkmark">
                                         <span class="menu-card-checkmark-icon">
-                                            <i class="fa-solid fa-check"></i>
+                                            <i class="fa-solid fa-check" aria-hidden="true"></i>
                                         </span>
                                     </div>
                                 </div>
@@ -127,12 +167,16 @@
                         </li>
                     </ul>
                 </div>
+
+                <!-- ========================================
+                     Menu Category - Plats (Main Courses)
+                     ======================================== -->
                 <div class="menu-category">
                     <h2>Plats</h2>
-                    <ul>
-                        <li>
+                    <ul role="list">
+                        <li role="listitem">
                             <label class="menu-card">
-                                <input type="checkbox" class="menu-card-checkbox" />
+                                <input type="checkbox" class="menu-card-checkbox" aria-label="Sélectionner Noix de coquilles Saint-Jacques" />
                                 <div class="menu-card-content">
                                     <div class="menu-card-info">
                                         <h3 class="menu-card-title">Noix de coquilles Saint-Jacques</h3>
@@ -143,15 +187,15 @@
                                     </div>
                                     <div class="menu-card-checkmark">
                                         <span class="menu-card-checkmark-icon">
-                                            <i class="fa-solid fa-check"></i>
+                                            <i class="fa-solid fa-check" aria-hidden="true"></i>
                                         </span>
                                     </div>
                                 </div>
                             </label>
                         </li>
-                        <li>
+                        <li role="listitem">
                             <label class="menu-card">
-                                <input type="checkbox" class="menu-card-checkbox" />
+                                <input type="checkbox" class="menu-card-checkbox" aria-label="Sélectionner Langoustine poêlée" />
                                 <div class="menu-card-content">
                                     <div class="menu-card-info">
                                         <h3 class="menu-card-title">Langoustine poêlée</h3>
@@ -162,15 +206,15 @@
                                     </div>
                                     <div class="menu-card-checkmark">
                                         <span class="menu-card-checkmark-icon">
-                                            <i class="fa-solid fa-check"></i>
+                                            <i class="fa-solid fa-check" aria-hidden="true"></i>
                                         </span>
                                     </div>
                                 </div>
                             </label>
                         </li>
-                        <li>
+                        <li role="listitem">
                             <label class="menu-card">
-                                <input type="checkbox" class="menu-card-checkbox" />
+                                <input type="checkbox" class="menu-card-checkbox" aria-label="Sélectionner Mijoté de queue de bœuf" />
                                 <div class="menu-card-content">
                                     <div class="menu-card-info">
                                         <h3 class="menu-card-title">Mijoté de queue de bœuf</h3>
@@ -181,7 +225,7 @@
                                     </div>
                                     <div class="menu-card-checkmark">
                                         <span class="menu-card-checkmark-icon">
-                                            <i class="fa-solid fa-check"></i>
+                                            <i class="fa-solid fa-check" aria-hidden="true"></i>
                                         </span>
                                     </div>
                                 </div>
@@ -189,12 +233,16 @@
                         </li>
                     </ul>
                 </div>
+
+                <!-- ========================================
+                     Menu Category - Desserts
+                     ======================================== -->
                 <div class="menu-category">
                     <h2>Desserts</h2>
-                    <ul>
-                        <li>
+                    <ul role="list">
+                        <li role="listitem">
                             <label class="menu-card">
-                                <input type="checkbox" class="menu-card-checkbox" />
+                                <input type="checkbox" class="menu-card-checkbox" aria-label="Sélectionner Macaron noisette et chocolat" />
                                 <div class="menu-card-content">
                                     <div class="menu-card-info">
                                         <h3 class="menu-card-title">Macaron noisette et chocolat</h3>
@@ -205,15 +253,15 @@
                                     </div>
                                     <div class="menu-card-checkmark">
                                         <span class="menu-card-checkmark-icon">
-                                            <i class="fa-solid fa-check"></i>
+                                            <i class="fa-solid fa-check" aria-hidden="true"></i>
                                         </span>
                                     </div>
                                 </div>
                             </label>
                         </li>
-                        <li>
+                        <li role="listitem">
                             <label class="menu-card">
-                                <input type="checkbox" class="menu-card-checkbox" />
+                                <input type="checkbox" class="menu-card-checkbox" aria-label="Sélectionner Baba au rhum revisité" />
                                 <div class="menu-card-content">
                                     <div class="menu-card-info">
                                         <h3 class="menu-card-title">Baba au rhum revisité</h3>
@@ -224,15 +272,15 @@
                                     </div>
                                     <div class="menu-card-checkmark">
                                         <span class="menu-card-checkmark-icon">
-                                            <i class="fa-solid fa-check"></i>
+                                            <i class="fa-solid fa-check" aria-hidden="true"></i>
                                         </span>
                                     </div>
                                 </div>
                             </label>
                         </li>
-                        <li>
+                        <li role="listitem">
                             <label class="menu-card">
-                                <input type="checkbox" class="menu-card-checkbox" />
+                                <input type="checkbox" class="menu-card-checkbox" aria-label="Sélectionner Tarte au citron meringuée" />
                                 <div class="menu-card-content">
                                     <div class="menu-card-info">
                                         <h3 class="menu-card-title">Tarte au citron meringuée</h3>
@@ -243,7 +291,7 @@
                                     </div>
                                     <div class="menu-card-checkmark">
                                         <span class="menu-card-checkmark-icon">
-                                            <i class="fa-solid fa-check"></i>
+                                            <i class="fa-solid fa-check" aria-hidden="true"></i>
                                         </span>
                                     </div>
                                 </div>
@@ -251,22 +299,30 @@
                         </li>
                     </ul>
                 </div>
-                <button class="button button-up">Commander</button>
+
+                <!-- ========================================
+                     Order Button
+                     ======================================== -->
+                <button class="button button-up" type="submit" aria-label="Passer la commande">Commander</button>
             </form>
         </main>
+
+        <!-- ========================================
+             Footer - Site navigation and contact
+             ======================================== -->
         <footer>
-            <img src="../assets/images/logo/ohmyfood.png" alt="Logo de OhMyFood" />
-            <nav>
-                <a href="#">
-                    <i class="fa-solid fa-utensils"></i>
+            <img src="../assets/images/logo/ohmyfood.png" alt="Logo de OhMyFood" width="200" height="40" />
+            <nav aria-label="Navigation du pied de page">
+                <a href="#" aria-label="Proposer votre restaurant sur OhMyFood">
+                    <i class="fa-solid fa-utensils" aria-hidden="true"></i>
                     Proposer un restaurant
                 </a>
-                <a href="#">
-                    <i class="fa-solid fa-handshake-angle"></i>
+                <a href="#" aria-label="Devenir partenaire OhMyFood">
+                    <i class="fa-solid fa-handshake-angle" aria-hidden="true"></i>
                     Devenir partenaire
                 </a>
-                <a href="#"> Mentions légales </a>
-                <a href="mailto:contact@ohmyfood.com"> Contact </a>
+                <a href="#" aria-label="Voir les mentions légales"> Mentions légales </a>
+                <a href="mailto:contact@ohmyfood.com" aria-label="Contacter OhMyFood par email"> Contact </a>
             </nav>
         </footer>
     </body>

@@ -1,42 +1,77 @@
+// ========================================
+// Typography Styles
+// ========================================
+// This file defines font imports and typography mixins for consistent
+// text styling throughout the OhMyFood website.
+// ========================================
+
+// ========================================
+// Font Imports - Google Fonts
+// ========================================
+// Arimo - Alternative sans-serif font
+// Roboto - Primary UI font with variable weight support
+// Shrikhand - Decorative font for restaurant titles
 @import url("https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 
+// ========================================
+// Font Family Mixins
+// ========================================
+// Arimo font family mixin
 @mixin font-arimo {
     font-family: "Arimo", sans-serif;
     font-optical-sizing: auto;
 }
+
+// Roboto font family mixin with default settings
 @mixin font-roboto {
     font-family: "Roboto", sans-serif;
     font-optical-sizing: auto;
     font-variation-settings: "wdth" 100;
 }
 
+// ========================================
+// Heading Mixins
+// ========================================
+// H1 - Primary heading (24px, bold)
 @mixin h1 {
     @include font-roboto;
     font-size: 24px;
     font-weight: 700;
 }
+
+// H2 - Secondary heading (24px, bold)
 @mixin h2 {
     @include font-roboto;
     font-size: 24px;
     font-weight: 700;
 }
+
+// H3 - Tertiary heading (18px, bold)
 @mixin h3 {
     @include font-roboto;
     font-size: 18px;
     font-weight: 700;
 }
 
+// ========================================
+// Body Text Mixins
+// ========================================
+// Body text - Standard paragraph text (17px, light)
 @mixin body-text {
     @include font-roboto;
     font-weight: 300;
     font-size: 17px;
 }
+
+// Body text small - Smaller paragraph text (16px, medium)
 @mixin body-text-sm {
     @include font-roboto;
     font-weight: 500;
     font-size: 16px;
 }
+
+// Badge text - Small text for badges and labels (14px, medium)
 @mixin badge-text {
     @include font-roboto;
     font-weight: 500;
@@ -45,6 +80,11 @@
     letter-spacing: 0%;
     text-align: center;
 }
+
+// ========================================
+// Menu Typography Mixins
+// ========================================
+// Menu title - Restaurant name styling (Shrikhand, 28px)
 @mixin menu-title {
     font-family: Shrikhand;
     font-weight: 400;
@@ -52,6 +92,8 @@
     line-height: 100%;
     letter-spacing: 0%;
 }
+
+// Menu category - Category labels (16px, uppercase)
 @mixin menu-category {
     font-family: Roboto;
     font-weight: 300;
@@ -60,6 +102,8 @@
     letter-spacing: 0%;
     text-transform: uppercase;
 }
+
+// Menu item description - Dish descriptions (15px, light)
 @mixin menu-item-description {
     font-family: Roboto;
     font-weight: 300;

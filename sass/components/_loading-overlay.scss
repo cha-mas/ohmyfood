@@ -1,5 +1,21 @@
+// ========================================
+// Loading Overlay Component Styles
+// ========================================
+// This file contains styles for the full-screen loading animation
+// displayed when the page first loads. Features a rotating icon
+// and animated text with dots.
+// ========================================
+
+// ========================================
+// Dependencies
+// ========================================
 @use "../utils/variables" as *;
 
+// ========================================
+// Loading Overlay Container
+// ========================================
+// Full-screen overlay that covers all content during loading
+// Fades out after 3 seconds
 .loading-overlay {
     position: fixed;
     inset: 0;
@@ -11,6 +27,10 @@
     animation: fade-out 0.5s ease-out 3s forwards;
 }
 
+// ========================================
+// Loading Backdrop
+// ========================================
+// Semi-transparent background layer
 .loading-backdrop {
     position: absolute;
     inset: 0;
@@ -18,6 +38,10 @@
     animation: fade-out 0.5s ease-out 3s forwards;
 }
 
+// ========================================
+// Loading Content Container
+// ========================================
+// Centers the loading icon and text vertically
 .loading-content {
     position: relative;
     z-index: 1;
@@ -27,12 +51,20 @@
     gap: 1.5rem;
 }
 
+// ========================================
+// Loading Icon
+// ========================================
+// Large animated icon that rotates and bounces
 .loading-icon {
     font-size: 120px;
     color: $loading-white;
     animation: rotate-bounce 3s ease-in-out forwards;
 }
 
+// ========================================
+// Loading Text
+// ========================================
+// Container for the loading text with animated dots
 .loading-text {
     display: flex;
     gap: 0.5rem;
@@ -43,15 +75,22 @@
     animation: fade-out 0.3s ease-out 3s forwards;
 }
 
+// Text element
 .text {
     animation: fade-out 0.3s ease-out 3s forwards;
 }
 
+// Animated dots
 .dot {
     font-size: 1.5rem;
     animation: dots 3s ease-in-out forwards;
 }
 
+// ========================================
+// Keyframe Animations
+// ========================================
+// Rotate and bounce animation for the loading icon
+// Creates a spinning effect with scale variations
 @keyframes rotate-bounce {
     0% {
         transform: rotate(0deg) scale(1);
@@ -70,6 +109,7 @@
     }
 }
 
+// Dots animation - pulsing opacity effect
 @keyframes dots {
     0% {
         opacity: 0.1;
@@ -88,6 +128,7 @@
     }
 }
 
+// Fade out animation - hides elements after loading
 @keyframes fade-out {
     0% {
         opacity: 1;

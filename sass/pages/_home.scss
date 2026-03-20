@@ -1,40 +1,73 @@
+// ============================================
+// Home Page Styles
+// ============================================
+// This stylesheet contains styles specific to the home page,
+// including the location bar, hero section, explanations section,
+// and restaurants listing section.
+// ============================================
+
+// --------------------------------------------
+// Module Imports
+// --------------------------------------------
+// Import component styles used on the home page
 @use "../components/button";
 @use "../components/explanation-item";
 @use "../components/restaurant-item";
 
+// Import utility modules for mixins, spacing, typography, variables, and breakpoints
 @use "../utils/mixins" as *;
 @use "../utils/spacing" as *;
 @use "../base/typography" as *;
 @use "../utils/variables" as *;
 @use "../utils/breakpoints" as *;
 
+// --------------------------------------------
+// Location Bar
+// --------------------------------------------
+// Displays the current location (Paris, France) with a location icon.
+// Positioned at the top of the page below the header.
+// Uses a grey background with inset shadow for depth effect.
 .location {
+    // Center content with location icon and text
     @include flex-centered;
     @include font-roboto;
 
+    // Background and text colors
     background-color: $grey-two;
     color: $grey;
 
+    // Typography and dimensions
     @include body-text-sm;
     height: 50px;
     gap: 17px;
+
+    // Inset shadow creates a subtle border/depth effect
+    // The inset shadow simulates a top border effect
     box-shadow:
-        0px 2px 4px 0px #00000026 inset,
-        0px 4px 4px 0px #00000040;
+        0px 2px 4px 0px #00000026 inset,  // Subtle top shadow
+        0px 4px 4px 0px #00000040;         // Drop shadow below
 }
 
+// --------------------------------------------
+// Hero Section
+// --------------------------------------------
+// Main call-to-action section below the location bar.
+// Contains the main heading, tagline, and explore button.
+// Uses a light grey background to separate from other sections.
 .hero {
     @include flex-centered;
     background-color: $background;
     @include flex-column;
     text-align: center;
     padding: $spacing-xl;
-    z-index: -1;
+    z-index: -1;  // Behind other elements for proper layering
 
+    // Main heading styling
     h1 {
         @include h1;
     }
 
+    // Tagline paragraph styling
     > p {
         @include body-text;
         color: $grey;
@@ -45,38 +78,69 @@
     }
 }
 
+// --------------------------------------------
+// Section Base Styles
+// --------------------------------------------
+// Common styles applied to all main content sections.
+// Provides consistent padding and heading styles.
 section {
     padding: $spacing-xl 20px;
 
+    // Section heading styling
     h2 {
         @include h2;
         margin-bottom: 30px;
     }
 }
 
+// --------------------------------------------
+// List Containers
+// --------------------------------------------
+// Common flexbox layout for both explanations and restaurants lists.
+// Items stack vertically on mobile, reorganize on larger screens.
 .explanations-list,
 .restaurants-list {
     @include flex-column;
     gap: 20px;
 }
 
+// --------------------------------------------
+// Explanations Section
+// --------------------------------------------
+// Contains the 3-step explanation of how the service works.
+// White background to contrast with adjacent sections.
 .explanations {
     background-color: #fff;
 }
 
+// --------------------------------------------
+// Restaurants Section
+// --------------------------------------------
+// Grid/list of restaurant cards with images and details.
+// Uses the same grey background as the hero for visual consistency.
 .restaurants {
     background-color: $background;
 }
 
+// --------------------------------------------
+// Responsive Breakpoint: Large Screens (≥1024px)
+// --------------------------------------------
+// Reorganizes layout for desktop/tablet viewing.
+// - Sections get wider max-width with percentage-based padding
+// - Explanations list becomes horizontal row
+// - Restaurants list becomes multi-column grid
 @include respond-to(lg) {
     section {
+        // Dynamic padding: 10% or minimum 300px on each side
         padding: $spacing-xl max(10%, 300px);
     }
 
+    // Horizontal layout for explanation steps
     .explanations-list {
         flex-direction: row;
     }
 
+    // Grid layout for restaurant cards
     .restaurants-list {
         flex-direction: row;
         flex-wrap: wrap;
