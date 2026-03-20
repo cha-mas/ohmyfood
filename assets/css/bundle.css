@@ -32,8 +32,8 @@ footer {
 }
 footer img {
   filter: invert(100%) sepia(100%) hue-rotate(180deg);
-  height: 27px;
-  width: 139px;
+  height: 18px;
+  width: 130px;
 }
 footer nav {
   display: flex;
@@ -55,6 +55,7 @@ footer nav a i {
 @media (min-width: 1024px) {
   footer {
     padding: 24px;
+    height: 114px;
     flex-direction: row-reverse;
     gap: 50px;
     align-items: flex-end;
