@@ -23,7 +23,7 @@ header.header-with-arrow a {
 }
 
 footer {
-  padding: 20px;
+  padding: 24px;
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -54,9 +54,10 @@ footer nav a i {
 
 @media (min-width: 1024px) {
   footer {
-    padding: 50px max(10%, 300px);
+    padding: 24px;
     flex-direction: row-reverse;
     gap: 50px;
+    align-items: flex-end;
   }
   footer nav {
     flex-direction: row;

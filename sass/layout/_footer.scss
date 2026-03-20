@@ -5,7 +5,7 @@
 @use "../utils/spacing" as *;
 
 footer {
-    padding: 20px;
+    padding: $spacing-md;
     @include flex-column;
     gap: 20px;
     background: $grey;
@@ -36,10 +36,11 @@ footer {
 
 @include respond-to(lg) {
     footer {
-        padding: $spacing-xl max(10%, 300px);
+        padding: $spacing-md;
 
         flex-direction: row-reverse;
         gap: $spacing-xl;
+        align-items: flex-end;
 
         nav {
             flex-direction: row;
