@@ -31,7 +31,6 @@
         position: relative;
     }
 
-
     &-info {
         flex: 1;
         min-width: 0;
@@ -66,7 +65,7 @@
         bottom: 0;
         width: 4rem;
         background: $green;
-       @include flex-centered;
+        @include flex-centered;
 
         transition: right 0.4s ease;
 
@@ -78,7 +77,6 @@
             @include flex-centered;
             width: 26px;
             height: 26px;
-
         }
     }
 

@@ -10,21 +10,21 @@
     border: none;
     @include button-icon;
     position: relative;
-    
+
     svg {
         width: 24px;
         height: 24px;
         display: block;
         overflow: visible;
     }
-    
+
     .heart-outline {
         fill: none;
         stroke: $black;
         stroke-width: 2;
         transition: stroke 300ms ease-in-out;
     }
-    
+
     .heart-fill {
         fill: url(#heart-gradient);
         stroke: none;

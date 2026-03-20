@@ -1,5 +1,5 @@
 @use "../utils/mixins" as *;
-@use '../utils/spacing'  as *;
+@use "../utils/spacing" as *;
 
 header {
     @include flex-centered;
@@ -12,14 +12,13 @@ header {
     }
 
     &.header-with-arrow {
-            position: relative;
+        position: relative;
 
-            a {
-                color: inherit;
-                @include button-icon;
-                position: absolute;
-                left: $spacing-md;
-            }
-
+        a {
+            color: inherit;
+            @include button-icon;
+            position: absolute;
+            left: $spacing-md;
+        }
     }
 }
