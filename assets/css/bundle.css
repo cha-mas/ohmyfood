@@ -75,14 +75,14 @@ footer nav a i {
   align-items: center;
   justify-content: center;
   background-color: #101010;
-  animation: fade-out 0.5s ease-out 5s forwards;
+  animation: fade-out 0.5s ease-out 3s forwards;
 }
 
 .loading-backdrop {
   position: absolute;
   inset: 0;
   background-color: #101010;
-  animation: fade-out 0.5s ease-out 5s forwards;
+  animation: fade-out 0.5s ease-out 3s forwards;
 }
 
 .loading-content {
@@ -97,7 +97,7 @@ footer nav a i {
 .loading-icon {
   font-size: 120px;
   color: #ffffff;
-  animation: rotate-bounce 5s ease-in-out forwards;
+  animation: rotate-bounce 3s ease-in-out forwards;
 }
 
 .loading-text {
@@ -107,16 +107,16 @@ footer nav a i {
   font-size: 1.5rem;
   font-weight: 500;
   font-family: "Roboto", sans-serif;
-  animation: fade-out 0.3s ease-out 5s forwards;
+  animation: fade-out 0.3s ease-out 3s forwards;
 }
 
 .text {
-  animation: fade-out 0.3s ease-out 5s forwards;
+  animation: fade-out 0.3s ease-out 3s forwards;
 }
 
 .dot {
   font-size: 1.5rem;
-  animation: dots 5s ease-in-out forwards;
+  animation: dots 3s ease-in-out forwards;
 }
 
 @keyframes rotate-bounce {
@@ -124,13 +124,13 @@ footer nav a i {
     transform: rotate(0deg) scale(1);
   }
   25% {
-    transform: rotate(90deg) scale(1.05);
+    transform: rotate(90deg) scale(0.75);
   }
   50% {
-    transform: rotate(180deg) scale(1);
+    transform: rotate(180deg) scale(1.25);
   }
   75% {
-    transform: rotate(270deg) scale(1.05);
+    transform: rotate(270deg) scale(0.75);
   }
   100% {
     transform: rotate(360deg) scale(1);
@@ -138,7 +138,7 @@ footer nav a i {
 }
 @keyframes dots {
   0% {
-    opacity: 0.3;
+    opacity: 0.1;
   }
   25% {
     opacity: 1;
@@ -150,7 +150,7 @@ footer nav a i {
     opacity: 1;
   }
   100% {
-    opacity: 0.3;
+    opacity: 0.1;
   }
 }
 @keyframes fade-out {
