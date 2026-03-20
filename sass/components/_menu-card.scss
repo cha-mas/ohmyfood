@@ -8,6 +8,7 @@
     position: relative;
     display: block;
     cursor: pointer;
+    margin: 8px;
 
     &-checkbox {
         position: absolute;
@@ -30,9 +31,6 @@
         position: relative;
     }
 
-    &:hover &-content {
-        @include shadow-hover-sm;
-    }
 
     &-info {
         flex: 1;

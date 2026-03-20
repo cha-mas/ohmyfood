@@ -10,7 +10,7 @@
 @keyframes menu-slide-up {
     0% {
         opacity: 0;
-        transform: translateY(30px) scale(0.95);
+        transform: translateY(60px) scale(0.95);
     }
     60% {
         transform: translateY(-5px) scale(1.02);
@@ -72,7 +72,11 @@ main {
         }
     }
 
-    h2 {
+    
+
+    // Staggered animation for menu categories
+    .menu-category {
+        h2 {
         @include menu-category;
         opacity: 0;
         animation: category-title-entrance 0.4s ease-out forwards;
@@ -85,9 +89,7 @@ main {
             border-bottom: 2px solid $green;
         }
     }
-
-    // Staggered animation for menu categories
-    .menu-category {
+    
         &:nth-child(1) {
             h2 { animation-delay: 0.1s; }
             li:nth-child(1) { animation-delay: 0.15s; }
@@ -114,8 +116,8 @@ main {
     ul {
         list-style: none;
         @include flex-column;
-        gap: $spacing-sm;
         margin-top: $spacing-sm;
+        overflow: hidden;
         
         li {
             padding: 0;
