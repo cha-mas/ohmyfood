@@ -616,6 +616,16 @@ main {
   margin: 0 auto;
 }
 
+@media (min-width: 1024px) {
+  .menu-container {
+    padding-left: min(150px, 10%);
+    padding-right: min(150px, 10%);
+  }
+  .menu-container .restaurant-info {
+    justify-content: center;
+    gap: 24px;
+  }
+}
 :root {
   color-scheme: light;
 }
