@@ -16,14 +16,12 @@
 @use "../utils/spacing" as *;
 
 // ========================================
-// Menu Card Styles
+// Menu Card Wrapper
 // ========================================
-// Interactive card that allows users to select menu items
-// Features a sliding checkmark animation on selection
+// Parent container for the entire menu card component
+// Contains the checkbox, label, and content
 .menu-card {
     position: relative;
-    display: block;
-    cursor: pointer;
     margin: 8px;
 
     // ========================================
@@ -36,6 +34,22 @@
         opacity: 0;
         width: 0;
         height: 0;
+        z-index: 1;  // Ensure it's accessible via keyboard
+    }
+
+    // ========================================
+    // Clickable Label
+    // ========================================
+    // Label that makes the entire card clickable
+    // Positioned as an overlay on top of content
+    &-label {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        cursor: pointer;
+        z-index: 2;  // Above content for click events
     }
 
     // ========================================

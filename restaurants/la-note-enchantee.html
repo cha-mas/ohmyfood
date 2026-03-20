@@ -19,7 +19,7 @@
              SVG Definitions - Shared gradient for heart icons
              Hidden from view but kept in render tree for url(#id) references
              ======================================== -->
-        <svg style="position: absolute; width: 0; height: 0; overflow: hidden;" aria-hidden="true">
+        <svg class="svg-definitions" aria-hidden="true">
             <defs>
                 <linearGradient id="heart-gradient" x1="0%" y1="100%" x2="0%" y2="0%">
                     <stop offset="0%" stop-color="#ff79da" />
@@ -61,14 +61,14 @@
              Main Content - Restaurant menu
              ======================================== -->
         <main id="main-content">
-            <form class="menu-container" aria-label="Menu du restaurant La Note Enchantée">
+            <form class="menu-container" aria-label="Menu du restaurant La Note Enchantée" action="#">
                 <!-- ========================================
                      Restaurant Info - Name and favorite button
                      ======================================== -->
                 <div class="restaurant-info">
                     <h1>La Note Enchantée</h1>
                     <input type="checkbox" id="fav-1" class="fav-checkbox" aria-label="Ajouter aux favoris" />
-                    <label for="fav-1" class="fav-label" role="button" tabindex="0">
+                    <label for="fav-1" class="fav-label" tabindex="0">
                         <svg viewBox="0 0 24 24" aria-hidden="true">
                             <path
                                 class="heart-outline"
@@ -88,10 +88,11 @@
                      ======================================== -->
                 <div class="menu-category">
                     <h2>Entrées</h2>
-                    <ul role="list">
-                        <li role="listitem">
-                            <label class="menu-card">
-                                <input type="checkbox" class="menu-card-checkbox" aria-label="Sélectionner Ravioles de foie gras" />
+                    <ul>
+                        <li>
+                            <div class="menu-card">
+                                <input type="checkbox" id="menu-1" class="menu-card-checkbox" aria-label="Sélectionner Ravioles de foie gras" />
+                                <label for="menu-1" class="menu-card-label"></label>
                                 <div class="menu-card-content">
                                     <div class="menu-card-info">
                                         <h3 class="menu-card-title">Ravioles de foie gras</h3>
@@ -106,11 +107,12 @@
                                         </span>
                                     </div>
                                 </div>
-                            </label>
+                            </div>
                         </li>
-                        <li role="listitem">
-                            <label class="menu-card">
-                                <input type="checkbox" class="menu-card-checkbox" aria-label="Sélectionner Caviar osciètre" />
+                        <li>
+                            <div class="menu-card">
+                                <input type="checkbox" id="menu-2" class="menu-card-checkbox" aria-label="Sélectionner Caviar osciètre" />
+                                <label for="menu-2" class="menu-card-label"></label>
                                 <div class="menu-card-content">
                                     <div class="menu-card-info">
                                         <h3 class="menu-card-title">Caviar osciètre</h3>
@@ -125,11 +127,12 @@
                                         </span>
                                     </div>
                                 </div>
-                            </label>
+                            </div>
                         </li>
-                        <li role="listitem">
-                            <label class="menu-card">
-                                <input type="checkbox" class="menu-card-checkbox" aria-label="Sélectionner Homard et espuma de potiron" />
+                        <li>
+                            <div class="menu-card">
+                                <input type="checkbox" id="menu-3" class="menu-card-checkbox" aria-label="Sélectionner Homard et espuma de potiron" />
+                                <label for="menu-3" class="menu-card-label"></label>
                                 <div class="menu-card-content">
                                     <div class="menu-card-info">
                                         <h3 class="menu-card-title">Homard et espuma de potiron</h3>
@@ -144,11 +147,12 @@
                                         </span>
                                     </div>
                                 </div>
-                            </label>
+                            </div>
                         </li>
-                        <li role="listitem">
-                            <label class="menu-card">
-                                <input type="checkbox" class="menu-card-checkbox" aria-label="Sélectionner Foie gras de canard cuit entier" />
+                        <li>
+                            <div class="menu-card">
+                                <input type="checkbox" id="menu-4" class="menu-card-checkbox" aria-label="Sélectionner Foie gras de canard cuit entier" />
+                                <label for="menu-4" class="menu-card-label"></label>
                                 <div class="menu-card-content">
                                     <div class="menu-card-info">
                                         <h3 class="menu-card-title">Foie gras de canard cuit entier</h3>
@@ -163,7 +167,7 @@
                                         </span>
                                     </div>
                                 </div>
-                            </label>
+                            </div>
                         </li>
                     </ul>
                 </div>
@@ -173,10 +177,11 @@
                      ======================================== -->
                 <div class="menu-category">
                     <h2>Plats</h2>
-                    <ul role="list">
-                        <li role="listitem">
-                            <label class="menu-card">
-                                <input type="checkbox" class="menu-card-checkbox" aria-label="Sélectionner Noix de coquilles Saint-Jacques" />
+                    <ul>
+                        <li>
+                            <div class="menu-card">
+                                <input type="checkbox" id="menu-5" class="menu-card-checkbox" aria-label="Sélectionner Noix de coquilles Saint-Jacques" />
+                                <label for="menu-5" class="menu-card-label"></label>
                                 <div class="menu-card-content">
                                     <div class="menu-card-info">
                                         <h3 class="menu-card-title">Noix de coquilles Saint-Jacques</h3>
@@ -191,11 +196,12 @@
                                         </span>
                                     </div>
                                 </div>
-                            </label>
+                            </div>
                         </li>
-                        <li role="listitem">
-                            <label class="menu-card">
-                                <input type="checkbox" class="menu-card-checkbox" aria-label="Sélectionner Langoustine poêlée" />
+                        <li>
+                            <div class="menu-card">
+                                <input type="checkbox" id="menu-6" class="menu-card-checkbox" aria-label="Sélectionner Langoustine poêlée" />
+                                <label for="menu-6" class="menu-card-label"></label>
                                 <div class="menu-card-content">
                                     <div class="menu-card-info">
                                         <h3 class="menu-card-title">Langoustine poêlée</h3>
@@ -210,11 +216,12 @@
                                         </span>
                                     </div>
                                 </div>
-                            </label>
+                            </div>
                         </li>
-                        <li role="listitem">
-                            <label class="menu-card">
-                                <input type="checkbox" class="menu-card-checkbox" aria-label="Sélectionner Mijoté de queue de bœuf" />
+                        <li>
+                            <div class="menu-card">
+                                <input type="checkbox" id="menu-7" class="menu-card-checkbox" aria-label="Sélectionner Mijoté de queue de bœuf" />
+                                <label for="menu-7" class="menu-card-label"></label>
                                 <div class="menu-card-content">
                                     <div class="menu-card-info">
                                         <h3 class="menu-card-title">Mijoté de queue de bœuf</h3>
@@ -229,7 +236,7 @@
                                         </span>
                                     </div>
                                 </div>
-                            </label>
+                            </div>
                         </li>
                     </ul>
                 </div>
@@ -239,10 +246,11 @@
                      ======================================== -->
                 <div class="menu-category">
                     <h2>Desserts</h2>
-                    <ul role="list">
-                        <li role="listitem">
-                            <label class="menu-card">
-                                <input type="checkbox" class="menu-card-checkbox" aria-label="Sélectionner Macaron noisette et chocolat" />
+                    <ul>
+                        <li>
+                            <div class="menu-card">
+                                <input type="checkbox" id="menu-8" class="menu-card-checkbox" aria-label="Sélectionner Macaron noisette et chocolat" />
+                                <label for="menu-8" class="menu-card-label"></label>
                                 <div class="menu-card-content">
                                     <div class="menu-card-info">
                                         <h3 class="menu-card-title">Macaron noisette et chocolat</h3>
@@ -257,11 +265,12 @@
                                         </span>
                                     </div>
                                 </div>
-                            </label>
+                            </div>
                         </li>
-                        <li role="listitem">
-                            <label class="menu-card">
-                                <input type="checkbox" class="menu-card-checkbox" aria-label="Sélectionner Baba au rhum revisité" />
+                        <li>
+                            <div class="menu-card">
+                                <input type="checkbox" id="menu-9" class="menu-card-checkbox" aria-label="Sélectionner Baba au rhum revisité" />
+                                <label for="menu-9" class="menu-card-label"></label>
                                 <div class="menu-card-content">
                                     <div class="menu-card-info">
                                         <h3 class="menu-card-title">Baba au rhum revisité</h3>
@@ -276,11 +285,12 @@
                                         </span>
                                     </div>
                                 </div>
-                            </label>
+                            </div>
                         </li>
-                        <li role="listitem">
-                            <label class="menu-card">
-                                <input type="checkbox" class="menu-card-checkbox" aria-label="Sélectionner Tarte au citron meringuée" />
+                        <li>
+                            <div class="menu-card">
+                                <input type="checkbox" id="menu-10" class="menu-card-checkbox" aria-label="Sélectionner Tarte au citron meringuée" />
+                                <label for="menu-10" class="menu-card-label"></label>
                                 <div class="menu-card-content">
                                     <div class="menu-card-info">
                                         <h3 class="menu-card-title">Tarte au citron meringuée</h3>
@@ -295,7 +305,7 @@
                                         </span>
                                     </div>
                                 </div>
-                            </label>
+                            </div>
                         </li>
                     </ul>
                 </div>

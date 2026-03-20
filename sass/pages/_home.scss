@@ -102,6 +102,8 @@ section {
 .restaurants-list {
     @include flex-column;
     gap: 20px;
+    list-style: none;
+    padding: 0;
 }
 
 // --------------------------------------------
@@ -142,7 +144,7 @@ section {
 
     // Grid layout for restaurant cards
     .restaurants-list {
-        flex-direction: row;
-        flex-wrap: wrap;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
     }
 }

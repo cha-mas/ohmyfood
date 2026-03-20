@@ -19,7 +19,7 @@
              SVG Definitions - Shared gradient for heart icons
              Hidden from view but kept in render tree for url(#id) references
              ======================================== -->
-        <svg style="position: absolute; width: 0; height: 0; overflow: hidden;" aria-hidden="true">
+        <svg class="svg-definitions" aria-hidden="true">
             <defs>
                 <linearGradient id="heart-gradient" x1="0%" y1="100%" x2="0%" y2="0%">
                     <stop offset="0%" stop-color="#ff79da" />
@@ -61,14 +61,14 @@
              Main Content - Restaurant menu
              ======================================== -->
         <main id="main-content">
-            <form class="menu-container" aria-label="Menu du restaurant Le Délice des Sens">
+            <form class="menu-container" aria-label="Menu du restaurant Le Délice des Sens" action="#">
                 <!-- ========================================
                      Restaurant Info - Name and favorite button
                      ======================================== -->
                 <div class="restaurant-info">
                     <h1>Le délice des sens</h1>
                     <input type="checkbox" id="fav-1" class="fav-checkbox" aria-label="Ajouter aux favoris" />
-                    <label for="fav-1" class="fav-label" role="button" tabindex="0">
+                    <label for="fav-1" class="fav-label" tabindex="0">
                         <svg viewBox="0 0 24 24" aria-hidden="true">
                             <path
                                 class="heart-outline"
@@ -88,10 +88,11 @@
                      ======================================== -->
                 <div class="menu-category">
                     <h2>Entrées</h2>
-                    <ul role="list">
-                        <li role="listitem">
-                            <label class="menu-card">
-                                <input type="checkbox" class="menu-card-checkbox" aria-label="Sélectionner Tartare de thon" />
+                    <ul>
+                        <li>
+                            <div class="menu-card">
+                                <input type="checkbox" id="menu-1" class="menu-card-checkbox" aria-label="Sélectionner Tartare de thon" />
+                                <label for="menu-1" class="menu-card-label"></label>
                                 <div class="menu-card-content">
                                     <div class="menu-card-info">
                                         <h3 class="menu-card-title">Tartare de thon</h3>
@@ -106,11 +107,12 @@
                                         </span>
                                     </div>
                                 </div>
-                            </label>
+                            </div>
                         </li>
-                        <li role="listitem">
-                            <label class="menu-card">
-                                <input type="checkbox" class="menu-card-checkbox" aria-label="Sélectionner Bouchée de homard croustillant" />
+                        <li>
+                            <div class="menu-card">
+                                <input type="checkbox" id="menu-2" class="menu-card-checkbox" aria-label="Sélectionner Bouchée de homard croustillant" />
+                                <label for="menu-2" class="menu-card-label"></label>
                                 <div class="menu-card-content">
                                     <div class="menu-card-info">
                                         <h3 class="menu-card-title">Bouchée de homard croustillant</h3>
@@ -125,11 +127,12 @@
                                         </span>
                                     </div>
                                 </div>
-                            </label>
+                            </div>
                         </li>
-                        <li role="listitem">
-                            <label class="menu-card">
-                                <input type="checkbox" class="menu-card-checkbox" aria-label="Sélectionner Velouté de cèpes" />
+                        <li>
+                            <div class="menu-card">
+                                <input type="checkbox" id="menu-3" class="menu-card-checkbox" aria-label="Sélectionner Velouté de cèpes" />
+                                <label for="menu-3" class="menu-card-label"></label>
                                 <div class="menu-card-content">
                                     <div class="menu-card-info">
                                         <h3 class="menu-card-title">Velouté de cèpes</h3>
@@ -144,7 +147,7 @@
                                         </span>
                                     </div>
                                 </div>
-                            </label>
+                            </div>
                         </li>
                     </ul>
                 </div>
@@ -154,10 +157,11 @@
                      ======================================== -->
                 <div class="menu-category">
                     <h2>Plats</h2>
-                    <ul role="list">
-                        <li role="listitem">
-                            <label class="menu-card">
-                                <input type="checkbox" class="menu-card-checkbox" aria-label="Sélectionner Poulet rôti aux herbes de Provence" />
+                    <ul>
+                        <li>
+                            <div class="menu-card">
+                                <input type="checkbox" id="menu-4" class="menu-card-checkbox" aria-label="Sélectionner Poulet rôti aux herbes de Provence" />
+                                <label for="menu-4" class="menu-card-label"></label>
                                 <div class="menu-card-content">
                                     <div class="menu-card-info">
                                         <h3 class="menu-card-title">Poulet rôti aux herbes de Provence</h3>
@@ -172,11 +176,12 @@
                                         </span>
                                     </div>
                                 </div>
-                            </label>
+                            </div>
                         </li>
-                        <li role="listitem">
-                            <label class="menu-card">
-                                <input type="checkbox" class="menu-card-checkbox" aria-label="Sélectionner Langouste rôtie" />
+                        <li>
+                            <div class="menu-card">
+                                <input type="checkbox" id="menu-5" class="menu-card-checkbox" aria-label="Sélectionner Langouste rôtie" />
+                                <label for="menu-5" class="menu-card-label"></label>
                                 <div class="menu-card-content">
                                     <div class="menu-card-info">
                                         <h3 class="menu-card-title">Langouste rôtie</h3>
@@ -191,11 +196,12 @@
                                         </span>
                                     </div>
                                 </div>
-                            </label>
+                            </div>
                         </li>
-                        <li role="listitem">
-                            <label class="menu-card">
-                                <input type="checkbox" class="menu-card-checkbox" aria-label="Sélectionner Côte de bœuf Angus" />
+                        <li>
+                            <div class="menu-card">
+                                <input type="checkbox" id="menu-6" class="menu-card-checkbox" aria-label="Sélectionner Côte de bœuf Angus" />
+                                <label for="menu-6" class="menu-card-label"></label>
                                 <div class="menu-card-content">
                                     <div class="menu-card-info">
                                         <h3 class="menu-card-title">Côte de bœuf Angus</h3>
@@ -210,7 +216,7 @@
                                         </span>
                                     </div>
                                 </div>
-                            </label>
+                            </div>
                         </li>
                     </ul>
                 </div>
@@ -220,10 +226,11 @@
                      ======================================== -->
                 <div class="menu-category">
                     <h2>Desserts</h2>
-                    <ul role="list">
-                        <li role="listitem">
-                            <label class="menu-card">
-                                <input type="checkbox" class="menu-card-checkbox" aria-label="Sélectionner Farandole de desserts" />
+                    <ul>
+                        <li>
+                            <div class="menu-card">
+                                <input type="checkbox" id="menu-7" class="menu-card-checkbox" aria-label="Sélectionner Farandole de desserts" />
+                                <label for="menu-7" class="menu-card-label"></label>
                                 <div class="menu-card-content">
                                     <div class="menu-card-info">
                                         <h3 class="menu-card-title">Farandole de desserts</h3>
@@ -238,11 +245,12 @@
                                         </span>
                                     </div>
                                 </div>
-                            </label>
+                            </div>
                         </li>
-                        <li role="listitem">
-                            <label class="menu-card">
-                                <input type="checkbox" class="menu-card-checkbox" aria-label="Sélectionner Crème brulée" />
+                        <li>
+                            <div class="menu-card">
+                                <input type="checkbox" id="menu-8" class="menu-card-checkbox" aria-label="Sélectionner Crème brulée" />
+                                <label for="menu-8" class="menu-card-label"></label>
                                 <div class="menu-card-content">
                                     <div class="menu-card-info">
                                         <h3 class="menu-card-title">Crème brulée</h3>
@@ -257,11 +265,12 @@
                                         </span>
                                     </div>
                                 </div>
-                            </label>
+                            </div>
                         </li>
-                        <li role="listitem">
-                            <label class="menu-card">
-                                <input type="checkbox" class="menu-card-checkbox" aria-label="Sélectionner Tiramisu" />
+                        <li>
+                            <div class="menu-card">
+                                <input type="checkbox" id="menu-9" class="menu-card-checkbox" aria-label="Sélectionner Tiramisu" />
+                                <label for="menu-9" class="menu-card-label"></label>
                                 <div class="menu-card-content">
                                     <div class="menu-card-info">
                                         <h3 class="menu-card-title">Tiramisu</h3>
@@ -276,7 +285,7 @@
                                         </span>
                                     </div>
                                 </div>
-                            </label>
+                            </div>
                         </li>
                     </ul>
                 </div>

@@ -60,7 +60,7 @@
         // Positioned in top-right corner of image
         .badge-new {
             @include badge-text;
-            @include spacing-sm;
+            @include spacing-xs;
             position: absolute;
             top: 16px;
             right: 16px;
@@ -88,15 +88,5 @@
         p {
             @include body-text;
         }
-    }
-}
-
-// ========================================
-// Responsive Styles
-// ========================================
-// On large screens, cards display in a 2-column grid
-@include respond-to(lg) {
-    .restaurant-item {
-        width: calc(50% - 10px);
     }
 }

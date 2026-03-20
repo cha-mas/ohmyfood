@@ -20,13 +20,11 @@
 // Arimo font family mixin
 @mixin font-arimo {
     font-family: "Arimo", sans-serif;
-    font-optical-sizing: auto;
 }
 
 // Roboto font family mixin with default settings
 @mixin font-roboto {
     font-family: "Roboto", sans-serif;
-    font-optical-sizing: auto;
     font-variation-settings: "wdth" 100;
 }
 
@@ -77,7 +75,7 @@
     font-weight: 500;
     font-size: 14px;
     line-height: 100%;
-    letter-spacing: 0%;
+    letter-spacing: normal;
     text-align: center;
 }
 
@@ -90,7 +88,7 @@
     font-weight: 400;
     font-size: 28px;
     line-height: 100%;
-    letter-spacing: 0%;
+    letter-spacing: normal;
 }
 
 // Menu category - Category labels (16px, uppercase)
@@ -99,7 +97,7 @@
     font-weight: 300;
     font-size: 16px;
     line-height: 100%;
-    letter-spacing: 0%;
+    letter-spacing: normal;
     text-transform: uppercase;
 }
 
@@ -109,5 +107,5 @@
     font-weight: 300;
     font-size: 15.04px;
     line-height: 100%;
-    letter-spacing: 0%;
+    letter-spacing: normal;
 }
