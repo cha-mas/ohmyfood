@@ -147,12 +147,12 @@
     // Checked State Animations
     // ========================================
     // When selected, expand content to make room for checkmark
-    &-checkbox:checked ~ &-content {
+    &-checkbox:checked ~ &-content, &:hover &-content {
         padding-right: calc(4rem + $spacing-sm);
     }
 
     // Slide checkmark into view
-    &-checkbox:checked ~ &-content &-checkmark {
+    &-checkbox:checked ~ &-content &-checkmark, &:hover &-content &-checkmark {
         right: 0;
     }
 }

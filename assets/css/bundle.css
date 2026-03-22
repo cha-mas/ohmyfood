@@ -565,10 +565,10 @@ section h2 {
   width: 26px;
   height: 26px;
 }
-.menu-card-checkbox:checked ~ .menu-card-content {
+.menu-card-checkbox:checked ~ .menu-card-content, .menu-card:hover .menu-card-content {
   padding-right: calc(4rem + 16px);
 }
-.menu-card-checkbox:checked ~ .menu-card-content .menu-card-checkmark {
+.menu-card-checkbox:checked ~ .menu-card-content .menu-card-checkmark, .menu-card:hover .menu-card-content .menu-card-checkmark {
   right: 0;
 }
 
