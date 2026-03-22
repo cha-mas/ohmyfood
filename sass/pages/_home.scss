@@ -46,6 +46,16 @@
     box-shadow:
         0px 2px 4px 0px #00000026 inset,  // Subtle top shadow
         0px 4px 4px 0px #00000040;         // Drop shadow below
+
+        input {
+            @include font-roboto;
+            @include body-text-sm;
+            color: inherit;
+            background-color: transparent;
+            border: none;
+            outline: none;
+            cursor: pointer;
+        }
 }
 
 // --------------------------------------------
