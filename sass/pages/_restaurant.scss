@@ -34,7 +34,7 @@
 @keyframes menu-slide-up {
     0% {
         opacity: 0;
-        transform: translateY(60px) scale(0.95);  // Start below, slightly smaller
+        transform: translateY(100dvh) scale(0.95);  // Start below, slightly smaller
     }
     60% {
         transform: translateY(-5px) scale(1.02);   // Overshoot for bounce
@@ -146,37 +146,34 @@ main {
         // --------------------------------------------
         // Each category and its items animate in sequence.
         // Delays are calculated to create a cascading reveal effect.
-        // Category 1 (Entrées): earliest timing
-        &:nth-child(1) {
-            h2 {
-                animation-delay: 0.1s;
-            }
-            li:nth-child(1) { animation-delay: 0.15s; }
-            li:nth-child(2) { animation-delay: 0.25s; }
-            li:nth-child(3) { animation-delay: 0.35s; }
-            li:nth-child(4) { animation-delay: 0.45s; }
-        }
+        // Uses Sass loops for future-proofing and maintainability.
+        
+        // Animation timing configuration
+        $animation-start-delay: 0.1s;
+        $category-delay-increment: 0.45s;
+        $item-delay-increment: 0.1s;
+        $item-start-offset: 0.05s;
+        $max-categories: 10;
+        $max-items-per-category: 10;
 
-        // Category 2 (Plats): middle timing
-        &:nth-child(2) {
-            h2 {
-                animation-delay: 0.55s;
-            }
-            li:nth-child(1) { animation-delay: 0.6s; }
-            li:nth-child(2) { animation-delay: 0.7s; }
-            li:nth-child(3) { animation-delay: 0.8s; }
-            li:nth-child(4) { animation-delay: 0.9s; }
-        }
+        // Generate staggered animations for each menu category
+        @for $i from 1 through $max-categories {
+            &:nth-of-type(#{$i}) {
+                // Calculate delay for category title
+                $category-delay: $animation-start-delay + (($i - 1) * $category-delay-increment);
+                
+                h2 {
+                    animation-delay: $category-delay;
+                }
 
-        // Category 3 (Desserts): latest timing
-        &:nth-child(3) {
-            h2 {
-                animation-delay: 1s;
+                // Generate staggered delays for menu items within this category
+                @for $j from 1 through $max-items-per-category {
+                    li:nth-of-type(#{$j}) {
+                        $item-delay: $category-delay + $item-start-offset + (($j - 1) * $item-delay-increment);
+                        animation-delay: $item-delay;
+                    }
+                }
             }
-            li:nth-child(1) { animation-delay: 1.05s; }
-            li:nth-child(2) { animation-delay: 1.15s; }
-            li:nth-child(3) { animation-delay: 1.25s; }
-            li:nth-child(4) { animation-delay: 1.35s; }
         }
     }
 
@@ -191,7 +188,8 @@ main {
         margin-top: $spacing-sm;
         overflow: hidden;     // Clip animated items during entrance
 
-        // Each menu item animates in from below
+        // Each menu item animates in from below.
+        // Animation delays are applied via :nth-of-type() selectors above.
         li {
             padding: 0;
             margin: 0;
