@@ -315,9 +315,8 @@ footer nav a i {
   font-variation-settings: "wdth" 100;
   font-weight: 500;
 }
-
-.explanations-list li:last-child .explanation-item i {
-  color: #9356dc !important;
+.explanation-item:hover i {
+  color: #9356dc;
 }
 
 .explanations-list li:nth-child(1) .explanation-item::before {

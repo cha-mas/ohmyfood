@@ -66,18 +66,13 @@
             font-weight: 500;
         }
     }
-}
 
-// ========================================
-// Step Number Badge
-// ========================================
-// Purple circle with white number positioned on the left
-.explanations-list li:last-child .explanation-item i {
-    color: $purple !important;
+    &:hover i {
+        color: $purple;
+    }
 }
 
 .explanations-list {
-
     // Generate content for steps 1-3
     @for $index from 1 through 3 {
         li:nth-child(#{$index}) .explanation-item::before {
