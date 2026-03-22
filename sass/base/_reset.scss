@@ -18,16 +18,3 @@
     padding: 0;
 }
 
-// ========================================
-// Screen Reader Only Class
-// ========================================
-// Visually hides content but keeps it accessible to screen readers
-// Used for skip links, hidden labels, and accessibility purposes
-.sr-only {
-    position: absolute;
-    left: -10000px;
-    top: auto;
-    width: 1px;
-    height: 1px;
-    overflow: hidden;
-}

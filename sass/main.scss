@@ -9,6 +9,7 @@
 // Utils - Variables and Mixins
 // ========================================
 @use "./utils/variables" as *;
+@use "./utils/sr";
 
 // ========================================
 // Layout - Header and Footer
@@ -44,20 +45,6 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-}
-
-// ========================================
-// Screen Reader Only - Accessibility
-// ========================================
-// Visually hides content but keeps it accessible to screen readers
-// Used for skip links and hidden labels
-.sr-only {
-    position: absolute;
-    left: -10000px;
-    top: auto;
-    width: 1px;
-    height: 1px;
-    overflow: hidden;
 }
 
 // ========================================
