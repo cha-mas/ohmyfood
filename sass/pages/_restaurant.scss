@@ -34,10 +34,10 @@
 @keyframes menu-slide-up {
     0% {
         opacity: 0;
-        transform: translateY(100dvh) scale(0.95);  // Start below, slightly smaller
+        transform: translateY(-45px) scale(0.95);  // Start below, slightly smaller
     }
     60% {
-        transform: translateY(-5px) scale(1.02);   // Overshoot for bounce
+        transform: translateY(-5px);
     }
     100% {
         opacity: 1;
@@ -148,11 +148,11 @@ main {
         
         // Animation timing configuration
         $animation-start-delay: 0.1s;
-        $category-delay-increment: 0.45s;
-        $item-delay-increment: 0.1s;
-        $item-start-offset: 0.05s;
-        $max-categories: 10;
-        $max-items-per-category: 10;
+        $category-delay-increment: 1s;
+        $item-delay-increment: 0.2s;
+        $item-start-offset: 0.5s;
+        $max-categories: 4;
+        $max-items-per-category: 5;
 
         // Generate staggered animations for each menu category
         @for $i from 1 through $max-categories {
