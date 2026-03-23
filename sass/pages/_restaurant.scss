@@ -82,7 +82,6 @@ main {
     position: relative;
     width: 100%;
     height: 100%;
-    background: #fff;        // White background for content
     @include flex-column;    // Stack children vertically
 }
 
@@ -92,18 +91,16 @@ main {
 // Main container for restaurant menu content.
 // Features rounded top corners that overlap the hero image.
 // Contains restaurant info and menu categories.
+// Note: Horizontal width/spacing is handled by the .container class on <main>
 .menu-container {
     position: relative;
     z-index: 1;              // Above hero image
     margin-top: (-$spacing-lg);  // Pull up to overlap hero
     width: 100%;
-    max-width: $breakpoint-lg;  // Limit width on large screens
-    margin-left: auto;
-    margin-right: auto;
     @include flex-column;
     gap: $spacing-xl;
     background-color: $grey-two;  // Light grey background
-    padding: $spacing-xl $spacing-md;
+    padding: $spacing-xl;  
     border-top-left-radius: $spacing-lg;   // Rounded corners at top
     border-top-right-radius: $spacing-lg;
 
@@ -213,7 +210,6 @@ main {
 // --------------------------------------------
 // Adjusts layout for tablet and desktop viewing.
 // - Taller hero image for more visual impact
-// - Wider menu container with side padding
 // - Centered restaurant info with gap
 @include respond-to(lg) {
     // Taller hero image on larger screens
@@ -221,12 +217,8 @@ main {
         height: 375px;
     }
 
-    // Wider menu container with proportional padding
+    // Center restaurant name and favorite button
     .menu-container {
-        padding-left: min(150px, 10%);
-        padding-right: min(150px, 10%);
-
-        // Center restaurant name and favorite button
         .restaurant-info {
             justify-content: center;
             gap: $spacing-md;

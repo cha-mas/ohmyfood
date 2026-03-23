@@ -21,11 +21,14 @@
 // Dark footer with white text
 // Stacked layout on mobile, horizontal on desktop
 footer {
-    padding: $spacing-md;
-    @include flex-column;
-    gap: 20px;
     background: $grey;
     color: #fff;
+
+    >div {
+padding: $spacing-md;
+    @include flex-column;
+    gap: 20px;
+    
 
     // ========================================
     // Logo
@@ -58,6 +61,8 @@ footer {
             }
         }
     }
+    }
+    
 }
 
 // ========================================
@@ -67,22 +72,24 @@ footer {
 // with logo on the right and links on the left
 @include respond-to(lg) {
     footer {
-        padding: $spacing-md;
-        height: 114px;
+        >div {
+            padding: $spacing-md;
+            height: 114px;
 
-        // Reverse direction for desktop layout
-        flex-direction: row-reverse;
-        gap: $spacing-xl;
-        align-items: flex-end;
-
-        // Horizontal navigation layout
-        nav {
-            flex-direction: row;
+            // Reverse direction for desktop layout
+            flex-direction: row-reverse;
+            gap: $spacing-xl;
             align-items: flex-end;
 
-            // Add spacing after second link
-            > :nth-child(2) {
-                margin-right: $spacing-xl;
+            // Horizontal navigation layout
+            nav {
+                flex-direction: row;
+                align-items: flex-end;
+
+                 // Add spacing after second link
+                a:nth-child(2) {
+                    margin-right: $spacing-xl;
+                }
             }
         }
     }

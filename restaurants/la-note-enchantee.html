@@ -33,7 +33,7 @@
     <!-- ========================================
              Header - Logo and back navigation
              ======================================== -->
-    <header class="header-with-arrow">
+    <header class="container header-with-arrow">
         <a href="../index.html" aria-label="Retour à la page d'accueil">
             <i class="fa-solid fa-arrow-left" aria-hidden="true"></i>
             <span class="sr-only">Retour à la page d'accueil</span>
@@ -51,7 +51,7 @@
     <!-- ========================================
              Main Content - Restaurant menu
              ======================================== -->
-    <main id="main-content">
+    <main id="main-content" class="container">
         <form class="menu-container" aria-label="Menu du restaurant La Note Enchantée" action="#">
             <!-- ========================================
                      Restaurant Info - Name and favorite button
@@ -318,19 +318,21 @@
              Footer - Site navigation and contact
              ======================================== -->
     <footer>
-        <img src="../assets/images/logo/ohmyfood.png" alt="Logo de OhMyFood" width="200" height="40" />
-        <nav aria-label="Navigation du pied de page">
-            <a href="#" aria-label="Proposer votre restaurant sur OhMyFood">
-                <i class="fa-solid fa-utensils" aria-hidden="true"></i>
-                Proposer un restaurant
-            </a>
-            <a href="#" aria-label="Devenir partenaire OhMyFood">
-                <i class="fa-solid fa-handshake-angle" aria-hidden="true"></i>
-                Devenir partenaire
-            </a>
-            <a href="#" aria-label="Voir les mentions légales"> Mentions légales </a>
-            <a href="mailto:contact@ohmyfood.com" aria-label="Contacter OhMyFood par email"> Contact </a>
-        </nav>
+        <div class="container">
+            <img src="../assets/images/logo/ohmyfood.png" alt="Logo de OhMyFood" width="200" height="40" />
+            <nav aria-label="Navigation du pied de page">
+                <a href="#" aria-label="Proposer votre restaurant sur OhMyFood">
+                    <i class="fa-solid fa-utensils" aria-hidden="true"></i>
+                    Proposer un restaurant
+                </a>
+                <a href="#" aria-label="Devenir partenaire OhMyFood">
+                    <i class="fa-solid fa-handshake-angle" aria-hidden="true"></i>
+                    Devenir partenaire
+                </a>
+                <a href="#" aria-label="Voir les mentions légales"> Mentions légales </a>
+                <a href="mailto:contact@ohmyfood.com" aria-label="Contacter OhMyFood par email"> Contact </a>
+            </nav>
+        </div>
     </footer>
 </body>
 

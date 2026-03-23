@@ -1,0 +1,27 @@
+// ========================================
+// Container Utility Class
+// ========================================
+// Similar to Bootstrap's container class
+// Constrain content max-width while keeping section backgrounds full-width
+// ========================================
+
+@use "../utils/spacing" as *;
+@use "../utils/breakpoints" as *;
+
+.container {
+    // Full width within the viewport
+    width: 100%;
+    
+    // Max width constraint
+    max-width: $breakpoint-lg;
+    
+    // Center horizontally
+    margin-left: auto;
+    margin-right: auto;
+    
+    // Horizontal padding on mobile (20px = between $spacing-md and $spacing-xl)
+    padding-left: $spacing-md;
+    padding-right: $spacing-md;
+}
+
+

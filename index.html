@@ -37,215 +37,225 @@
     <a href="#main-content" class="skip-link sr-only">Aller au contenu principal</a>
 
     <!-- ========================================
-         HEADER
-         Site logo and navigation
+          HEADER
+          Site logo and navigation
     ======================================== -->
-    <header>
+    <header class="container">
         <img srcset="./assets/images/logo/ohmyfood.png, ./assets/images/logo/ohmyfood@2x.svg 2x"
             src="./assets/images/logo/ohmyfood.png" alt="Logo OhMyFood" width="197" height="36" />
     </header>
 
     <!-- ========================================
-         LOCATION BAR
-         Displays current location with icon
+          LOCATION BAR
+          Displays current location with icon
     ======================================== -->
     <div class="location" role="region" aria-label="Localisation">
-        <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
-        <input type="text" value="Paris, Belleville">
+        <div class="container">
+            <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+            <input type="text" value="Paris, Belleville">
+        </div>
     </div>
 
     <!-- ========================================
-         HERO SECTION
-         Main call-to-action area
+          HERO SECTION
+          Main call-to-action area
     ======================================== -->
     <section class="hero" aria-labelledby="hero-title">
-        <h1 id="hero-title">Réservez le menu qui vous convient</h1>
-        <p>Découvrez des restaurants d'exception, sélectionnés par nos soins.</p>
-        <a href="#restaurants" class="button button-up" aria-label="Explorer la liste des restaurants">
-            Explorer nos restaurants
-        </a>
+        <div class="container">
+            <h1 id="hero-title">Réservez le menu qui vous convient</h1>
+            <p>Découvrez des restaurants d'exception, sélectionnés par nos soins.</p>
+            <a href="#restaurants" class="button button-up" aria-label="Explorer la liste des restaurants">
+                Explorer nos restaurants
+            </a>
+        </div>
     </section>
 
     <!-- ========================================
-         EXPLANATIONS SECTION
-         How the service works - 3 step process
+          EXPLANATIONS SECTION
+          How the service works - 3 step process
     ======================================== -->
     <section class="explanations" aria-labelledby="explanations-title">
-        <h2 id="explanations-title">Fonctionnement</h2>
-        <ul class="explanations-list">
-            <!-- Step 1: Choose a restaurant -->
-            <li>
-                <article class="explanation-item">
-                    <div>
-                        <i class="fa-solid fa-mobile-screen" aria-hidden="true"></i>
-                        <p>Choisissez un restaurant</p>
-                    </div>
-                </article>
-            </li>
-            <!-- Step 2: Compose your menu -->
-            <li>
-                <article class="explanation-item">
-                    <div>
-                        <i class="fa-solid fa-list" aria-hidden="true"></i>
-                        <p>Composez votre menu</p>
-                    </div>
-                </article>
-            </li>
-            <!-- Step 3: Enjoy at the restaurant -->
-            <li>
-                <article class="explanation-item">
-                    <div>
-                        <i class="fa-solid fa-store" aria-hidden="true"></i>
-                        <p>Dégustez au restaurant</p>
-                    </div>
-                </article>
-            </li>
-        </ul>
+        <div class="container">
+            <h2 id="explanations-title">Fonctionnement</h2>
+            <ul class="explanations-list">
+                <!-- Step 1: Choose a restaurant -->
+                <li>
+                    <article class="explanation-item">
+                        <div>
+                            <i class="fa-solid fa-mobile-screen" aria-hidden="true"></i>
+                            <p>Choisissez un restaurant</p>
+                        </div>
+                    </article>
+                </li>
+                <!-- Step 2: Compose your menu -->
+                <li>
+                    <article class="explanation-item">
+                        <div>
+                            <i class="fa-solid fa-list" aria-hidden="true"></i>
+                            <p>Composez votre menu</p>
+                        </div>
+                    </article>
+                </li>
+                <!-- Step 3: Enjoy at the restaurant -->
+                <li>
+                    <article class="explanation-item">
+                        <div>
+                            <i class="fa-solid fa-store" aria-hidden="true"></i>
+                            <p>Dégustez au restaurant</p>
+                        </div>
+                    </article>
+                </li>
+            </ul>
+        </div>
     </section>
 
     <!-- ========================================
-         RESTAURANTS SECTION
-         List of featured restaurants
+          RESTAURANTS SECTION
+          List of featured restaurants
     ======================================== -->
     <section class="restaurants" id="restaurants" aria-labelledby="restaurants-title">
-        <h2 id="restaurants-title">Restaurants</h2>
-        <ul class="restaurants-list">
+        <div class="container">
+            <h2 id="restaurants-title">Restaurants</h2>
+            <ul class="restaurants-list">
 
-            <!-- Restaurant Card: La palette du goût -->
-            <li>
-                <article class="restaurant-item">
-                    <a href="restaurants/la-palette-du-gout.html" class="card-media"
-                        aria-label="Voir le menu du restaurant La palette du goût à Ménilmontant">
-                        <span class="badge-new">Nouveau</span>
-                        <img src="./assets/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg"
-                            alt="Photo du restaurant La palette du goût" loading="lazy" width="800" height="450" />
-                    </a>
-                    <div class="card-footer">
-                        <div>
-                            <h3>La palette du goût</h3>
-                            <p>Ménilmontant</p>
+                <!-- Restaurant Card: La palette du goût -->
+                <li>
+                    <article class="restaurant-item">
+                        <a href="restaurants/la-palette-du-gout.html" class="card-media"
+                            aria-label="Voir le menu du restaurant La palette du goût à Ménilmontant">
+                            <span class="badge-new">Nouveau</span>
+                            <img src="./assets/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg"
+                                alt="Photo du restaurant La palette du goût" loading="lazy" width="800" height="450" />
+                        </a>
+                        <div class="card-footer">
+                            <div>
+                                <h3>La palette du goût</h3>
+                                <p>Ménilmontant</p>
+                            </div>
+                            <!-- Favorite toggle button -->
+                            <input type="checkbox" id="fav-1" class="fav-checkbox" aria-label="Ajouter aux favoris" />
+                            <label for="fav-1" class="fav-label" tabindex="0">
+                                <svg viewBox="0 0 24 24" aria-hidden="true">
+                                    <path class="heart-outline"
+                                        d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+                                    <path class="heart-fill"
+                                        d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+                                </svg>
+                                <span class="sr-only">Ajouter ou supprimer de vos favoris</span>
+                            </label>
                         </div>
-                        <!-- Favorite toggle button -->
-                        <input type="checkbox" id="fav-1" class="fav-checkbox" aria-label="Ajouter aux favoris" />
-                        <label for="fav-1" class="fav-label" tabindex="0">
-                            <svg viewBox="0 0 24 24" aria-hidden="true">
-                                <path class="heart-outline"
-                                    d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
-                                <path class="heart-fill"
-                                    d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
-                            </svg>
-                            <span class="sr-only">Ajouter ou supprimer de vos favoris</span>
-                        </label>
-                    </div>
-                </article>
-            </li>
+                    </article>
+                </li>
 
-            <!-- Restaurant Card: La note enchantée -->
-            <li>
-                <article class="restaurant-item">
-                    <a href="restaurants/la-note-enchantee.html" class="card-media"
-                        aria-label="Voir le menu du restaurant La note enchantée à Charonne">
-                        <span class="badge-new">Nouveau</span>
-                        <img src="./assets/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg"
-                            alt="Photo du restaurant La note enchantée" loading="lazy" width="800" height="450" />
-                    </a>
-                    <div class="card-footer">
-                        <div>
-                            <h3>La note enchantée</h3>
-                            <p>Charonne</p>
+                <!-- Restaurant Card: La note enchantée -->
+                <li>
+                    <article class="restaurant-item">
+                        <a href="restaurants/la-note-enchantee.html" class="card-media"
+                            aria-label="Voir le menu du restaurant La note enchantée à Charonne">
+                            <span class="badge-new">Nouveau</span>
+                            <img src="./assets/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg"
+                                alt="Photo du restaurant La note enchantée" loading="lazy" width="800" height="450" />
+                        </a>
+                        <div class="card-footer">
+                            <div>
+                                <h3>La note enchantée</h3>
+                                <p>Charonne</p>
+                            </div>
+                            <!-- Favorite toggle button -->
+                            <input type="checkbox" id="fav-2" class="fav-checkbox" checked
+                                aria-label="Retirer des favoris" />
+                            <label for="fav-2" class="fav-label" tabindex="0">
+                                <svg viewBox="0 0 24 24" aria-hidden="true">
+                                    <path class="heart-outline"
+                                        d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+                                    <path class="heart-fill"
+                                        d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+                                </svg>
+                                <span class="sr-only">Ajouter ou supprimer de vos favoris</span>
+                            </label>
                         </div>
-                        <!-- Favorite toggle button -->
-                        <input type="checkbox" id="fav-2" class="fav-checkbox" checked
-                            aria-label="Retirer des favoris" />
-                        <label for="fav-2" class="fav-label" tabindex="0">
-                            <svg viewBox="0 0 24 24" aria-hidden="true">
-                                <path class="heart-outline"
-                                    d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
-                                <path class="heart-fill"
-                                    d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
-                            </svg>
-                            <span class="sr-only">Ajouter ou supprimer de vos favoris</span>
-                        </label>
-                    </div>
-                </article>
-            </li>
+                    </article>
+                </li>
 
-            <!-- Restaurant Card: À la française -->
-            <li>
-                <article class="restaurant-item">
-                    <a href="restaurants/a-la-francaise.html" class="card-media"
-                        aria-label="Voir le menu du restaurant À la française à Cité Rouge">
-                        <img src="./assets/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg"
-                            alt="Photo du restaurant À la française" loading="lazy" width="800" height="450" />
-                    </a>
-                    <div class="card-footer">
-                        <div>
-                            <h3>À la française</h3>
-                            <p>Cité Rouge</p>
+                <!-- Restaurant Card: À la française -->
+                <li>
+                    <article class="restaurant-item">
+                        <a href="restaurants/a-la-francaise.html" class="card-media"
+                            aria-label="Voir le menu du restaurant À la française à Cité Rouge">
+                            <img src="./assets/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg"
+                                alt="Photo du restaurant À la française" loading="lazy" width="800" height="450" />
+                        </a>
+                        <div class="card-footer">
+                            <div>
+                                <h3>À la française</h3>
+                                <p>Cité Rouge</p>
+                            </div>
+                            <!-- Favorite toggle button -->
+                            <input type="checkbox" id="fav-3" class="fav-checkbox" aria-label="Ajouter aux favoris" />
+                            <label for="fav-3" class="fav-label" tabindex="0">
+                                <svg viewBox="0 0 24 24" aria-hidden="true">
+                                    <path class="heart-outline"
+                                        d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+                                    <path class="heart-fill"
+                                        d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+                                </svg>
+                                <span class="sr-only">Ajouter ou supprimer de vos favoris</span>
+                            </label>
                         </div>
-                        <!-- Favorite toggle button -->
-                        <input type="checkbox" id="fav-3" class="fav-checkbox" aria-label="Ajouter aux favoris" />
-                        <label for="fav-3" class="fav-label" tabindex="0">
-                            <svg viewBox="0 0 24 24" aria-hidden="true">
-                                <path class="heart-outline"
-                                    d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
-                                <path class="heart-fill"
-                                    d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
-                            </svg>
-                            <span class="sr-only">Ajouter ou supprimer de vos favoris</span>
-                        </label>
-                    </div>
-                </article>
-            </li>
+                    </article>
+                </li>
 
-            <!-- Restaurant Card: Le délice des sens -->
-            <li>
-                <article class="restaurant-item">
-                    <a href="restaurants/le-delice-des-sens.html" class="card-media"
-                        aria-label="Voir le menu du restaurant Le délice des sens à Folie-Méricourt">
-                        <img src="./assets/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg"
-                            alt="Photo du restaurant Le délice des sens" loading="lazy" width="800" height="450" />
-                    </a>
-                    <div class="card-footer">
-                        <div>
-                            <h3>Le délice des sens</h3>
-                            <p>Folie-Méricourt</p>
+                <!-- Restaurant Card: Le délice des sens -->
+                <li>
+                    <article class="restaurant-item">
+                        <a href="restaurants/le-delice-des-sens.html" class="card-media"
+                            aria-label="Voir le menu du restaurant Le délice des sens à Folie-Méricourt">
+                            <img src="./assets/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg"
+                                alt="Photo du restaurant Le délice des sens" loading="lazy" width="800" height="450" />
+                        </a>
+                        <div class="card-footer">
+                            <div>
+                                <h3>Le délice des sens</h3>
+                                <p>Folie-Méricourt</p>
+                            </div>
+                            <!-- Favorite toggle button -->
+                            <input type="checkbox" id="fav-4" class="fav-checkbox" aria-label="Ajouter aux favoris" />
+                            <label for="fav-4" class="fav-label" tabindex="0">
+                                <svg viewBox="0 0 24 24" aria-hidden="true">
+                                    <path class="heart-outline"
+                                        d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+                                    <path class="heart-fill"
+                                        d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+                                </svg>
+                                <span class="sr-only">Ajouter ou supprimer de vos favoris</span>
+                            </label>
                         </div>
-                        <!-- Favorite toggle button -->
-                        <input type="checkbox" id="fav-4" class="fav-checkbox" aria-label="Ajouter aux favoris" />
-                        <label for="fav-4" class="fav-label" tabindex="0">
-                            <svg viewBox="0 0 24 24" aria-hidden="true">
-                                <path class="heart-outline"
-                                    d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
-                                <path class="heart-fill"
-                                    d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
-                            </svg>
-                            <span class="sr-only">Ajouter ou supprimer de vos favoris</span>
-                        </label>
-                    </div>
-                </article>
-            </li>
-        </ul>
+                    </article>
+                </li>
+            </ul>
+        </div>
     </section>
 
     <!-- ========================================
-         FOOTER
-         Site navigation and contact information
+          FOOTER
+          Site navigation and contact information
     ======================================== -->
     <footer>
-        <img src="./assets/images/logo/ohmyfood.png" alt="Logo OhMyFood" />
-        <nav aria-label="Navigation du pied de page">
-            <a href="#" aria-label="Proposer votre restaurant sur OhMyFood">
-                <i class="fa-solid fa-utensils" aria-hidden="true"></i>
-                Proposer un restaurant
-            </a>
-            <a href="#" aria-label="Devenir partenaire OhMyFood">
-                <i class="fa-solid fa-handshake-angle" aria-hidden="true"></i>
-                Devenir partenaire
-            </a>
-            <a href="#" aria-label="Consulter les mentions légales">Mentions légales</a>
-            <a href="mailto:contact@ohmyfood.com" aria-label="Contacter OhMyFood par email">Contact</a>
-        </nav>
+        <div class="container">
+            <img src="../assets/images/logo/ohmyfood.png" alt="Logo de OhMyFood" width="200" height="40" />
+            <nav aria-label="Navigation du pied de page">
+                <a href="#" aria-label="Proposer votre restaurant sur OhMyFood">
+                    <i class="fa-solid fa-utensils" aria-hidden="true"></i>
+                    Proposer un restaurant
+                </a>
+                <a href="#" aria-label="Devenir partenaire OhMyFood">
+                    <i class="fa-solid fa-handshake-angle" aria-hidden="true"></i>
+                    Devenir partenaire
+                </a>
+                <a href="#" aria-label="Voir les mentions légales"> Mentions légales </a>
+                <a href="mailto:contact@ohmyfood.com" aria-label="Contacter OhMyFood par email"> Contact </a>
+            </nav>
+        </div>
     </footer>
 
     <!-- ========================================

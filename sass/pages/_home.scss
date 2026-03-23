@@ -29,8 +29,12 @@
 // Uses a grey background with inset shadow for depth effect.
 .location {
     // Center content with location icon and text
-    @include flex-centered;
     @include font-roboto;
+
+    >div {
+        @include flex-centered;
+        height: 100%;
+    }
 
     // Background and text colors
     background-color: $grey-two;
@@ -55,7 +59,9 @@
             border: none;
             outline: none;
             cursor: pointer;
+            width: 116px;
         }
+
 }
 
 // --------------------------------------------
@@ -78,7 +84,7 @@
     }
 
     // Tagline paragraph styling
-    > p {
+    p {
         @include body-text;
         color: $grey;
         font-weight: 300;
@@ -92,9 +98,10 @@
 // Section Base Styles
 // --------------------------------------------
 // Common styles applied to all main content sections.
-// Provides consistent padding and heading styles.
+// Provides consistent vertical padding.
+// Horizontal padding is handled by the .container class.
 section {
-    padding: $spacing-xl 20px;
+    padding: $spacing-xl 0;
 
     // Section heading styling
     h2 {
@@ -114,6 +121,7 @@ section {
     gap: 20px;
     list-style: none;
     padding: 0;
+    width: 100%;
 }
 
 // --------------------------------------------
@@ -143,8 +151,8 @@ section {
 // - Restaurants list becomes multi-column grid
 @include respond-to(lg) {
     section {
-        // Dynamic padding: 10% or minimum 300px on each side
-        padding: $spacing-xl max(10%, 300px);
+        // Only vertical padding - horizontal handled by .container
+        padding: $spacing-xl 0;
     }
 
     // Horizontal layout for explanation steps

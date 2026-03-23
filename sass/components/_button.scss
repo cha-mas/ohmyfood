@@ -24,7 +24,9 @@
     @include flex-centered;
     @include font-roboto;
     @include body-text-sm;
+    margin: auto;
     height: 50px;
+    max-width: fit-content;
     padding: 0 25px;
     border-radius: 25px;
     @include shadow-md;

@@ -86,7 +86,7 @@
 // ========================================
 // On large screens, items expand to fill available space
 @include respond-to(lg) {
-    .explanation-item {
+    .explanations-list li {
         flex: 1;
     }
 }

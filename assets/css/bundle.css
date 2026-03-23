@@ -9,6 +9,15 @@
   overflow: hidden;
 }
 
+.container {
+  width: 100%;
+  max-width: 1024px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
 header {
   display: flex;
   align-items: center;
@@ -32,47 +41,49 @@ header.header-with-arrow a {
 }
 
 footer {
+  background: #353535;
+  color: #fff;
+}
+footer > div {
   padding: 24px;
   display: flex;
   flex-direction: column;
   gap: 20px;
-  background: #353535;
-  color: #fff;
 }
-footer img {
+footer > div img {
   filter: invert(100%) sepia(100%) hue-rotate(180deg);
   height: 18px;
   width: 130px;
 }
-footer nav {
+footer > div nav {
   display: flex;
   flex-direction: column;
   gap: 8px;
 }
-footer nav a {
+footer > div nav a {
   font-family: "Roboto", sans-serif;
   font-variation-settings: "wdth" 100;
   color: #fff;
   text-decoration: none;
 }
-footer nav a i {
+footer > div nav a i {
   font-size: 12px;
   margin-right: 4px;
 }
 
 @media (min-width: 1024px) {
-  footer {
+  footer > div {
     padding: 24px;
     height: 114px;
     flex-direction: row-reverse;
     gap: 50px;
     align-items: flex-end;
   }
-  footer nav {
+  footer > div nav {
     flex-direction: row;
     align-items: flex-end;
   }
-  footer nav > :nth-child(2) {
+  footer > div nav a:nth-child(2) {
     margin-right: 50px;
   }
 }
@@ -258,7 +269,9 @@ footer nav a i {
   font-variation-settings: "wdth" 100;
   font-weight: 500;
   font-size: 16px;
+  margin: auto;
   height: 50px;
+  max-width: fit-content;
   padding: 0 25px;
   border-radius: 25px;
   box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.2509803922);
@@ -339,7 +352,7 @@ footer nav a i {
 }
 
 @media (min-width: 1024px) {
-  .explanation-item {
+  .explanations-list li {
     flex: 1;
   }
 }
@@ -401,11 +414,16 @@ footer nav a i {
 }
 
 .location {
+  font-family: "Roboto", sans-serif;
+  font-variation-settings: "wdth" 100;
+}
+.location > div {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: "Roboto", sans-serif;
-  font-variation-settings: "wdth" 100;
+  height: 100%;
+}
+.location {
   background-color: #eaeaea;
   color: #353535;
   font-family: "Roboto", sans-serif;
@@ -428,6 +446,7 @@ footer nav a i {
   border: none;
   outline: none;
   cursor: pointer;
+  width: 116px;
 }
 
 .hero {
@@ -447,7 +466,7 @@ footer nav a i {
   font-size: 24px;
   font-weight: 700;
 }
-.hero > p {
+.hero p {
   font-family: "Roboto", sans-serif;
   font-variation-settings: "wdth" 100;
   font-weight: 300;
@@ -460,7 +479,7 @@ footer nav a i {
 }
 
 section {
-  padding: 50px 20px;
+  padding: 50px 0;
 }
 section h2 {
   font-family: "Roboto", sans-serif;
@@ -477,6 +496,7 @@ section h2 {
   gap: 20px;
   list-style: none;
   padding: 0;
+  width: 100%;
 }
 
 .explanations {
@@ -489,7 +509,7 @@ section h2 {
 
 @media (min-width: 1024px) {
   section {
-    padding: 50px max(10%, 300px);
+    padding: 50px 0;
   }
   .explanations-list {
     flex-direction: row;
@@ -630,7 +650,6 @@ main {
   position: relative;
   width: 100%;
   height: 100%;
-  background: #fff;
   display: flex;
   flex-direction: column;
 }
@@ -640,14 +659,11 @@ main {
   z-index: 1;
   margin-top: -32px;
   width: 100%;
-  max-width: 1024px;
-  margin-left: auto;
-  margin-right: auto;
   display: flex;
   flex-direction: column;
   gap: 50px;
   background-color: #eaeaea;
-  padding: 50px 24px;
+  padding: 50px;
   border-top-left-radius: 32px;
   border-top-right-radius: 32px;
 }
@@ -1032,10 +1048,6 @@ main {
   .hero-media {
     height: 375px;
   }
-  .menu-container {
-    padding-left: min(150px, 10%);
-    padding-right: min(150px, 10%);
-  }
   .menu-container .restaurant-info {
     justify-content: center;
     gap: 24px;
@@ -1051,12 +1063,6 @@ main {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-}
-
-html {
-  max-width: 1440px;
-  background-color: #7e7e7e;
-  margin: auto;
 }
 
 /*# sourceMappingURL=bundle.css.map */

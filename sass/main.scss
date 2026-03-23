@@ -12,8 +12,9 @@
 @use "./utils/sr";
 
 // ========================================
-// Layout - Header and Footer
+// Layout - Container and Layout Elements
 // ========================================
+@use "./layout/container";
 @use "./layout/header";
 @use "./layout/footer";
 
@@ -45,13 +46,4 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-}
-
-// ========================================
-// Root Container - Max width and centering
-// ========================================
-html {
-    max-width: 1440px;
-    background-color: $grey-four;
-    margin: auto;
 }
