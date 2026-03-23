@@ -14,6 +14,7 @@
 @use "../utils/variables" as *;
 @use "../utils/shadows" as *;
 @use "../utils/spacing" as *;
+@use "../utils/breakpoints" as *;
 
 // ========================================
 // Menu Card Wrapper
@@ -147,12 +148,23 @@
     // Checked State Animations
     // ========================================
     // When selected, expand content to make room for checkmark
-    &-checkbox:checked ~ &-content, &:hover &-content {
+    &-checkbox:checked ~ &-content {
         padding-right: calc(4rem + $spacing-sm);
     }
 
     // Slide checkmark into view
-    &-checkbox:checked ~ &-content &-checkmark, &:hover &-content &-checkmark {
+    &-checkbox:checked ~ &-content &-checkmark {
         right: 0;
+    }
+}
+
+@include respond-to(lg) {
+    .menu-card {
+        &:hover &-content {
+        padding-right: calc(4rem + $spacing-sm);
+    }
+    &:hover &-content &-checkmark {
+        right: 0;
+    }
     }
 }
