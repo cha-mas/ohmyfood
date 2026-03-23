@@ -672,7 +672,7 @@ main {
   flex-direction: column;
   gap: 50px;
   background-color: #eaeaea;
-  padding: 50px;
+  padding: 50px 24px;
   border-top-left-radius: 32px;
   border-top-right-radius: 32px;
 }

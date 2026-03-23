@@ -101,7 +101,7 @@ main {
     @include flex-column;
     gap: $spacing-xl;
     background-color: $grey-two;  // Light grey background
-    padding: $spacing-xl;  
+    padding: $spacing-xl $spacing-md ;  
     border-top-left-radius: $spacing-lg;   // Rounded corners at top
     border-top-right-radius: $spacing-lg;
 
