@@ -79,6 +79,7 @@
 // Uses negative margin to overlap the hero image slightly.
 main {
     margin-top: -10px;       // Slight overlap with hero
+    padding: 0!important; // Remove container's default padding
     position: relative;
     width: 100%;
     height: 100%;
